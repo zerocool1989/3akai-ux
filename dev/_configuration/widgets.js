@@ -556,6 +556,18 @@ var Widgets = {
 			personalportal:0,
 			siteportal:0,
 			history : {"init":"Resources.initHistory","nav":"Resources.browser.printResources",tag:"Resources.tagging.showTagViewReal"}
+		},
+		tasks :
+		{
+			description:"Tasks Widget\r\n",
+			iframe:0,
+			url:"/devwidgets/tasks/tasks.html",
+			name:"Tasks",
+			id:"tasks",
+			personalportal:1,
+			siteportal:0,
+			hasSettings: 1,
+			img:"/dev/img/myprofile.png"
 		}
 	},
 	orders:[
