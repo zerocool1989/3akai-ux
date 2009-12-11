@@ -568,6 +568,21 @@ var Widgets = {
 			siteportal:0,
 			hasSettings: 1,
 			img:"/dev/img/myprofile.png"
+		},
+		assignments :
+		{
+			description:"Assignments",
+			iframe:0,
+			url:"/devwidgets/assignments/assignments.html",
+			name:"Assignments",
+			id:"assignments",
+			personalportal:0,
+			siteportal:1,
+			hasSettings: false,
+			ca:1,
+			showinmedia:0,
+			showinsakaigoodies:1,
+			img:"/devwidgets/assignments/images/assignments.png"
 		}
 	},
 	orders:[
