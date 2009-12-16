@@ -30,17 +30,56 @@ sakai.assignments = function(tuid, placement, showSettings){
 	var rootel = $("#" + tuid);
 
 	var assignments = "#assignments";
+	var assignmentsListButtonsDiv = ".assignments .assignments_list .assignments_list_buttons div";
+	var assignmentsListHover = "assignements_list_hover";
 	var $assignmentsMainContainer = $(assignments + "_main_container");
 
 
 	/**
-	 * Initialisation function
+	 * Add binding to several elements
+	 */
+
+	var addBinding = function(){
+
+		/**
+		 * Add a hover function for the buttons
+		 */
+		$(assignmentsListButtonsDiv).hover(function(){
+			
+			// Check if there is an a tag 
+			if($(this).find("a").length > 0){
+				$(this).addClass(assignmentsListHover);
+			}
+		}, function(){
+			$(this).removeClass(assignmentsListHover);
+		});
+		
+		$(".assignments_list_button_people", rootel).click(function(){
+			
+			if($(".assignments_list_button_people_selected").length > 0){
+				$(".assignments_list_button_people_selected").removeClass("assignments_list_button_people_selected");
+				$(".assignments_list_people_info").hide();
+
+			}else{
+				$(this).addClass("assignments_list_button_people_selected");
+				$(".assignments_list_people_info", $(this).closest(".assignments_list_item")).show();
+			}
+			
+			
+		});
+		
+	};
+
+	/**
+	 * Initialization function
 	 */
 	var init = function(){
 		
 		$assignmentsMainContainer.show();
+		
+		addBinding();
 	};
-	
+
 	init();
 };
 
