@@ -183,7 +183,7 @@
 { border: none; clear: none; display: block; margin:6px 0; float: left; width: 117px }
 .assignments .assignments_list_people_info_link
 { display:block; float:left; font-size:11px; line-height:13px; margin-right:4px; text-align:right; text-transform:uppercase; width:82px }
-.assignments .assignments_list_people_info_link a:hover
-{ }
 .assignments .assignments_list_people_info_number
 { display: block; float: left; font-size:27px; font-weight:bold; line-height:24px }
+.assignments .assignments_list_tooltip_big
+{ position: absolute; height: 294px; width: 407;}
