@@ -186,4 +186,4 @@
 .assignments .assignments_list_people_info_number
 { display: block; float: left; font-size:27px; font-weight:bold; line-height:24px }
 .assignments .assignments_list_tooltip_big
-{ position: absolute; height: 294px; width: 407;}
+{ background: url("/devwidgets/assignments/images/.png"); height: 294px; position: absolute; width: 407px }
