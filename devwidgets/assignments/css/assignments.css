@@ -68,13 +68,14 @@
 .assignments .assignments_list ul
 {}
 .assignments .assignments_list ul li
-{ border-top: 1px solid #d3d7d9; clear: both; list-style-type:none}
+{ border-top: 1px solid #d3d7d9; clear: both; list-style-type:none; position: relative }
 .assignments .assignments_list ul li div.assignments_list_item
 { background-color:#fff; border: 2px solid #fff; height:50px; padding:2px}
 .assignments .assignments_list ul li div.assignments_list_grey_container
 { background-color: #f5f6f6; border: 2px solid #f5f6f6;}
 .assignments .assignments_list ul li div.assignments_list_yellow_container
 { background-color: #ffffed; border: 2px solid #f1e495;}
+
 
 .assignments .assignments_list .assignments_list_opacity
 { opacity: 0.5 }
@@ -122,10 +123,11 @@
 .assignments .assignments_list .assignments_list_info .assignments_list_info_small .assignments_list_info_small_new
 { margin-right: 5px; position:relative; top:3px; }
 
+/* LIST BUTTONS */
 .assignments .assignments_list .assignments_list_buttons
-{ float: left; margin-top: 12px}
+{ float: left; margin-top: 12px }
 .assignments .assignments_list .assignments_list_buttons div
-{ float: left; margin-left: 3px}
+{ float: left; margin-left: 3px }
 .assignments .assignments_list .assignments_list_buttons .assignements_list_hover
 { cursor:pointer }
 .assignments .assignments_list .assignments_list_buttons .assignements_list_hover a
@@ -137,7 +139,14 @@
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_people_selected
 { background: url('/devwidgets/assignments/images/button_people_selected_bg.png') 0 0 no-repeat; height:34px;}
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_settings
-{ background: url('/devwidgets/assignments/images/button_settings_bg.png') 0 0 no-repeat; height:29px; width: 43px}
+{ border: 1px solid #fff; background: url('/devwidgets/assignments/images/button_settings_bg.png') 0 0 no-repeat; height:27px; width: 43px}
+.assignments .assignments_list .assignments_list_buttons .assignments_list_button_settings:hover,
+.assignments .assignments_list .assignments_list_buttons .assignments_list_button_settings_selected
+{ background-color: #fff; border: 1px solid #cbd0d4 !important; -webkit-border-radius: 4px; -moz-border-radius: 4px }
+.assignments .assignments_list_grey_container .assignments_list_buttons .assignments_list_button_settings
+{ border: 1px solid #f5f6f6}
+.assignments .assignments_list_yellow_container .assignments_list_buttons .assignments_list_button_settings
+{ border: 1px solid #ffffed}
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_submission
 { background: url('/devwidgets/assignments/images/button_submission_bg.png') 0 0 no-repeat; height:29px; width: 81px}
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_submission_re
@@ -159,8 +168,24 @@
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_discussion .assignments_list_highlight
 { background: #ded58b; color: #016D96; display:inline; font-weight:bold; padding: 1px }
 
+.assignments .assignments_zip_overlay
+{ cursor:pointer; display: none; left: 327px; position:absolute; top: 16px; z-index: 10 }
+
+/* PEOPLE INFO */
 .assignments .assignments_list .assignments_list_people_info
-{ display: none }
+{ display: none; margin-right:-1px}
+
+/* SETTINGS */
+.assignments .assignments_list .assignments_list_settings
+{ background: #fff; display: none; position: absolute; right:8px; top:42px; z-index:8 }
+.assignments .assignments_list .assignments_list_settings ul
+{ border: 1px solid #cbd0d4; padding: 0 !important}
+.assignments .assignments_list .assignments_list_settings ul li
+{ border: none }
+.assignments .assignments_list .assignments_list_settings a
+{ color: #454a4f; display: block; font-weight: normal; padding:3px 5px; }
+.assignments .assignments_list .assignments_list_settings a:hover
+{ background-color: #dceffd; text-decoration: none }
 
 /* WARNING & INFO */
 .assignments .assignments_warning
@@ -185,5 +210,45 @@
 { display:block; float:left; font-size:11px; line-height:13px; margin-right:4px; text-align:right; text-transform:uppercase; width:82px }
 .assignments .assignments_list_people_info_number
 { display: block; float: left; font-size:27px; font-weight:bold; line-height:24px }
+
+/* BIG TOOLTIP */
 .assignments .assignments_list_tooltip_big
-{ background: url("/devwidgets/assignments/images/.png"); height: 294px; position: absolute; width: 407px }
+{ background: url("/devwidgets/assignments/images/tooltip_big_bg.png"); display: none; height: 294px; position: absolute; right: 0; top: 180px; width: 407px; z-index: 10 }
+.assignments .assignments_list_tooltip_big_container
+{ margin: 32px 37px 32px 68px }
+.assignments .assignments_list_tooltip_big_container .assignments_list_tooltip_big_title
+{ color: #0b6297; font-weight: bold; padding: 2px 0 }
+.assignments .assignments_list_tooltip_big_container .assignments_list_tooltip_big_text
+{ color: #494949}
+.assignments .assignments_list_tooltip_big_container .assignments_list_tooltip_big_actions
+{ background: #f1e495; color: #000; font-weight: bold; padding: 5px; text-align: center; -webkit-border-radius: 6px; -moz-border-radius: 6px }
+.assignments .assignments_list_tooltip_big_close
+{ background: url("/devwidgets/assignments/images/tooltip_big_close.png"); display: block; height: 40px; position: absolute; right: -1px; top: -1px; width: 40px }
+.assignments .assignments_list_tooltip_big_close span
+{ display: block; overflow: hidden; text-indent: -9999em }
+
+/* PEOPLE TOOLTIP */
+.assignments .assignments_people_tooltip
+{ background: url("/devwidgets/assignments/images/tooltip_verybig_bg.png"); display: none; height: 254px; position: absolute; right: 0; top: 110px; width: 635px; z-index: 10 }
+.assignments .assignments_people_tooltip_container
+{ margin: 35px 25px}
+.assignments .assignments_people_tooltip_container h3
+{ color: #878a8c; font-size: 1.1em; font-weight: normal }
+.assignments .assignments_people_tooltip_container h4
+{ color: #45494e; font-size: 1.2em; }
+.assignments .assignments_people_tooltip_container .assignments_people_actions_container_sub
+{ float: left; font-size:0.9em; margin:25px 6px 0 0}
+.assignments .assignments_people_tooltip_container ul
+{ float: left; margin-right:6px }
+.assignments .assignments_people_tooltip_container ul li
+{ list-style-type: none; margin-top: 10px }
+
+/* BUTTON */
+.assignments .assignments_button
+{ background: #fff; border: 1px solid #cbd0d4; color: #454a4f; font-weight: normal; padding: 2px 15px; -webkit-border-radius: 4px; -moz-border-radius: 4px }
+.assignments .assignments_button_up, .assignments .assignments_button_down
+{ padding: 2px 12px 2px 30px}
+.assignments .assignments_button_up
+{ background: #fff url("/devwidgets/assignments/images/arrow_up_big.png") no-repeat 7px 5px }
+.assignments .assignments_button_down
+{ background: #fff url("/devwidgets/assignments/images/arrow_down_big.png") no-repeat 7px 6px }
