@@ -35,12 +35,28 @@ sakai.assignments = function(tuid, placement, showSettings){
 	var $assignmentsMainContainer = $(assignments + "_main_container");
 
 	/**
+	 * Initialise the tipsy library
+	 */
+	var initialiseTipsy = function(){
+
+		// Set the tipsy tooltip on all the elements with rel="tipsy"
+		$('[rel=tipsy]').tipsy({
+			gravity: 's'
+		});
+	};
+
+	/**
 	 * Hide the big tooltip
 	 */
 	var hideBigTooltip = function(){
 		
 		// Hide the big tooltip
-		$(".assignments_list_tooltip_big", rootel).hide();
+		$(".assignments_list_tooltip_big3", rootel).hide();
+	};
+	var hideBigTooltip1 = function(){
+		
+		// Hide the big tooltip
+		$(".assignments_list_tooltip_big1", rootel).hide();
 	};
 	
 	/** 
@@ -110,12 +126,25 @@ sakai.assignments = function(tuid, placement, showSettings){
 		/**
 		 * Bind the onclick event on every assignment title
 		 */
-		$(".assignments_list_info .assignments_list_info_big", rootel).click(function(){
+		$(".assignments_list_info .assignments_list_info_big3", rootel).click(function(){
 
-			if(!$(".assignments_list_tooltip_big", rootel).is(":visible")){
-				$(".assignments_list_tooltip_big").show();
+			if(!$(".assignments_list_tooltip_big3", rootel).is(":visible")){
+				$(".assignments_list_tooltip_big3").show();
 			}else{
 				hideBigTooltip();
+			}
+
+		});
+		
+		/**
+		 * Bind the onclick event on every assignment title
+		 */
+		$(".assignments_list_info .assignments_list_info_big1", rootel).click(function(){
+
+			if(!$(".assignments_list_tooltip_big1", rootel).is(":visible")){
+				$(".assignments_list_tooltip_big1").show();
+			}else{
+				hideBigTooltip1();
 			}
 
 		});
@@ -151,6 +180,13 @@ sakai.assignments = function(tuid, placement, showSettings){
 		$(".assignments_zip_overlay").live("mouseout", function(){
 			$(this).hide();
 		});
+		
+		/**
+		 * Show an overlay when you click on the zip button
+		 */
+		$(".assignments_zip_overlay").live("click", function(){
+			$("#assignments_downloading").show().fadeOut(3000);
+		});
 
 		/**
 		 * Bind a click handler to the grading item
@@ -165,6 +201,14 @@ sakai.assignments = function(tuid, placement, showSettings){
 		$(".assignments_list_people_info_submissions", rootel).click(function(){
 			$(".assignments_people_tooltip_submission", rootel).show();
 		});
+		
+		/**
+		 * Bind the add assignments button
+		 */
+		$("#assignments_add_button", rootel).click(function(){
+
+			document.location = "/dev/assignments_create_v01.html";
+		});
 
 		/**
 		 * Bind the click function on the window document
@@ -176,10 +220,13 @@ sakai.assignments = function(tuid, placement, showSettings){
 			var $clicked = $(e.target);
 
 			// Check if it is a title link
-			if(!$clicked.is(".assignments_list_info .assignments_list_info_big")){
+			if(!$clicked.is(".assignments_list_info .assignments_list_info_big3")){
 				hideBigTooltip();
 			}
-			
+			if(!$clicked.is(".assignments_list_info .assignments_list_info_big1")){
+				hideBigTooltip1();
+			}
+
 			// Check if the element is the settings button
 			if(!$clicked.parents().is(".assignments_list_button_settings") && !$clicked.is(".assignments_list_button_settings") ){
 				hideAssignmentSettings();
@@ -202,10 +249,15 @@ sakai.assignments = function(tuid, placement, showSettings){
 	 * Initialization function
 	 */
 	var init = function(){
-		
+
+		// Show the main container
 		$assignmentsMainContainer.show();
-		
+
+		// Add binding to several elements
 		addBinding();
+
+		// Initialise the tipsy library
+		initialiseTipsy();
 	};
 
 	init();

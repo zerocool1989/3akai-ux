@@ -135,9 +135,13 @@
 .assignments .assignments_list .assignments_list_buttons span
 { display:block; color: #85898a; font-size: 11px; padding: 7px 5px 5px 29px }
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_people
-{ background: url('/devwidgets/assignments/images/button_people_bg.png') 0 0 no-repeat; height:29px; width: 55px; margin: 0}
+{ -moz-border-radius-bottomright: 4px; -moz-border-radius-topright: 4px; -webkit-border-bottom-right-radius: 4px; -webkit-border-top-right-radius: 4px; background: #fff url('/devwidgets/assignments/images/button_people_bg.png') center center no-repeat; border: 1px solid #cbd0d4; margin: 0; padding:9px 9px 6px 10px}
+.assignments .assignments_list .assignments_list_buttons .assignments_list_button_people:hover
+{ border: 1px solid #0c0c0d }
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_people_selected
-{ background: url('/devwidgets/assignments/images/button_people_selected_bg.png') 0 0 no-repeat; height:34px;}
+{ -moz-border-radius: 0; -border-radius: 0; -webkit-border-radius: 0px; border: 1px solid #0c0c0d; border-bottom: none; }
+.assignments .assignments_list .assignments_list_buttons .assignments_list_button_people_selected:hover
+{ border-bottom: none}
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_settings
 { border: 1px solid #fff; background: url('/devwidgets/assignments/images/button_settings_bg.png') 0 0 no-repeat; height:27px; width: 43px}
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_settings:hover,
@@ -160,7 +164,9 @@
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_submission_gr
 { background: url('/devwidgets/assignments/images/button_submissiongr_bg.png') 0 0 no-repeat; height:29px; width: 107px}
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_discussion
-{ background: url('/devwidgets/assignments/images/button_discussion_bg.png') 0 0 no-repeat; height:29px; width: 78px}
+{ -moz-border-radius: 4px; -moz-border-radius: 4px; background: #fff url('/devwidgets/assignments/images/button_discussion_bg.png') 2px 5px no-repeat; border: 1px solid #cbd0d4; height:27px; width: 76px}
+.assignments .assignments_list .assignments_list_buttons .assignments_list_button_discussion:hover
+{ border: 1px solid #0c0c0d }
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_discussion span
 { padding-left: 24px }
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_discussion .assignments_notbold
@@ -170,10 +176,6 @@
 
 .assignments .assignments_zip_overlay
 { cursor:pointer; display: none; left: 327px; position:absolute; top: 16px; z-index: 10 }
-
-/* PEOPLE INFO */
-.assignments .assignments_list .assignments_list_people_info
-{ display: none; margin-right:-1px}
 
 /* SETTINGS */
 .assignments .assignments_list .assignments_list_settings
@@ -201,11 +203,11 @@
 
 /* PEOPLE INFO */
 .assignments .assignments_list_people_info
-{ background: url("/devwidgets/assignments/images/button_submission_dropdown_bg.png") no-repeat; float: right }
+{ background: url("/devwidgets/assignments/images/button_submission_dropdown_bg.png") no-repeat; display: none; float: right; margin-top: -1px; }
 .assignments .assignments_list_people_info .assignments_list_people_info_zero
 { color: #898989 }
 .assignments .assignments_list .assignments_list_people_info ul li
-{ border: none; clear: none; display: block; margin:6px 0; float: left; width: 117px }
+{ border: none; clear: none; display: block; margin:9px 0; float: left; width: 117px }
 .assignments .assignments_list_people_info_link
 { display:block; float:left; font-size:11px; line-height:13px; margin-right:4px; text-align:right; text-transform:uppercase; width:82px }
 .assignments .assignments_list_people_info_number
@@ -214,12 +216,18 @@
 /* BIG TOOLTIP */
 .assignments .assignments_list_tooltip_big
 { background: url("/devwidgets/assignments/images/tooltip_big_bg.png"); display: none; height: 294px; position: absolute; right: 0; top: 180px; width: 407px; z-index: 10 }
+.assignments .assignments_list_tooltip_big1
+{ top: 61px }
 .assignments .assignments_list_tooltip_big_container
 { margin: 32px 37px 32px 68px }
 .assignments .assignments_list_tooltip_big_container .assignments_list_tooltip_big_title
 { color: #0b6297; font-weight: bold; padding: 2px 0 }
 .assignments .assignments_list_tooltip_big_container .assignments_list_tooltip_big_text
 { color: #494949}
+.assignments .assignments_list_tooltip_big_container .assignments_list_tooltip_big_locations
+{ font-size: 11px}
+.assignments .assignments_list_tooltip_big_container .assignments_list_tooltip_big_locations a
+{ font-weight: normal}
 .assignments .assignments_list_tooltip_big_container .assignments_list_tooltip_big_actions
 { background: #f1e495; color: #000; font-weight: bold; padding: 5px; text-align: center; -webkit-border-radius: 6px; -moz-border-radius: 6px }
 .assignments .assignments_list_tooltip_big_close
@@ -252,3 +260,9 @@
 { background: #fff url("/devwidgets/assignments/images/arrow_up_big.png") no-repeat 7px 5px }
 .assignments .assignments_button_down
 { background: #fff url("/devwidgets/assignments/images/arrow_down_big.png") no-repeat 7px 6px }
+
+/* DOWNLOADING */
+#assignments_downloading
+{ background:#000; display:none; height:172px; padding-top:160px; position:absolute; text-align:center; top:68px; width:632px; z-index:20; }
+#assignments_downloading p 
+{color: #fff !important }
