@@ -164,7 +164,7 @@
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_submission_gr
 { background: url('/devwidgets/assignments/images/button_submissiongr_bg.png') 0 0 no-repeat; height:29px; width: 107px}
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_discussion
-{ -moz-border-radius: 4px; -moz-border-radius: 4px; background: #fff url('/devwidgets/assignments/images/button_discussion_bg.png') 2px 5px no-repeat; border: 1px solid #cbd0d4; height:27px; width: 76px}
+{ -moz-border-radius: 4px; -webkit-border-radius: 4px; -border-radius: 4px; background: #fff url('/devwidgets/assignments/images/button_discussion_bg.png') 2px 5px no-repeat; border: 1px solid #cbd0d4; height:27px; width: 76px}
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_discussion:hover
 { border: 1px solid #0c0c0d }
 .assignments .assignments_list .assignments_list_buttons .assignments_list_button_discussion span
