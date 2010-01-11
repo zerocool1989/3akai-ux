@@ -203,7 +203,7 @@
 
 /* PEOPLE INFO */
 .assignments .assignments_list_people_info
-{ background: url("/devwidgets/assignments/images/button_submission_dropdown_bg.png") no-repeat; display: none; float: right; margin-top: -1px; }
+{ background: url("/devwidgets/assignments/images/button_submission_dropdown_bg.png") no-repeat; display: none; float: left; margin-top: -1px; }
 .assignments .assignments_list_people_info .assignments_list_people_info_zero
 { color: #898989 }
 .assignments .assignments_list .assignments_list_people_info ul li
