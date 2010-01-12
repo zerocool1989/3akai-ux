@@ -1396,6 +1396,20 @@ sakai.site = function(){
 		document.location = "/dev/search_content.html##1|" + search + "|/sites/" + sakai.site.currentsite.id;
 	};
 	
+	var doPrototype = function(){
+		
+		if(sakai.site.selectedpage === "introduction"){
+			var simpleEdit = fluid.inlineEdit("#show_view_container", {
+	            selectors : {
+	                text: ".site_input"
+	            },
+				defaultViewText : "The Division of Biology and Medicine is composed of Alpert Medical School, the Program in Biology (which includes study at the undergraduate and graduate levels), and the Public Health Program. It is home to five basic biology departments and fourteen clinical departments, and is affiliated with seven diverse teaching hospitals in and around Providence. The multidepartmental graduate program in Molecular Biology, Cell Biology and Biochemistry (MCB) has held a predoctoral training grant from NIH for more than 29 years.",
+	            useTooltip : true,
+				tooltipText : "Click item to edit",
+	            tooltipDelay : 500
+	        });
+		}
+	};
 	
 	//////////
 	// INIT //
@@ -1405,6 +1419,8 @@ sakai.site = function(){
 		// Start loading page
 		loadControl();
 		
+		setTimeout(function () {doPrototype();}, 4000);
+
 	};
 	
 	// Start

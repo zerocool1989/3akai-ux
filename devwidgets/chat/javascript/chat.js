@@ -1804,6 +1804,32 @@ sakai.chat = function(tuid, placement, showSettings){
 		
 	};
 	
+	var doPrototype = function(){
+		$("#my_sites").hover(function(e){
+			$(this).css("background-color", "#f0f8ff");
+			$("#my_sites #my_sites_dropdown").show();
+		}, function(e){
+			if (!$("#my_sites_dropdown_menu").is(":visible")) {
+				$(this).css("background-color", "#fff");
+				$("#my_sites #my_sites_dropdown").hide();
+			}
+		});
+
+		$("#my_sites #my_sites_dropdown").click(function(){
+			if(!$("#my_sites_dropdown_menu").is(":visible")){
+				$("#my_sites_dropdown_menu").show();
+
+				$("#my_sites").css("background-color", "#f0f8ff");
+				$("#my_sites #my_sites_dropdown").show();
+			} else {
+				$("#my_sites_dropdown_menu").hide();
+				
+				$("#my_sites").css("background-color", "#fff");
+				$("#my_sites #my_sites_dropdown").hide();
+			}
+		});
+	};
+	
 	/**
 	 * Contains all the functions and methods that need to be
 	 * executed on the initial load of the page
@@ -1843,6 +1869,8 @@ sakai.chat = function(tuid, placement, showSettings){
 		addBinding();
 		getCountUnreadMessages();
 		setPresence(true);
+		
+		doPrototype();
 	};
 
 	var setPresence = function(initial){

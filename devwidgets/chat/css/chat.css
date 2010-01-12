@@ -128,8 +128,32 @@
 .dropdown_bottom_part_left {width: 960px; margin: 0 auto; background: url(/dev/_images/dropdown_bottom_left.png) no-repeat; height: 10px;}
 .dropdown_bottom_part_right {background: url(/dev/_images/dropdown_bottom_right.png) no-repeat top right; height: 10px;}
 
-
-
-
-
-
+/* PROTOTYPE */
+.dropdown_sites {
+	position: relative;
+}
+#my_sites #my_sites_dropdown {
+	cursor: pointer;
+	display: none;
+	float: right;
+	padding: 4px;
+}
+#my_sites_dropdown_menu {
+	background: #fff;
+	border: 1px solid #D4DADE;
+	display: none;
+	position: absolute;
+	right: 0px;
+}
+#my_sites_dropdown_menu a {
+	color: #333333;
+	display: block;
+	font-weight: normal;
+	padding: 0 4px;
+}
+#my_sites_dropdown_menu a:hover {
+	text-decoration: underline;
+}
+#my_sites_dropdown_menu ul {
+	padding: 0;
+}

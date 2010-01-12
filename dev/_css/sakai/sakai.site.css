@@ -285,3 +285,17 @@
 
 .sakai_site .sakai_logo
 { float: left; }
+
+
+/* PROTOTYPE */
+.site_input
+{ border: 1px dashed #ccc; color: #38393d; margin-left:225px; padding:6px !important}
+
+.fl-inlineEdit-edit
+{ border: 1px solid #ccc; color: #000; padding:6px !important}
+
+.fl-inlineEdit-invitation
+{ background-color: #FFECB3; }
+
+.fl-inlineEdit-invitation-text
+{ color: #999 }

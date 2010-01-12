@@ -1,0 +1,31 @@
+.search_content_wrapper {
+	margin:0 0 20px 290px;
+}
+.my_sites_resources_list {
+	width: auto;	
+}
+.my_sites_resources_people_list {
+	width: auto;
+}
+.my_sites_resources_list li {
+	float: left;
+	padding: 10px 15px 0 0;
+	width: 100px;
+}
+.my_sites_resources_people_list li{
+	width: 200px;
+}
+.my_sites_resources_people_list_picture {
+	width: 60px;
+}
+.my_sites_resources_people_list_comment {
+	width: 60px;
+}
+.my_sites_resources_container_list_left {
+	float: left;
+}
+.my_sites_resources_container_list {
+	clear: both;
+	margin-top: 10px;
+}
+
