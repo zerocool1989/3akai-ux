@@ -21,7 +21,7 @@ var sakai = sakai || {};
 
 sakai.my_sites_resource = function(){
 	var simpleTreeCollection = $('.simpleTree').simpleTree({
-		autoclose: true,
+		autoclose: false,
 		drag: false
 	});
 
