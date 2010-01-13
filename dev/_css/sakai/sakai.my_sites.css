@@ -338,3 +338,12 @@ a.search_results_part_title {
 .fl-tab-content {
 	border: none;
 }
+
+
+/* confirmed */
+.my_sites_list_yellow {
+	background-color:#FFFFED;
+}
+.my_sites_info_container {
+	background-color:#F1E495;
+}
