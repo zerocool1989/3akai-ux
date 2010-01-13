@@ -329,7 +329,7 @@ a.search_results_part_title {
 	margin-bottom: 0;
 }
 .my_sites_list p {
-	padding: 0 !important;
+	padding: 0;
 }
 .my_sites_list_info {
 	color: #666666 !important;
