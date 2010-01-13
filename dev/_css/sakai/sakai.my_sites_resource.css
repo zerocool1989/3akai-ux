@@ -1,6 +1,13 @@
 .search_content_wrapper {
 	margin:0 0 20px 290px;
 }
+.my_sites_resources_menu {
+	float: left;
+	width: 270px;
+}
+.my_sites_resources_menu .search_tab_content_top{
+	background-image: url(../../_images/content_tr_flip.png);
+}
 .my_sites_resources_list {
 	width: auto;	
 }

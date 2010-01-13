@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.core.2.css" />
 	<link rel="stylesheet" type="text/css" href="/devwidgets/chat/css/chat.css" />
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.components.jq_pager.css" />
+	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.treeview.css" />
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.3.css" />
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.my_sites.css" />
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.my_sites_resource.css" />
@@ -23,6 +24,7 @@
 	<script type="text/javascript" language="JavaScript" src="_lib/Jquery/jquery.cookie.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/Jquery/jquery.corners.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/Jquery/jquery.pager.js"></script>
+	<script type="text/javascript" language="JavaScript" src="_lib/Jquery/jquery.simple.tree.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/sakai_util/sdata.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/sakai_util/i18n.js"></script>
 
@@ -59,6 +61,62 @@
 			</ul>
 		</div>
 		<!-- TAB CONTENT -->
+		<div class="my_sites_resources_menu">
+			<div class="search_tab_content_top">
+				<div class="search_tab_content_top_inner"><!-- --></div>
+			</div>
+			<div class="search_content_main">
+				<h2>Rated highly</h2>
+				<ul class="simpleTree">
+					<li class="root" id="1">
+						<span style="display:none">Tree Root 1</span>
+						<ul>
+							<li class='open'>
+								<span>Department</span>
+								<ul>
+									<li class='open'>
+										<span>Biology and Medicine</span>
+									</li>
+									<li class='open'>
+										<span>Chemistry</span>
+									</li>
+									<li class='open'>
+										<span>Biostatics</span>
+									</li>
+									<li class='open'>
+										<span>Ecology</span>
+									</li>
+									<li class='open'>
+										<span>Evolution</span>
+									</li>
+									<li class='open'>
+										<span>Mathematics</span>
+									</li>
+									<li class='open'>
+										<span>Physics</span>
+									</li>
+									<li class='open'>
+										<span><strong>A to Z of departments...</strong></span>
+									</li>
+								</ul>
+							</li>
+							<li class='open'>
+								<span>test</span>
+								<ul>
+									<li class='open'>
+										<span>test2</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="search_tab_content_bottom">
+				<div class="search_tab_content_bottom_inner"><!-- --></div>
+			</div>
+		</div>
+		
 		<div class="fl-centered fl-container fl-tab-content search_content_wrapper">
 			<div class="search_tab_content_top">
 				<div class="search_tab_content_top_inner"><!-- --></div>
@@ -178,6 +236,7 @@
 <!-- FOOTER WIDGET -->
 <div id="widget_footer_footercontainer" class="widget_inline footercontainer"></div>	
 
+<script type="text/javascript" src="/dev/_javascript/my_sites_resource.js"></script>
 
 </body>
 </html>
