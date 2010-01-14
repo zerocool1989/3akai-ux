@@ -10,10 +10,6 @@
   font-weight: bold;
 }
 
-.mytasks_task_container {
-
-}
-
 .mytasks_task_wrap {
   float: left;
   width: 50%;
@@ -66,18 +62,6 @@
   height: 33%;
   vertical-align: middle;
   font-weight: bold;
-}
-
-.mytasks_task_info_empty {
-
-}
-
-.mytasks_task_title {
-  text-overflow: elipses;
-}
-
-.mytasks_task_info_cal {
-
 }
 
 .mytasks_month {
