@@ -583,6 +583,18 @@ var Widgets = {
 			showinmedia:0,
 			showinsakaigoodies:1,
 			img:"/devwidgets/assignments/images/assignments.png"
+		},
+		mytasks :
+		{
+			description:"My tasks.",
+			iframe:0,
+			url:"/devwidgets/mytasks/mytasks.html",
+			name:"My Tasks",
+			id:"mytasks",
+			personalportal:0,
+			siteportal:1,
+      ca:1,
+      showinsakaigoodies:1
 		}
 	},
 	orders:[
