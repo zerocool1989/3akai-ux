@@ -20,7 +20,7 @@
   margin: 3px;
 }
 
-.mytask_task_selected {
+.mytasks_highlight {
   background-color: #E7EAA6;
   border-style: solid;
   border-width: medium;
