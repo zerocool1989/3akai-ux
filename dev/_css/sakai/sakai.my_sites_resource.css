@@ -19,19 +19,19 @@
 	padding: 10px 15px 0 0;
 	width: 100px;
 }
-.my_sites_resources_people_list li{
+.my_sites_people_list li{
 	padding:10px 7px 0 0;
 	width: 185px;
 }
-.my_sites_resources_people_list_picture {
+.my_sites_people_list_picture {
 	width: 60px;
 }
-.my_sites_resources_people_list_comment {
+.my_sites_people_list_comment {
 	background: url(/dev/_images/my_sites_people.png) no-repeat 0 0;
 	height: 70px;
 	width: 122px;
 }
-.my_sites_resources_people_list_comment p {
+.my_sites_people_list_comment p {
 	font-size: 11px;
 	font-weight: bold;
 	padding: 5px 5px 5px 15px;

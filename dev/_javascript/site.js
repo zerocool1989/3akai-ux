@@ -1409,6 +1409,16 @@ sakai.site = function(){
 	            tooltipDelay : 500
 	        });
 		}
+		
+		if(sakai.site.selectedpage === "syllabus/lecture-04"){
+			$(".site_prototype_edited").css("border", "1px solid #ddd");
+			$(".site_prototype_edited").css("background-color", "#ffffed");
+			$(".site_prototype_edited").css("margin-left","416px");
+			
+			$("#site_prototype_edited_bar").show();
+			
+			position:absolute; top:10px; left:10px; z-index:100
+		}
 	};
 	
 	//////////
@@ -1419,7 +1429,7 @@ sakai.site = function(){
 		// Start loading page
 		loadControl();
 		
-		setTimeout(function () {doPrototype();}, 4000);
+		setTimeout(function () {doPrototype();}, 500);
 
 	};
 	

@@ -51,9 +51,9 @@
 		<!-- TAB NAVIGATION -->
 		<div class="search_tab_nav">
 			<ul class="fl-tabs fl-tabs-right">
-				<li class="fl-activeTab search_tab_selected"><a id="tab_search_all" href="my_sites.html">Sites I created</a></li>
+				<li><a id="tab_search_all" href="my_sites.html">Sites I created</a></li>
 				<li><a href="my_sites_resource.html" id="tab_search_content">Resource sites</a></li>
-				<li><a href="my_sites_contacts.html" id="tab_search_people">My contact's sites</a></li>
+				<li class="fl-activeTab search_tab_selected"><a href="my_sites_contacts.html" id="tab_search_people">My contact's sites</a></li>
 				<li><a href="my_sites_date.html" id="tab_search_sites">Show all sites by date</a></li>
 			</ul>
 		</div>
@@ -63,46 +63,60 @@
 				<div class="search_tab_content_top_inner"><!-- --></div>
 			</div>
 			<div class="search_content_main">
-				<h2>Sites you've created and saved</h2>
-				<div class="my_sites_info_container">You have saved a new site to your sites | <a href="javascript:;">Publish site live</a> |  <a href="javascript:;">Edit</a> or <a href="javascript:;">Mark up regions for another instructor</a></div>
-				<ul class="my_sites_list" style="float: left;">
-					<li class="my_sites_list_yellow">
+				<h2>Your contact's shared template sites</h2>
+				<ul class="my_sites_list">
+					<li>
+						<p class="fl-force-left my_sites_people_list_picture my_sites_list_info">
+							<img src="/dev/_images/person_icon.jpg" alt="" /><br />
+							<strong>Adrian</strong>
+						</p>
 						<h3><a href="javascript:;">Molecular Biology And Biochemistry Of The Cell</a></h3>
 						<p class="my_sites_list_info">3 Apr 2009 - By You - <strong>Inherited</strong> from <a href="javascript:;">Molecular Biology, Cell Biology &amp; Biochemistry</a> - By Steve Gower</p>
 						<p class="my_sites_list_content">Studies cellular, molecular, and biochemical mechanisms of biological processes in development, growth, and disease. Graduate Program Directors: Michael McKeown, PhD / Tricia Serio, PhD</p>
+						<img class="my_sites_list_dropdown" alt="" src="/dev/_images/white_subnav_arrow_down.png" style="display: none;"/>
 					</li>
 					<li>
+						<p class="fl-force-left my_sites_people_list_picture my_sites_list_info">
+							<img src="/dev/_images/person_icon.jpg" alt="" /><br />
+							<strong>Adrian</strong>
+						</p>
 						<h3><a href="javascript:;">Biomedical Engineering</a></h3>
 						<p class="my_sites_list_info">3 Apr 2009 - By You - <strong>Inherited</strong> from <a href="javascript:;">Biochemistry</a> - By Steve Gower</p>
 						<p class="my_sites_list_content">Exploits biological molecules and organisms to develop new technologies and manipulates living cells to produce replacement organs and novel therapies.
 Ecology and Evolutionary Biology</p>
+						<img class="my_sites_list_dropdown" alt="" src="/dev/_images/white_subnav_arrow_down.png" style="display: none;"/>
 					</li>
 					<li>
+						<p class="fl-force-left my_sites_people_list_picture my_sites_list_info">
+							<img src="/dev/_images/person_icon.jpg" alt="" /><br />
+							<strong>Adrian</strong>
+						</p>
 						<h3><a href="javascript:;">Ecology and Evolutionary Biology</a></h3>
 						<p class="my_sites_list_info">3 Apr 2009 - By You</p>
 						<p class="my_sites_list_content">Seeks to understand biological patterns and processes ranging from DNA to dinosaurs, using integrative approaches with genetic models, functional analyses of whole organisms, and natural experiments in the field.</p>
+						<img class="my_sites_list_dropdown" alt="" src="/dev/_images/white_subnav_arrow_down.png" style="display: none;"/>
 					</li>
 					<li>
+						<p class="fl-force-left my_sites_people_list_picture my_sites_list_info">
+							<img src="/dev/_images/person_icon.jpg" alt="" /><br />
+							<strong>Adrian</strong>
+						</p>
 						<h3><a href="javascript:;">Molecular Pharmacology &amp; Physiology</a></h3>
 						<p class="my_sites_list_info">3 Apr 2009 - By You - <strong>Inherited</strong> from <a href="javascript:;">Molecular Biology</a> - By Steve Gower</p>
 						<p class="my_sites_list_content">Studies the underlying mechanisms of basic physiological processes, their structural components, and how drugs affect these processes to develop cures for diseases.</p>
+						<img class="my_sites_list_dropdown" alt="" src="/dev/_images/white_subnav_arrow_down.png" style="display: none;"/>
 					</li>
 					<li>
+						<p class="fl-force-left my_sites_people_list_picture my_sites_list_info">
+							<img src="/dev/_images/person_icon.jpg" alt="" /><br />
+							<strong>Adrian</strong>
+						</p>
 						<h3><a href="javascript:;">Neuroscience</a></h3>
 						<p class="my_sites_list_info">3 Apr 2009</p>
 						<p class="my_sites_list_content">Unites experimental and theoretical scientists who study the molecules, cells, and networks of the brain to advance understanding of nervous system function, disease, and treatment.</p>
+						<img class="my_sites_list_dropdown" alt="" src="/dev/_images/white_subnav_arrow_down.png" style="display: none;"/>
 					</li>
 				</ul>
-				<div class="my_sites_confirmed_comment">
-					<p class="fl-force-left my_sites_people_list_picture my_sites_list_info">
-						<img src="/dev/_images/person_icon.jpg" alt="" /><br />
-						<strong>Adrian</strong>
-					</p>
-					<div class="fl-force-left my_sites_people_list_comment">
-						<p>Could you please check that I have the correct Lecture dates in place?...</p>
-					</div>
-				</div>
-				
 				<br style="clear: both;" />
 			</div>
 			<div class="search_tab_content_bottom">
@@ -111,12 +125,22 @@ Ecology and Evolutionary Biology</p>
 		</div>
 		<!-- CONTAINER FOR THE PAGER -->
 		<div class="jq_pager"><!-- --></div>
+		
+		<div id="my_sites_list_dropdown_menu">
+			<ul>
+				<li><a href="javascript:;"><strong>Reuse this site</strong></a></li>
+				<li><a href="javascript:;">View</a></li>
+				<li><a href="javascript:;">Tag</a></li>
+				<li><a href="javascript:;">Rate</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 
 <!-- FOOTER WIDGET -->
 <div id="widget_footer_footercontainer" class="widget_inline footercontainer"></div>	
 
+<script type="text/javascript" src="/dev/_javascript/my_sites_contacts.js"></script>
 
 </body>
 </html>

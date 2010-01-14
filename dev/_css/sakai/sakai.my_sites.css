@@ -73,6 +73,9 @@ body.search-container .explore_nav .explore #nav_search_link {
 	padding: 0;
 	margin: 0 0 20px 0;	
 }
+.search_content_wrapper a:hover {
+	text-decoration: underline;
+}
 .search_content_main {
 	border-left: 3px solid #D3DBDE;
 	border-right: 3px solid #D3DBDE;
@@ -323,10 +326,11 @@ a.search_results_part_title {
 .my_sites_list li {
 	border-top: 1px solid #eee;
 	list-style-type : none;
+	padding: 8px;
 }
 .my_sites_list h3{
 	font-size: 13px;
-	margin-bottom: 0;
+	margin: 0;
 }
 .my_sites_list p {
 	padding: 0;
@@ -339,11 +343,64 @@ a.search_results_part_title {
 	border: none;
 }
 
+/* People */
+
+.my_sites_people_list li{
+	padding:10px 7px 0 0;
+	width: 185px;
+}
+.my_sites_people_list_picture {
+	width: 60px;
+}
+.my_sites_people_list_comment {
+	background: url(/dev/_images/my_sites_people.png) no-repeat 0 0;
+	height: 70px;
+	width: 122px;
+}
+.my_sites_people_list_comment p {
+	font-size: 11px;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+}
 
 /* confirmed */
 .my_sites_list_yellow {
 	background-color:#FFFFED;
 }
 .my_sites_info_container {
-	background-color:#F1E495;
+	-moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;background-color:#F1E495;font-size:12px;font-weight:bold;margin:5px 13px;padding:8px;text-align:center;width:600px;
+}
+.my_sites_confirmed_comment {
+	margin-top: 145px;
+}
+
+/* contacts */
+.my_sites_list_dropdown {
+	cursor: pointer;
+	left: 0;
+	padding: 5px;
+	position: absolute;
+	top: 0;
+}
+#my_sites_list_dropdown_menu {
+	background: #fff;
+	border: 1px solid #D4DADE;
+	display: none;
+	position: absolute;
+}
+#my_sites_list_dropdown_menu a {
+	color: #333333;
+	display: block;
+	font-weight: normal;
+	padding: 2px 4px;
+}
+#my_sites_list_dropdown_menu a:hover {
+	text-decoration: underline;
+}
+#my_sites_list_dropdown_menu ul {
+	padding: 0 !important;
+	margin: 0;
+}
+#my_sites_list_dropdown_menu li {
+	list-style-type: none;
 }
