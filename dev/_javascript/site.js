@@ -1414,7 +1414,7 @@ sakai.site = function(){
 			$(".site_prototype_edited").css("border", "1px solid #ddd");
 			$(".site_prototype_edited").css("background-color", "#ffffed");
 			$(".site_prototype_edited").css("margin-left","416px");
-			
+
 			var cssEditedBar = {
 				"-moz-border-radius": "4px",
 				"background-color": "#F1E495",
@@ -1425,14 +1425,42 @@ sakai.site = function(){
 				"text-align": "center",
 				"float": "left"
 			};
-			
+
 			$("#site_prototype_edited_bar").css(cssEditedBar);
 			$("#site_prototype_edited_bar").show();
-			
-			
-			/*
-			*/
+
 		}
+		
+		if (sakai.site.selectedpage === "syllabus/lecture-03") {
+			$("#nav_people_link").trigger("click");
+
+			$(".fixed-container .dropdown_contacts").css("width", "310px");
+			
+			setTimeout(function () {
+				$("#people_dropdown_my_contacts_list").parent().find("h2").text("My Contacts - Drag & drop");
+				$("#people_dropdown_my_contacts_list").html('<ul>' + 
+				'<li class="fl-force-left"><a href="javascript:;"><img alt="" src="/dev/_images/person_icon.jpg"/><br/><strong>Adrian</strong></p></a></li>' + 
+				'<li class="fl-force-left"><a href="javascript:;"><img alt="" src="/dev/_images/person_icon.jpg"/><br/><strong>James</strong></a></p></li>' + 
+				'<li class="fl-force-left"><a href="javascript:;"><img alt="" src="/dev/_images/person_icon.jpg"/><br/><strong>John</strong></a></p></li>' + 
+				'<li class="fl-force-left"><a href="javascript:;"><img alt="" src="/dev/_images/person_icon.jpg"/><br/><strong>Sam</strong></a></p></li>' + 
+				'<li class="fl-force-left"><a href="javascript:;"><img alt="" src="/dev/_images/person_icon.jpg"/><br/><strong>Clay</strong></a></p></li>' + 
+				'</ul>');
+				
+				$("#people_dropdown_my_contacts_list li").css("margin-right", "10px");
+				$("#people_dropdown_my_contacts_list li").css("font-size", "11px");
+				$("#people_dropdown_my_contacts_list li strong").css("color", "#666666");
+				$("#people_dropdown_my_contacts_list").closest(".fl-col-flex2").removeClass("fl-col-flex2").addClass("fl-col-flex3");
+				
+				$(".dropdown .dropdown_search_people").before('<div class="fl-col" style="width:280px; border-right:1px solid #878A8C; margin-bottom:15px; margin-top:20px;"><h2>Select contact</h2>' +
+				'<select style="width: 99%;"><option value="John">John</option><option value="Clay">Clay</option><option value="Thomas">Thomas</option><option value="Raad">Raad</option><option value="Sam">Sam</option></select>' +
+				'</div>');
+				
+				$(".dropdown .dropdown_search_people").css("margin-left", "0");
+				$(".dropdown .dropdown_search_people").addClass("fl-col");
+			}, 500);
+			
+		}
+		
 	};
 	
 	//////////
