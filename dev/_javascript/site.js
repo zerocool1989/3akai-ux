@@ -1415,9 +1415,23 @@ sakai.site = function(){
 			$(".site_prototype_edited").css("background-color", "#ffffed");
 			$(".site_prototype_edited").css("margin-left","416px");
 			
+			var cssEditedBar = {
+				"-moz-border-radius": "4px",
+				"background-color": "#F1E495",
+				"font-size": "12px",
+				"font-weight": "bold",
+				"margin": "16px 13px 0 13px",
+				"padding": "4px 8px",
+				"text-align": "center",
+				"float": "left"
+			};
+			
+			$("#site_prototype_edited_bar").css(cssEditedBar);
 			$("#site_prototype_edited_bar").show();
 			
-			//position:absolute; top:10px; left:10px; z-index:100
+			
+			/*
+			*/
 		}
 	};
 	
