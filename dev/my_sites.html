@@ -10,8 +10,10 @@
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.core.2.css" />
 	<link rel="stylesheet" type="text/css" href="/devwidgets/chat/css/chat.css" />
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.components.jq_pager.css" />
+	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.base.css" />
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.3.css" />
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.my_sites.css" />
+	
 	
 	<script type="text/javascript" language="JavaScript" src="_configuration/widgets.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_configuration/config.js"></script>
@@ -22,6 +24,7 @@
 	<script type="text/javascript" language="JavaScript" src="_lib/Jquery/jquery.cookie.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/Jquery/jquery.corners.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/Jquery/jquery.pager.js"></script>
+	<script type="text/javascript" language="JavaScript" src="_lib/tipsy/javascripts/jquery.tipsy.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/sakai_util/sdata.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/sakai_util/i18n.js"></script>
 
@@ -67,22 +70,26 @@
 					
 					<ul class="my_sites_list">
 						<li>
+							<img class="my_sites_list_picture" src="/dev/_images/prototype_placeholder_site.png" alt="Site picture" />
 							<h3><a href="javascript:;">Biomedical Engineering (DRAFT)</a></h3>
-							<p class="my_sites_list_info">3 Apr 2009 - By You - <strong>Inherited</strong> from <a href="javascript:;">Biochemistry</a> - By Steve Gower</p>
+							<p class="my_sites_list_info">3 Apr 2009 - By You | From template <a href="javascript:;" title="Created 12 Mar 2009 by Steve Gower" rel="tipsy">Biochemistry</a></p>
 							<p class="my_sites_list_content">Exploits biological molecules and organisms to develop new technologies and manipulates living cells to produce replacement organs and novel therapies.
 Ecology and Evolutionary Biology</p>
 						</li>
 						<li>
+							<img class="my_sites_list_picture" src="/dev/_images/prototype_placeholder_site.png" alt="Site picture" />
 							<h3><a href="javascript:;">Ecology and Evolutionary Biology</a></h3>
 							<p class="my_sites_list_info">3 Apr 2009 - By You</p>
 							<p class="my_sites_list_content">Seeks to understand biological patterns and processes ranging from DNA to dinosaurs, using integrative approaches with genetic models, functional analyses of whole organisms, and natural experiments in the field.</p>
 						</li>
 						<li>
+							<img class="my_sites_list_picture" src="/dev/_images/prototype_placeholder_site.png" alt="Site picture" />
 							<h3><a href="javascript:;">Molecular Pharmacology &amp; Physiology</a></h3>
-							<p class="my_sites_list_info">3 Apr 2009 - By You - <strong>Inherited</strong> from <a href="javascript:;">Molecular Biology</a> - By Steve Gower</p>
+							<p class="my_sites_list_info">3 Apr 2009 - By You | From template: <a href="javascript:;" title="Created 12 Mar 2009 by Steve Gower" rel="tipsy">Molecular Biology</a></p>
 							<p class="my_sites_list_content">Studies the underlying mechanisms of basic physiological processes, their structural components, and how drugs affect these processes to develop cures for diseases.</p>
 						</li>
 						<li>
+							<img class="my_sites_list_picture" src="/dev/_images/prototype_placeholder_site.png" alt="Site picture" />
 							<h3><a href="javascript:;">Neuroscience</a></h3>
 							<p class="my_sites_list_info">3 Apr 2009</p>
 							<p class="my_sites_list_content">Unites experimental and theoretical scientists who study the molecules, cells, and networks of the brain to advance understanding of nervous system function, disease, and treatment.</p>
@@ -101,6 +108,7 @@ Ecology and Evolutionary Biology</p>
 <!-- FOOTER WIDGET -->
 <div id="widget_footer_footercontainer" class="widget_inline footercontainer"></div>	
 
+<script type="text/javascript" src="/dev/_javascript/my_sites.js"></script>
 
 </body>
 </html>

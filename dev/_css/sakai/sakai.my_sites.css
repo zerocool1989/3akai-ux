@@ -404,3 +404,8 @@ a.search_results_part_title {
 #my_sites_list_dropdown_menu li {
 	list-style-type: none;
 }
+
+.my_sites_list_picture {
+	float: left;	
+}
+}
