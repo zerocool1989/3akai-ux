@@ -125,7 +125,7 @@
             <div id="top_navigation_my_sites_list_template"><!--
                 <ul class="my_site_list">
                     {for i in entry}
-                        <li><a href="/sites/${i.location}">${i.name}</a>{if i.location === "-search-molecular-biology-and-biochemistry"}<br /><span style="color: #878A8C; font-size:0.9em"><strong>DRAFT</strong> (60% complete)</span>{/if}</li>
+                        <li><a href="/sites/${i.location}">${i.name}</a>{if i.location === "-search-molecular-biology-and-biochemistry"}<br /><span style="color: #878A8C; font-size:0.9em"><strong style="color: #878A8C;">DRAFT</strong> (60% complete)</span>{/if}</li>
                     {forelse}
                         <span>You aren't a member of any sites yet</span>
                     {/for}
