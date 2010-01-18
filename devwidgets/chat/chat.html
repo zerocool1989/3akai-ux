@@ -117,17 +117,15 @@
             <h2 id="my_sites">My Sites<img src="/dev/_images/white_subnav_arrow_down.png" alt="" id="my_sites_dropdown" /></h2>
 			<div id="my_sites_dropdown_menu">
 				<ul>
-					<li><a href="javascript:;">My Draft Sites</a></li>
-					<li><a href="javascript:;">My Contact's Sites</a></li>
-					<li><a href="javascript:;">Resource Sites</a></li>
-					<li><a href="javascript:;">Create New</a></li>
+					<li><a href="/dev/my_sites_contacts.html">My Contact's Sites</a></li>
+					<li><a href="/dev/my_sites_resource.html">Resource Sites</a></li>
 				</ul>
 			</div>
             <div id="top_navigation_my_sites_list"></div>	
             <div id="top_navigation_my_sites_list_template"><!--
                 <ul class="my_site_list">
                     {for i in entry}
-                        <li><a href="/sites/${i.location}">${i.name}</a></li>
+                        <li><a href="/sites/${i.location}">${i.name}</a>{if i.location === "-search-molecular-biology-and-biochemistry"}<br /><span style="color: #878A8C; font-size:0.9em"><strong>DRAFT</strong> (60% complete)</span>{/if}</li>
                     {forelse}
                         <span>You aren't a member of any sites yet</span>
                     {/for}
