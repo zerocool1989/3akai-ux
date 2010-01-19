@@ -1461,6 +1461,119 @@ sakai.site = function(){
 			
 		}
 		
+		if (sakai.site.selectedpage === "syllabus/lecture-02") {
+			
+			$("#content_page_options ul").css("width", "650px");
+			
+			$("#content_page_options ul").prepend('<li><a href="javascript:;" id="prototype_page_access_dropdown">Page access <img src="/dev/_images/arrow_down_sm2.png" alt="Open page access section" /></a></li><li>|</li><li><a href="javascript:;" id="prototype_page_permissions_dropdown">Page permissions <img src="/dev/_images/arrow_down_sm2.png" alt="Open page access section" /></a></a></li>' + 
+			'</li><li></li><li></li><li></li><li></li><li></li>');
+			
+			$(".sakai_site .content_page_options").css("padding", 0);
+			
+			$("#prototype_page_permissions_dropdown").click(function(){
+				
+				if ($("#prototype_page_access_container").is(":visible")) {
+					$("#prototype_page_access_dropdown").trigger("click");
+				}
+				
+				if(!$("#prototype_page_permissions_container").is(":visible")){
+					$("#prototype_page_permissions_dropdown").css("background-color", "#fff");
+					$(".fl-col-mixed2 .fl-col-main").css("margin-top", "80px");
+					
+					$("#content_page_options ul").after('<div class="fl-force-right" id="prototype_page_permissions_container">'
+					+ '<div class="fl-force-left"><p style="font-weight: bold;">Set a page author</p><form><label for="prototype_page_permissions">My contacts: </label><select id="prototype_page_permissions"><option>Eli Cochran</option><option>Frank Harrison</option><option>Lance Speelmon</option><option>Christian Vuerings</option></select><a href="javascript:;">Add a new contact</a></form></div>'
+					+ '<div class="fl-force-left" style="margin-left: 20px"><p style="font-weight: bold;">Authoring rights</p><form><input type="checkbox" id="prototype_page_permissions_edit_content" /><label for="prototype_page_permissions_edit_content">Edit page content</label><input type="checkbox" id="prototype_page_permissions_gradebook" /><label for="prototype_page_permissions_gradebook">Gradebook access</label></form></div>'
+					+ '</div>');
+					
+					$("#prototype_page_permissions_container").css({
+						"background-color": "#fff",
+						"border":"3px solid #D3DBDE",
+						"border-top":"none",
+						"color":"#565c61",
+						"width": "634px",
+						"padding": "15px"
+					});
+					$("#prototype_page_permissions_container a").css({
+						"color" : "#0587ba",
+						"font-weight" : "normal",
+						"margin-left": "5px"
+					});
+					$("#prototype_page_permissions_container a").hover(function(){
+						$(this).css("text-decoration" , "underline");
+					},function(){
+						$(this).css("text-decoration" , "none");
+					});
+		
+					$("#prototype_page_permissions_container form").css({
+						"font-size" : "11px"
+					});
+					
+					$("#prototype_page_permissions_container input[type=checkbox]").css({
+						"margin" : "0 5px"
+					});
+
+				}else{
+					$("#prototype_page_permissions_container").hide();
+					$(".fl-col-mixed2 .fl-col-main").css("margin-top", "0");
+					$("#prototype_page_permissions_dropdown").css("background-color", "");
+				}
+				
+				
+			});
+
+			$("#prototype_page_access_dropdown").click(function(){
+				
+				if ($("#prototype_page_permissions_container").is(":visible")) {
+					$("#prototype_page_permissions_dropdown").trigger("click");
+				}
+
+				if (!$("#prototype_page_access_container").is(":visible")) {
+					$("#prototype_page_access_dropdown").css("background-color", "#fff");
+					$(".fl-col-mixed2 .fl-col-main").css("margin-top", "80px");
+					
+					$("#content_page_options ul").after('<div class="fl-force-right" id="prototype_page_access_container">'
+					+ '<div class="fl-force-left"><p style="font-weight: bold;">Who can view or access this page?</p><form><input type="checkbox" id="prototype_page_access_public" /><label for="prototype_page_access_public">General public</label><input type="checkbox" id="prototype_page_access_students" /><label for="prototype_page_access_students">Students/participants</label></form></div>'
+					+ '<div class="fl-force-left" style="margin-left: 5px"><form><p><label for="prototype_page_access_my_contacts">My Contacts </label><select id="prototype_page_access_my_contacts"><option>Eli Cochran</option><option>Frank Harrison</option><option>Lance Speelmon</option><option>Christian Vuerings</option></select></p><label for="prototype_page_access_my_groups">My Groups </label><select id="prototype_page_access_my_groups"><option>Biology group</option><option>Football groups</option><option>Tennis group</option><option>xSakai group</option></select></form></div>'
+					+ '<div class="fl-force-left" style="margin-left: 5px"><form><p style="font-weight: bold;">Access includes submission of work?</p><input type="radio" id="prototype_page_access_submission_yes" name="prototype_page_access_submission" /><label for="prototype_page_access_submission_yes">Yes</label><input type="radio" id="prototype_page_access_submission_no" name="prototype_page_access_submission" /><label for="prototype_page_access_submission_no">No</label></form></div>'
+					+ '</div>');
+					
+					$("#prototype_page_access_container").css({
+						"background-color": "#fff",
+						"border":"3px solid #D3DBDE",
+						"border-top":"none",
+						"color":"#565c61",
+						"width": "634px",
+						"padding": "15px"
+					});
+					$("#prototype_page_access_container a").css({
+						"color" : "#0587ba",
+						"font-weight" : "normal",
+						"margin-left": "5px"
+					});
+					$("#prototype_page_access_container a").hover(function(){
+						$(this).css("text-decoration" , "underline");
+					},function(){
+						$(this).css("text-decoration" , "none");
+					});
+		
+					$("#prototype_page_access_container form").css({
+						"font-size" : "11px"
+					});
+					
+					$("#prototype_page_access_container input[type=checkbox]").css({
+						"margin" : "0 5px"
+					});
+					
+				}else{
+					$("#prototype_page_access_container").hide();
+					$(".fl-col-mixed2 .fl-col-main").css("margin-top", "0");
+					$("#prototype_page_access_dropdown").css("background-color", "");
+				}
+					
+			});
+
+		}
+		
 	};
 	
 	//////////
