@@ -29,10 +29,23 @@
   margin-bottom: -3px;
 }
 
+.mytasks_completed {
+  background-color: #E5E5E5;
+  border-style: solid;
+  border-width: thin;
+  border-color: #DFDFDF;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  background-image: url('/devwidgets/mytasks/images/accept.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
 .mytasks_info_wrap {
   float: left;
   width: 33%;
   margin: 0.25em;
+  background-color: #FFF;
 }
 
 .mytasks_task_info {
