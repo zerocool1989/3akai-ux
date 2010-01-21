@@ -1410,13 +1410,15 @@ sakai.site = function(){
 		            tooltipDelay : 500
 		        });
 				
-				var saveChanges = '<div id="prototype_saveChanges" class="button-grey" style="margin-left: 220px;"><input type="button" value="Save Changes"></div>';
+				var saveChanges = '<div id="prototype_saveChanges" class="button-grey" style="margin-left: 568px; margin-bottom: 1px;"><input type="button" value="Save Changes"></div>';
 				
-				$("#content_page_options").prepend(saveChanges);
+				$("#content_page_options").before(saveChanges);
 				
 				$("#prototype_saveChanges").click(function(){
 					window.location = "/dev/my_sites_confirmed.html";
 				});
+				
+				
 				
 			}else{
 				$(".site_input").removeClass("site_input");
@@ -1475,7 +1477,7 @@ sakai.site = function(){
 			
 		}
 		
-		if (sakai.site.selectedpage === "syllabus/lecture-02") {
+		if (sakai.site.selectedpage === "syllabus/lecture-02" || document.location.hash === "#introduction") {
 			
 			$("#content_page_options ul").css("width", "650px");
 			
