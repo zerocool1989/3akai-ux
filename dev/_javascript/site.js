@@ -1399,15 +1399,29 @@ sakai.site = function(){
 	var doPrototype = function(){
 		
 		if(sakai.site.selectedpage === "introduction"){
-			var simpleEdit = fluid.inlineEdit("#show_view_container", {
-	            selectors : {
-	                text: ".site_input"
-	            },
-				defaultViewText : "The Division of Biology and Medicine is composed of Alpert Medical School, the Program in Biology (which includes study at the undergraduate and graduate levels), and the Public Health Program. It is home to five basic biology departments and fourteen clinical departments, and is affiliated with seven diverse teaching hospitals in and around Providence. The multidepartmental graduate program in Molecular Biology, Cell Biology and Biochemistry (MCB) has held a predoctoral training grant from NIH for more than 29 years.",
-	            useTooltip : true,
-				tooltipText : "Click item to edit",
-	            tooltipDelay : 500
-	        });
+			if(document.location.hash === "#introduction"){
+				var simpleEdit = fluid.inlineEdit("#show_view_container", {
+		            selectors : {
+		                text: ".site_input"
+		            },
+					defaultViewText : "The Division of Biology and Medicine is composed of Alpert Medical School, the Program in Biology (which includes study at the undergraduate and graduate levels), and the Public Health Program. It is home to five basic biology departments and fourteen clinical departments, and is affiliated with seven diverse teaching hospitals in and around Providence. The multidepartmental graduate program in Molecular Biology, Cell Biology and Biochemistry (MCB) has held a predoctoral training grant from NIH for more than 29 years.",
+		            useTooltip : true,
+					tooltipText : "Click item to edit",
+		            tooltipDelay : 500
+		        });
+				
+				var saveChanges = '<div id="prototype_saveChanges" class="button-grey" style="margin-left: 220px;"><input type="button" value="Save Changes"></div>';
+				
+				$("#content_page_options").prepend(saveChanges);
+				
+				$("#prototype_saveChanges").click(function(){
+					window.location = "/dev/my_sites_confirmed.html";
+				});
+				
+			}else{
+				$(".site_input").removeClass("site_input");
+			}
+			
 		}
 		
 		if(sakai.site.selectedpage === "syllabus/lecture-04"){

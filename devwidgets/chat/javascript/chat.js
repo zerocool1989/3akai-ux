@@ -522,112 +522,16 @@ sakai.chat = function(tuid, placement, showSettings){
 			$(navProfileLink).html(renderSelectedPage("Profile"));
 		} else if (windowLocationPath.indexOf(Config.URL.CONTENT_MEDIA_URL) !== -1){
 			$(navContentMediaLink).html(renderSelectedPage("Content &amp; Media"));
+		} else if (windowLocationPath.indexOf("my_sites.html") !== -1){
+			$(navCoursesSitesLink).html(renderSelectedPage("Courses &amp; Sites"));
 		}
 	
 	};
-	
-	/**
-	 * Render the recent sites for the current user
-	 * @param {Object} json JSON object that contains the recent sites
-	 * and a count with how many there are
-	 */
-	var renderRecentSites = function(json){
-		$(chatDropdownRecentSites).append($.Template.render(chatDropdownRecentSitesTemplate,json));
-	};
-	
-	/**
-	 * Load the recent sites that the current user has visited
-	 */
-	var loadRecentSites = function(){
-		var json = {};
-		json.count = 0;
-	
-			$.ajax({
-				url: Config.URL.RECENT_SITES_URL.replace(/__USERSTORAGEPREFIX__/, sdata.me.user.userStoragePrefix),
-				cache: false,
-				success: function(data){
-					// The response is a json object with an "items" array that contains the 
-					// names for the recent sites.
-					var items = $.evalJSON(data);
-						
-					// Do a request to the site service with all the names in it.
-					// This will give us the proper location, owner, siteid,..
-					var url = "/system/batch?";
-					var n_items = {};
-					n_items.items = [];
-					
-					for (var i = 0; i < items.items.length; i++) {
-						n_items.items[i] = "resources=/sites/" + items.items[i] + ".json";
-					}
-					url += n_items.items.join("&");
-					
-					
-					$.ajax({
-						url: url,
-						cache: false,
-						success: function(data){
-							var response = $.evalJSON(data);
-							json = {};
-							json.items = [];
-							json.count = 0;
-							
-							// We do a check for the number of sites we have.
-							// If we only have 1 site we will get a JSONObject
-							// If we have multiple it will be an array of JSONObjects.
-							for (var i = 0; i < response.length; i++) {
-								var el = {};
-								var site = $.evalJSON(response[i].data);
-								el.location = site.id;
-								el.name = site.name;
-								json.items[json.items.length] = el;
-								json.count++;
-							}
-							renderRecentSites(json);
-						},
-						error: function(xhr, textStatus, thrownError) {
-							renderRecentSites(json);
-						}
-					});
-					
-				},
-				error: function(xhr, textStatus, thrownError) {
-					renderRecentSites(json);
-				}
-			});
-	};
-	
-	/**
-	 * Drop down the sites container under the top navigation bar
-	 */
-	navCoursesSitesLinkClassSelector.live("click", function(ev) {
-		if ($(navCoursesSitesLink + " " + mySitesDropDownCloseLink).length === 0){
-
-			// Hide the people dropdown
-			$(peopleDropDownMain).hide();
-			$(peopleDropDownClose).hide();
-				
-			// Show the courses and sites.
-
-			$(mySitesDropDownMain).show();
-			$(mySitesDropDownClose).show();
-				
-			$(exploreClass).html(defaultNav);
-			$(navCoursesSitesLink).html(renderSelectedPage("Courses &amp; Sites", true));
-			$(navCoursesSitesLink).removeClass(navCoursesSitesLinkClass);
-			if (!sitesShown) {
-				loadSites();
-				loadRecentSites();
-				sitesShown = true;
-			}
-		}
-	});
 
 	/*
 	 * Bind the close button for the sites container
 	 */
 	$(mySitesDropDownCloseLink).live("click", function(ev){
-		$(mySitesDropDownMain).hide();
-		$(peopleDropDownMain).hide();
 		$(exploreClass).html(defaultNav);
 		selectPage();
 		$(navPeopleLink).addClass(navPeopleLinkClass);
@@ -1802,32 +1706,6 @@ sakai.chat = function(tuid, placement, showSettings){
 			sendToLoginOnFail: sendToLoginOnFail
 		});
 		
-	};
-	
-	var doPrototype = function(){
-		$("#my_sites").hover(function(e){
-			$(this).css("background-color", "#f0f8ff");
-			$("#my_sites #my_sites_dropdown").show();
-		}, function(e){
-			if (!$("#my_sites_dropdown_menu").is(":visible")) {
-				$(this).css("background-color", "#fff");
-				$("#my_sites #my_sites_dropdown").hide();
-			}
-		});
-
-		$("#my_sites #my_sites_dropdown").click(function(){
-			if(!$("#my_sites_dropdown_menu").is(":visible")){
-				$("#my_sites_dropdown_menu").show();
-
-				$("#my_sites").css("background-color", "#f0f8ff");
-				$("#my_sites #my_sites_dropdown").show();
-			} else {
-				$("#my_sites_dropdown_menu").hide();
-				
-				$("#my_sites").css("background-color", "#fff");
-				$("#my_sites #my_sites_dropdown").hide();
-			}
-		});
 	};
 	
 	/**
