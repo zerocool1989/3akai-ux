@@ -1747,8 +1747,6 @@ sakai.chat = function(tuid, placement, showSettings){
 		addBinding();
 		getCountUnreadMessages();
 		setPresence(true);
-		
-		doPrototype();
 	};
 
 	var setPresence = function(initial){
