@@ -1398,6 +1398,27 @@ sakai.site = function(){
 	
 	var doPrototype = function(){
 		
+		if (sakai.site.selectedpage === "lecture-05") {
+			$(".site_prototype_edited").css("border", "1px solid #ddd");
+			$(".site_prototype_edited").css("background-color", "#ffffed");
+			$(".site_prototype_edited").css("margin-left","416px");
+
+			var cssEditedBar1 = {
+				"-moz-border-radius": "4px",
+				"background-color": "#F1E495",
+				"font-size": "12px",
+				"font-weight": "bold",
+				"margin": "14px 0 0 -77px",
+				"padding": "4px 8px",
+				"text-align": "center",
+				"float": "left"
+			};
+
+			$("#site_prototype_edited_bar1").css(cssEditedBar1);
+			$("#site_prototype_edited_bar1").show();
+			$(".add_a_new_container").css("visibility", "hidden");
+		}
+		
 		if(sakai.site.selectedpage === "introduction"){
 			if(document.location.hash === "#introduction"){
 				var simpleEdit = fluid.inlineEdit("#show_view_container", {
