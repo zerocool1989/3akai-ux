@@ -1417,6 +1417,22 @@ sakai.site = function(){
 			$("#site_prototype_edited_bar1").css(cssEditedBar1);
 			$("#site_prototype_edited_bar1").show();
 			$(".add_a_new_container").css("visibility", "hidden");
+			
+			var qs = new Querystring();
+  			if (qs.contains("added")) {
+				$(".site_prototype_edited").show();
+				
+				$("#site_prototype_apply").click(function(){
+					$("#site_prototype_apply").hide();
+					$("#site_prototype_clear").hide();
+					
+					$(".site_prototype_edited").css("padding-bottom", 10);
+					
+					$("#site_prototype_edited_bar1").html('Task added to page | <a href="javascript:;">Save</a>');
+					
+					$("#site_prototype_edited_bar1").css("margin-left", 10);
+				});
+			}
 		}
 		
 		if(sakai.site.selectedpage === "introduction"){
