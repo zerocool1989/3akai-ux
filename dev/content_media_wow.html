@@ -4,9 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Sakai 3 R&amp;D - My Content &amp; Media</title>
 	
-	<link rel="stylesheet" type="text/css" href="_css/FSS/fluid.reset.css" />
-	<link rel="stylesheet" type="text/css" href="_css/FSS/fluid.layout.css" />
-	<link rel="stylesheet" type="text/css" href="_css/FSS/fluid.text.css" />
+	<link rel="stylesheet" type="text/css" href="_css/FSS/fss-base.css" />
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.core.2.css" />
 	<link rel="stylesheet" type="text/css" href="/devwidgets/chat/css/chat.css" />
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.base.css" />
@@ -188,22 +186,28 @@
 				</div>
 				<div id="content_media_main_right">
 					<div id="content_media_search">
-						<label>Search Content and Media</label>
-						<input type="text" />
+						<label for="content_media_search_input">Search Content and Media</label>
+						<input id="content_media_search_input" type="text" />
 						<input type="button" value="Search" />
 					</div>
 					<div id="content_media_options">
-						<a href="javascript:;">Select all</a>
-						<a href="javascript:;">Select none</a>
+						<ul id="content_media_options_select">
+							<li>
+								<a href="javascript:;">Select all</a>
+							</li>
+							<li>
+								<a href="javascript:;">Select none</a>
+							</li>
+						</ul>
 						<ul id ="content_media_options_view">
-							<li id="content_media_options_view_thumnail">
-								
+							<li id="content_media_options_view_thumbnail">
+								<a href="javascript:;" title="Change to thumbnail view" class="content_media_options_view_selected">Thumbnail view</a>
 							</li>
 							<li id="content_media_options_view_category">
-								
+								<a href="javascript:;" title="Change to category view">Category view</a>
 							</li>
 							<li id="content_media_options_view_list">
-								
+								<a href="javascript:;" title="Change to list view">List view</a>
 							</li>
 						</ul>
 					</div>
