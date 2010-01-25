@@ -1,0 +1,163 @@
+/*
+ * Licensed to the Sakai Foundation (SF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The SF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations under the License.
+ */
+
+.content .title {
+	font-size: 1.4em;
+	font-weight: bold;
+	margin: 15px 0 0;
+}
+
+/* Tab navigation */
+.content .tab_nav {
+	background:url("../../_images/site_appearance_tab_bg.gif") no-repeat scroll right top transparent;
+	height:25px;
+	margin:0;
+	padding:3px 10px 0 0;
+}
+.content .tab_nav ul {
+	border-bottom: none;
+	float:right;
+	margin:0;
+	padding:0;
+}
+.content .tab_nav ul li.fl-activeTab {
+	background:url("../../_images/tab_corner_tl.png") no-repeat scroll left top #FFFFFF;
+	height: 30px;
+	padding-left: 5px;
+}
+.content .tab_nav ul li {
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	display: block;
+	float: left;
+	margin:0;
+	padding:0;
+}
+.content .tab_nav .fl-activeTab a {
+	background: url("../../_images/tab_corner_tr.png") no-repeat scroll right top transparent;
+	font-weight: normal;
+}
+.content .tab_nav ul li a {
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	color: #000000;
+	display: block;
+	float: left;
+	font-weight: bold;
+	line-height: 20px;
+	padding: 3px 18px 4px 13px;
+}
+
+/* Tab content */
+.fl-tab-content {
+	border: none;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+.content_main {
+	border-left: 3px solid #D3DBDE;
+	border-right: 3px solid #D3DBDE;
+	padding: 10px;
+}
+.content_top  {
+	background: url("../../_images/content_tr.gif") no-repeat scroll right top transparent;
+	margin: 0;
+	padding: 0 5px 0 0;
+}
+.content_top_inner  {
+	background: url("../../_images/content_tl.gif") no-repeat scroll 0 0 transparent;
+	height: 6px;
+	margin: 0;
+}
+.content_bottom {
+	background: url('../../_images/content_br.png') top right no-repeat;
+	padding: 0 5px 0 0;
+	margin: 0;
+}
+.content_bottom_inner {
+	background: url('../../_images/content_bl.png') 0 0 no-repeat;
+	margin: 0;
+	height: 6px;
+}
+
+/* Left container */
+#content_media_main_left {
+	float: left;
+	margin: 0 0 20px 0;
+	padding-right: 10px;
+	width: 240px;
+}
+#content_media_main_left .content_media_list {
+}
+#content_media_main_left ul {
+	clear: both;
+	margin:0;
+	margin-left:5px;
+	min-height:20px;
+}
+#content_media_main_left ul li {
+	clear: both;
+	list-style-type: none;
+	padding-left: 10px;
+}
+#content_media_main_left ul li a {
+	clear: both;
+	color: #006E96;
+	display: block;
+	padding: 2px 5px;
+}
+#content_media_main_left ul li a:hover {
+	text-decoration: underline;
+}
+#content_media_main_left .content_media_list_dropdown{
+	float: left;
+	margin: 3px 0 0 -18px;
+}
+#content_media_main_left .content_media_list_selected {
+	background: #D3DBDE;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	float: left;
+	margin: 1px 0;
+}
+#content_media_main_left .content_media_list_selected a, #content_media_main_left .content_media_list_dropdown_text {
+	float: left;
+	clear: none;
+}
+#content_media_main_left .content_media_list_remove {
+	margin-top: 1px;
+}
+#content_media_main_left .content_media_list_container {
+	border-top: 1px solid #ddd;
+	padding-top: 10px;
+}
+#content_media_main_left .content_media_list_header {
+	color: #878a8c;
+	display: block;
+	font-size: 1.2em;
+	padding: 2px 5px;
+}
+#content_media_main_left .content_media_list_count {
+	color: #878a8c;
+}
+
+/* Right container */
+#content_media_main_rigth {
+	margin-left: 240px;
+}
