@@ -80,8 +80,21 @@ sakai.tasks = function(tuid, placement, showSettings){
 		$tasksTabCourse.live("click", toggleDropDown);
 	};
 	
+	/**
+	 * Initialise the tipsy library
+	 */
+	var initialiseTipsy = function(){
+
+		// Set the tipsy tooltip on all the elements with rel="tipsy"
+		$('[rel=tipsy]').tipsy({
+			gravity: 's'
+		});
+	};
+	
 	var init = function(){
 		addBinding();
+		
+		initialiseTipsy();
 		
 		$tasksMainContainer.show();
 	};
