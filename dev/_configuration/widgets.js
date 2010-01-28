@@ -327,6 +327,18 @@ var Widgets = {
 			img:"/dev/img/myprofile.png",
 			multipleinstance: false
 		},
+		myfiles :
+		{
+			description:"A list of my files\r\n",
+			iframe:0,
+			url:"/devwidgets/myfiles/myfiles.html",
+			name:"My Files",
+			id:"myfiles",
+			personalportal:1,
+			siteportal:0,
+			img:"/dev/img/prototype_placeholder_small.png",
+			multipleinstance: false
+		},
 		pagemanagement :
 		{
 			description:"pagemanagement",
