@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations under the License.
  */
 
-/*global $, Config, sdata */
+/*global $, Config, Querystring, sdata, window: false */
 
 var sakai = sakai || {};
 
@@ -28,14 +28,14 @@ sakai.myfiles = function(tuid,placement,showSettings){
 	/////////////////////////////
 
 	var rootel = $("#" + tuid);
-	var numberFiles = 6; // The number of files that will be shown
+	//var numberFiles = 6; // The number of files that will be shown
 	
 	// - ID
 	var myfiles = "#myfiles";
 	
 	// Error
-	var myfilesError = myfiles + "_error";
-	var myfilesErrorContactserver = myfilesError + "_contactserver";
+	//var myfilesError = myfiles + "_error";
+	//var myfilesErrorContactserver = myfilesError + "_contactserver";
 	
 	// List
 	var myfilesList = myfiles + "_list";
@@ -75,11 +75,7 @@ sakai.myfiles = function(tuid,placement,showSettings){
 		}
 		*/
 		
-		if (files == null) {
-		    // no files to show
-		}
-		else
-		{
+		if (files === "true" || files === "test") {
 			jsonFiles.items.push("file 1");
 			jsonFiles.items.push("file 2");
 			jsonFiles.items.push("file 3");
@@ -88,8 +84,18 @@ sakai.myfiles = function(tuid,placement,showSettings){
 			jsonFiles.items.push("file 6");
 		}
 		
+		/*var qs = new Querystring();
+		if (qs.contains("my_files")) {
+			jsonFiles.items.push("file 1");
+			jsonFiles.items.push("file 2");
+			jsonFiles.items.push("file 3");
+			jsonFiles.items.push("file 4");
+			jsonFiles.items.push("file 5");
+			jsonFiles.items.push("file 6");
+    }*/  
+		
 		// Render the template with the files
-		$(myfilesList).html($.Template.render(myfilesListTemplate, jsonFiles));
+		$(myfilesList, rootel).html($.Template.render(myfilesListTemplate, jsonFiles));
 	};
 
 	
@@ -115,15 +121,15 @@ sakai.myfiles = function(tuid,placement,showSettings){
 				$(myfilesErrorContactserver, rootel).show();
 			}
 		});*/
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++)
-    {
-      hash = hashes[i].split('=');
-      vars.push(hash[0]);
-      vars[hash[0]] = hash[1];
-    }
-		doProcessing(vars["my_files"]);
+		var vars = [], hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		for(var i = 0; i < hashes.length; i++)
+		{
+			hash = hashes[i].split('=');
+			vars.push(hash[0]);
+			vars[hash[0]] = hash[1];
+		}
+		doProcessing(vars.my_files);
 	
 	};
 
