@@ -17,16 +17,16 @@
  */
 
 
-.myfiles_widget #myfiles_list {padding: 10px;}
+.myfiles_widget #myfiles_list {padding: 10px}
 
 /* Widget Content */
-.myfiles_widget .fl-widget-content {padding: 10px;}
-.myfiles_widget {overflow:hidden;}
+.myfiles_widget .fl-widget-content {padding: 10px}
+.myfiles_widget {overflow:hidden}
 
 /* Files list */
-.myfiles_widget .myfiles_list_file {text-align:left;margin:auto;overflow:hidden;float:left;width:129px;margin-left:2%;padding-bottom:15px;}
-.myfiles_widget .myfiles_list_file img {display:inline;margin:3px;}	
-.myfiles_widget .myfiles_list_file p {text-align:left;font-weight:normal;margin:0px;padding:0px;}
+.myfiles_widget .myfiles_list_file {text-align:left;margin:auto;overflow:hidden;float:left;width:129px;margin-left:2%;padding-bottom:15px}
+.myfiles_widget .myfiles_list_file img {display:inline;margin:3px}	
+.myfiles_widget .myfiles_list_file p {text-align:left;font-weight:normal;margin:0;padding:0}
 
 /* No files */
-.myfiles_widget #myfiles_nofiles {font-size:0.95em;}
+.myfiles_widget #myfiles_nofiles {font-size:0.95em}

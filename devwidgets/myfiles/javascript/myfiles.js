@@ -16,137 +16,121 @@
  * specific language governing permissions and limitations under the License.
  */
 
-/*global $, Config, Querystring, sdata, window: false */
+/*global $, Config, Querystring, sdata */
 
 var sakai = sakai || {};
 
 sakai.myfiles = function(tuid,placement,showSettings){
 
-	
-	/////////////////////////////
-	// Configuration variables //
-	/////////////////////////////
 
-	var rootel = $("#" + tuid);
-	//var numberFiles = 6; // The number of files that will be shown
-	
-	// - ID
-	var myfiles = "#myfiles";
-	
-	// Error
-	//var myfilesError = myfiles + "_error";
-	//var myfilesErrorContactserver = myfilesError + "_contactserver";
-	
-	// List
-	var myfilesList = myfiles + "_list";
-	
-	// Templates
-	var myfilesListTemplate = "myfiles_list_template";
-	
+    /////////////////////////////
+    // Configuration variables //
+    /////////////////////////////
 
-	///////////////////////////
-	// Get & process files //
-	///////////////////////////
+    var rootel = $("#" + tuid);
+    //var numberFiles = 6; // The number of files that will be shown
 
-	/**
-	 * Process the information for each file
-	 * @param {Object} files JSON object containing all the files the current user
-	 */
-	var doProcessing = function(files){
-		var jsonFiles = {};
-		
-		// Array that will contain a specified number of files of the current user
-		jsonFiles.items = [];
-		
-		/*if (files.results) {
-			
-			// Run process each file
-			for (var i = 0; i < files.results.length; i++) {
-				if (i <= numberFiles) {
-					var file = files.results[i];
-					
-					// Set the id of the file
-					file.id = "test file"; //file.target;
-					
-					// Add the file to the array
-					jsonFiles.items.push(file);
-				}
-			}
-		}
-		*/
-		
-		if (files === "true" || files === "test") {
-			jsonFiles.items.push("file 1");
-			jsonFiles.items.push("file 2");
-			jsonFiles.items.push("file 3");
-			jsonFiles.items.push("file 4");
-			jsonFiles.items.push("file 5");
-			jsonFiles.items.push("file 6");
-		}
-		
-		/*var qs = new Querystring();
-		if (qs.contains("my_files")) {
-			jsonFiles.items.push("file 1");
-			jsonFiles.items.push("file 2");
-			jsonFiles.items.push("file 3");
-			jsonFiles.items.push("file 4");
-			jsonFiles.items.push("file 5");
-			jsonFiles.items.push("file 6");
-		}*/  
-		
-		// Render the template with the files
-		$(myfilesList, rootel).html($.Template.render(myfilesListTemplate, jsonFiles));
-	};
+    // - ID
+    var myfiles = "#myfiles";
 
-	
-	/**
-	 * Get all the files for the current user.
-	 */
-	var getFiles = function(){
-		
-		/*$.ajax({
-			url: "doc/files.json",
-			cache: false,
-			success: function(data){
-				
-				// Parse the data into a JSON object
-				var files = $.evalJSON(data);
-				
-				// Process the files: username, picture, ...
-				doProcessing(files);
-			},
-			error: function(xhr, textStatus, thrownError) {
-				
-				// Show the contact error
-				$(myfilesErrorContactserver, rootel).show();
-			}
-		});*/
-		var vars = [], hash;
-		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-		for(var i = 0; i < hashes.length; i++)
-		{
-			hash = hashes[i].split('=');
-			vars.push(hash[0]);
-			vars[hash[0]] = hash[1];
-		}
-		doProcessing(vars.my_files);
-	
-	};
+    // Error
+    //var myfilesError = myfiles + "_error";
+    //var myfilesErrorContactserver = myfilesError + "_contactserver";
+
+    // List
+    var myfilesList = myfiles + "_list";
+
+    // Templates
+    var myfilesListTemplate = "myfiles_list_template";
 
 
-	/////////////////////////////
-	// Initialisation function //
-	/////////////////////////////
-	
-	var doInit = function() {
-		
-		// Get the files for the current user
-		getFiles();
+    ///////////////////////////
+    // Get & process files //
+    ///////////////////////////
 
-	};
-	
-	doInit();
-	
+    /**
+     * Process the information for each file
+     * @param {Object} files JSON object containing all the files the current user
+     */
+    var doProcessing = function(files){
+        var jsonFiles = {};
+        
+        // Array that will contain a specified number of files of the current user
+        jsonFiles.items = [];
+        
+        /*if (files.results) {
+            
+            // Run process each file
+            for (var i = 0; i < files.results.length; i++) {
+                if (i <= numberFiles) {
+                    var file = files.results[i];
+                    
+                    // Set the id of the file
+                    file.id = "test file"; //file.target;
+                    
+                    // Add the file to the array
+                    jsonFiles.items.push(file);
+                }
+            }
+        }
+        */
+
+        if (files) {
+            jsonFiles.items.push("file 1");
+            jsonFiles.items.push("file 2");
+            jsonFiles.items.push("file 3");
+            jsonFiles.items.push("file 4");
+            jsonFiles.items.push("file 5");
+            jsonFiles.items.push("file 6");
+        }
+
+        // Render the template with the files
+        $(myfilesList, rootel).html($.Template.render(myfilesListTemplate, jsonFiles));
+    };
+
+
+    /**
+     * Get all the files for the current user.
+     */
+    var getFiles = function(){
+
+        /*$.ajax({
+            url: "doc/files.json",
+            cache: false,
+            success: function(data){
+                
+                // Parse the data into a JSON object
+                var files = $.evalJSON(data);
+                
+                // Process the files: username, picture, ...
+                doProcessing(files);
+            },
+            error: function(xhr, textStatus, thrownError) {
+                
+                // Show the contact error
+                $(myfilesErrorContactserver, rootel).show();
+            }
+        });*/
+
+        var qs = new Querystring();
+        doProcessing(qs.contains("my_files"));
+
+    };
+
+
+    /////////////////////////////
+    // Initialisation function //
+    /////////////////////////////
+
+    var doInit = function() {
+
+        // Get the files for the current user
+        getFiles();
+
+    };
+
+    doInit();
+
 };
 
 sdata.widgets.WidgetLoader.informOnLoad("myfiles");
