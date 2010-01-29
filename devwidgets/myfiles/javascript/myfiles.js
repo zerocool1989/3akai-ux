@@ -92,7 +92,7 @@ sakai.myfiles = function(tuid,placement,showSettings){
 			jsonFiles.items.push("file 4");
 			jsonFiles.items.push("file 5");
 			jsonFiles.items.push("file 6");
-    }*/  
+		}*/  
 		
 		// Render the template with the files
 		$(myfilesList, rootel).html($.Template.render(myfilesListTemplate, jsonFiles));
