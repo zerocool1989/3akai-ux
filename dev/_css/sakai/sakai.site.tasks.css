@@ -138,6 +138,33 @@
     margin-right: 4px;
 }
 
+.site_task_extra_reading_material_addable:hover {
+    border-width: thin;
+    border-color: #484D51;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.site_task_extra_reading_material_addable span {
+    display: none;
+}
+
+.site_task_extra_reading_material_addable:hover span {
+    display: block;
+    color: #FFF;
+    background-color: #484D51;
+    float: right;
+    position: relative;
+    left: 25px;
+    bottom: 6px;
+    font-weight: bold;
+    font-size: large;
+    width: 30px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+}
+
 /* SUBMIT ASSIGNNMENT */
 .site_tasks_top img {
     float: left;
