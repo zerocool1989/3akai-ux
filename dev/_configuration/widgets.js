@@ -164,9 +164,9 @@ var Widgets = {
             name:"File",
             id:"filepicker",
             personalportal:0,
-            siteportal:1,
+            siteportal:0,
             hasSettings: true,
-            ca:1,
+            ca:0,
             showinmedia:0,
             showinsakaigoodies:1,
             img:"/devwidgets/discussion/images/discussion.png"
@@ -180,8 +180,8 @@ var Widgets = {
             id:"folderpicker",
             personalportal:0,
             siteportal:0,
-            hasSettings:1,
-            ca:1,
+            hasSettings:0,
+            ca:0,
             showinmedia:0,
             showinsakaigoodies:1,
             img:"/devwidgets/discussion/images/discussion.png"
@@ -195,9 +195,9 @@ var Widgets = {
             id:"tagpicker",
             personalportal:0,
             siteportal:0,
-            ca:1,
+            ca:0,
             showinmedia:0,
-            showinsakaigoodies:1,
+            showinsakaigoodies:0,
             img:"/devwidgets/discussion/images/discussion.png"
         },
         poll :
@@ -377,7 +377,12 @@ var Widgets = {
             name:"chat",
             id:"chat",
             personalportal:0,
-            siteportal:0
+            siteportal:0,
+            i18n: {
+                "default": "/devwidgets/chat/bundles/default.json",
+                "en_US": "/devwidgets/chat/bundles/en_US.json",
+                "zh_CN": "/devwidgets/chat/bundles/zh_CN.json"
+            }
         },
         filemanager :
         {
@@ -542,7 +547,12 @@ var Widgets = {
             id:"footer",
             personalportal:0,
             siteportal:0,
-            siteportal:0
+            siteportal:0,
+            i18n: {
+                "default": "/devwidgets/footer/bundles/default.json",
+                "en_US": "/devwidgets/footer/bundles/en_US.json",
+                "zh_CN": "/devwidgets/footer/bundles/zh_CN.json"
+            }
         },
         tangler :
         {
