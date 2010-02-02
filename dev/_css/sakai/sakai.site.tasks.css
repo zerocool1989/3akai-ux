@@ -1,10 +1,15 @@
-
+/* TABS */
+.sakai_site .content_page_options {
+    position: relative;
+    top: 2px;
+    
+}
 /* TASK HEADER BAR */
 .site_tasks_header {
     -moz-background-clip: border;
     -moz-background-inline-policy: continuous;
     -moz-background-origin: padding;
-    background: transparent url(/dev/_images/block_tr.png) no-repeat scroll right top;
+    background: transparent url(/dev/_images/block_tr_fill.png) no-repeat scroll right top;
     cursor: move;
     padding: 0 8px 0 0;
     width: auto;
