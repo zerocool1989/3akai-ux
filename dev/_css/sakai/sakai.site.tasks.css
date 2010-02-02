@@ -2,7 +2,7 @@
 .sakai_site .content_page_options {
     position: relative;
     top: 2px;
-    
+
 }
 /* TASK HEADER BAR */
 .site_tasks_header {
@@ -168,7 +168,7 @@
 /* SUBMIT ASSIGNNMENT */
 .site_tasks_top img {
     float: left;
-	margin-right:10px;
+    margin-right:10px;
 }
 
 .site_tasks_top h3 {
