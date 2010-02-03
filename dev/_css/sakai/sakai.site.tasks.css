@@ -139,9 +139,7 @@
 }
 
 .site_task_extra_reading_material_addable:hover {
-    border-width: thin;
-    border-color: #484D51;
-    border-style: solid;
+    border: 1px #484D51 solid;
     cursor: pointer;
 }
 
