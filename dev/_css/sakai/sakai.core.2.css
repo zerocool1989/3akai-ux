@@ -24,10 +24,10 @@ a {
 .fixed-container {
     padding: 0 20px;
     width: 920px;
-    }
+}
 .fixed-container-2 {
     width: 960px;
-    }
+}
 /********************************************/
 /* Miscellaneous */
 .inline_class_widget_rightfloat {
@@ -125,7 +125,7 @@ a {
 #id0 #explore_nav_container {
     background-color: #454a4f;
     color: #fff;
-    }
+}
 .pipe_divider {color: #999;}
 .explore_nav {
     margin: 0 auto;
@@ -133,31 +133,29 @@ a {
     vertical-align: bottom;
     width: 960px;
     height: 32px;
-    }
+}
 .explore_nav * {}
 .explore_nav ul {
     padding:0;
     margin:0;
-    }
+}
 .explore_nav li {
     float: left;
     list-style:none none;
     padding: 0;
     margin: 0;
-    height: 32px;
-    }
-.explore_nav a {}
+}
 .explore_nav .explore {
     font-size: 1em;
-    }
+}
 .explore_nav ul.explore li {
-        padding: 0;
-        padding-bottom: 6px;
-      border-left: 1px solid #878a8c;
-  }
+    padding: 0;
+    padding-bottom: 6px;
+    border-left: 1px solid #878a8c;
+}
 .explore_nav .explore li#nav_my_sakai_link {
     border-left: none;
-    }
+}
 .explore_nav .explore li a {
     color:#fff;
     font-weight: bold;
@@ -165,27 +163,9 @@ a {
     text-align: center;
     display: block;
     float: left;
-    }
-
-/*body.my-sakai .explore_nav .explore #nav_my_sakai_link {
-    background-color: #878a8c;
-    padding: 0 20px;
-    }
-body.my-sakai .explore_nav .explore #nav_my_sakai_link a {
-    padding: 8px 0;
 }
-*/
-body.search-container .explore_nav .explore #nav_search_link {
-    background-color: #878a8c;
-    padding: 0 20px;
-    }
-body.search-container .explore_nav .explore #nav_search_link a {
-    padding: 8px 0;
-}
-.explore_nav .explore li small {
-    color:#ddd;
-    font-size: 0.85em;
-    }
+.explore_nav .explore .explore_nav_selected {background:url("/dev/_images/arrow_down_grey.png") no-repeat scroll center 32px transparent; padding-bottom:12px;}
+.explore_nav .explore .explore_nav_selected a {background-color: #666a6e}
 
 /*** Top Right Navbar ***/
 .explore_nav .personal-container {
@@ -198,38 +178,37 @@ body.search-container .explore_nav .explore #nav_search_link a {
     padding: 4px 0 0 5px;
     margin: 0;
     background: url('../../_images/topBar_tl.png') top left no-repeat;
-    min-height: 30px;
-    }
+    min-height: 18px;
+}
 .explore_nav .personal li a {
-    font-size:0.9em;
-    padding:0 5px 0 7px;
     border-left: 1px solid #666a6d;
     color: #fff;
+    padding:0 5px 0 7px;
+    font-size:0.923em;
 }
-.explore_nav .personal li span {
-    color: #fff;
-    font-size: 0.9em;
-    }
 .explore_nav .user_link span {
     background: url('../../_images/white_subnav_arrow.png') bottom right no-repeat;
-    padding-right: 17px;
-    padding-left: 5px;
+    padding: 0 17px 0 5px;
 }
 
 .explore_nav .personal li.last a{
      border:none;
      padding-right:0
-    }
+}
 .personal img{
     vertical-align: middle;
-    }
+}
 .explore_nav .personal .user_link {border: none;}
 .explore_nav .personal .user_link img {position: relative; top: -1px; padding: 0 3px 0 3px;}
 .explore_nav .personal .mail img {position: relative; top: -1px;}
-.explore_nav_selected_arrow {margin: 12px 0 0 5px;}
-.explore_nav_selected {background-color: #878A8C; height:32px;}
-.explore_nav_selected_dropdown {height: 46px; background-color: #fff !important;}
-.explore_nav_selected_dropdown span {color: #595e62 !important;}
+
+/* SEARCH */
+.search_container {width:960px;}
+.search_form {padding: 19px 0; text-align: right; float: right; font-size: 12px}
+.search_form .search_input_field {border: 1px solid #ddd; color:#999; display: block; padding:3px; float: left; margin-right: 11px; width: 225px;}
+.search_form .search_button {background: url('../../_images/search_button_trans.png') top left no-repeat;color: #fff;display: block;float: left;height: 23px;padding: 0;width: 88px}
+.search_form .search_button span {position:absolute;top:-9999px;left:-9999px;}
+.focussedInput {color: #000000 !important;}
 
 #widget_chat {
     position: relative;
@@ -816,7 +795,7 @@ body.search-container .explore_nav .explore #nav_search_link a {
 }
 .clear {
     clear: both;
-    }
+}
 
 
 /** SITE.HTML **/

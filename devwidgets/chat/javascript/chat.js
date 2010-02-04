@@ -181,28 +181,11 @@ sakai.chat = function(tuid, placement, showSettings){
     var chatWindows = chat + "_windows";
     var chatWith = chat + "_with";
 
-    // Courses & Sites
-    var coursesSitesSearch = "#courses_sites_search";
-    var coursesSitesSearchButton = coursesSitesSearch + "_button";
-
-    // Dropdown: people
-    var dropdownPeopleSearch = "#dropdown_people_search";
-    var dropdownPeopleSearchButton = dropdownPeopleSearch + "_button";
-
-    // My Sites
-    var mySitesDropDown = "#mysites_dropdown";
-    var mySitesDropDownMain = mySitesDropDown + "_main";
-    var mySitesDropDownClose = mySitesDropDown + "_close";
-    var mySitesDropDownCloseLink = mySitesDropDownClose + "_link";
-
     // Navigation
     var nav = "#nav";
     var navContentMediaLink = nav + "_content_media_link";
     var navCoursesSitesLink = nav + "_courses_sites_link";
-    var navCoursesSitesLinkClass = "nav_courses_sites_link";
-    var navCoursesSitesLinkClassSelector = $("#explore_nav_container .nav_courses_sites_link");
     var navPeopleLink = nav + "_people_link";
-    var navPeopleLinkClass = "nav_people_link";
     var navMySakaiLink = nav + "_my_sakai_link";
     var navSearchLink = nav + "_search_link";
     var navProfileLink = nav + "_profile_link";
@@ -431,57 +414,6 @@ sakai.chat = function(tuid, placement, showSettings){
         });
     };
 
-    /**
-     * Show the create new site lightbox
-     */
-    var createNewSite = function(){
-        $(createSiteContainer).show();
-        // Initialise the createsite widget.
-        sakai.createsite.initialise();
-    };
-
-    /**
-     * Search for the site(s) you putted in the input field
-     */
-    var doSitesSearch = function(){
-        var tosearch = $(coursesSitesSearch).val();
-        if (tosearch) {
-            document.location = Config.URL.SEARCH_SITES_URL + "#1|" + tosearch;
-        }
-    };
-
-    /**
-     * Bind the create site button in the top navigation
-     */
-    $(topNavigationCreateSite).bind("click", function(ev){
-        createNewSite();
-    });
-
-    /**
-     * If this is the first time the field gets focus, we'll make his text color black
-     * and remove the default value
-     */
-    $(coursesSitesSearch).bind("focus", function(ev){
-        if (!sitesFocus) {
-            var el = $(coursesSitesSearch);
-            el.val("");
-            el.addClass(focussedFieldClass);
-            sitesFocus = true;
-        }
-    });
-
-    /**
-     * Check on every keypress whether the enter key has been pressed or not. If so,
-     * search for sites
-     */
-    $(coursesSitesSearch).bind("keypress", function(ev){
-        if (ev.which === 13) {
-            doSitesSearch();
-        }
-    });
-
-    $(coursesSitesSearchButton).bind("click", doSitesSearch);
-
 
     ////////////////////////////////////////////
     // Courses & Sites dropdown : Show & Hide //
@@ -512,127 +444,20 @@ sakai.chat = function(tuid, placement, showSettings){
         var windowLocationPath = window.location.pathname.toLowerCase();
 
         if (windowLocationPath.indexOf(Config.URL.MY_DASHBOARD) !== -1){
-            $(navMySakaiLink).html(renderSelectedPage($.i18n.getValueForKey("MY_SAKAI")));
+            $(navMySakaiLink).addClass("explore_nav_selected");
         } else if (windowLocationPath.indexOf(Config.URL.SEARCH_GENERAL_URL) !== -1 || windowLocationPath.indexOf(Config.URL.SEARCH_PEOPLE_URL) !== -1 || windowLocationPath.indexOf(Config.URL.SEARCH_SITES_URL) !== -1 || windowLocationPath.indexOf(Config.URL.SEARCH_CONTENT_URL) !== -1){
-            $(navSearchLink).html(renderSelectedPage("Search"));
+            $(navSearchLink).addClass("explore_nav_selected");
         } else if (windowLocationPath.indexOf(Config.URL.PEOPLE_URL) !== -1){
-            $(navPeopleLink).html(renderSelectedPage("People"));
+            $(navPeopleLink).addClass("explore_nav_selected");
         } else if (windowLocationPath.indexOf(Config.URL.PROFILE_URL) !== -1){
-            $(navProfileLink).html(renderSelectedPage("Profile"));
+            $(navProfileLink).addClass("explore_nav_selected");
         } else if (windowLocationPath.indexOf(Config.URL.CONTENT_MEDIA_URL) !== -1){
-            $(navContentMediaLink).html(renderSelectedPage("Content &amp; Media"));
+            $(navContentMediaLink).addClass("explore_nav_selected");
         } else if (windowLocationPath.indexOf("my_sites.html") !== -1){
-            $(navCoursesSitesLink).html(renderSelectedPage("Courses &amp; Sites"));
+            $(navCoursesSitesLink).addClass("explore_nav_selected");
         }
 
     };
-
-    /*
-     * Bind the close button for the sites container
-     */
-    $(mySitesDropDownCloseLink).live("click", function(ev){
-        $(exploreClass).html(defaultNav);
-        selectPage();
-        $(navPeopleLink).addClass(navPeopleLinkClass);
-        $(navCoursesSitesLink).addClass(navCoursesSitesLink);
-    });
-
-
-    ///////////////////////////////
-    // People dropdown : Handler //
-    ///////////////////////////////
-
-    /**
-     * Load all the friends for the current user
-     */
-    var loadPeople = function(){
-        $.ajax({
-            url: Config.URL.FRIEND_ACCEPTED_SERVICE,
-            data: {
-                page: 0,
-                items: 4
-            },
-            cache: false,
-            success: function(data){
-                var friends = $.evalJSON(data);
-
-                var pOnline = {};
-                pOnline.items = [];
-                var total = 0;
-                pOnline.showMore = false;
-
-                if (friends.results) {
-                    for (var i = 0; i < friends.results.length; i++) {
-                        var isOnline = false;
-                        if (!isOnline && total < 4) {
-                            var item = friends.results[i];
-                            item.id = item.target;
-                            item.name = parseName(item.id, item.profile.firstName, item.profile.lastName);
-                            item.photo = parsePicture(item.profile.picture, item.id);
-                            item.online = false;
-                            pOnline.items[pOnline.items.length] = item;
-                            total++;
-                        }
-                    }
-                }
-
-                $(peopleDropDownMyContactsList).html($.Template.render(peopleDropDownMyContactsListTemplate, pOnline));
-
-            },
-            error: function(xhr, textStatus, thrownError) {
-                alert("An error has occurred. /n Please try again later");
-            }
-        });
-    };
-
-    /**
-     * Perform a search for the people the user inserted in the input field
-     */
-    var doPeopleSearch = function(){
-        var tosearch = $(dropdownPeopleSearch).val();
-        if (tosearch) {
-            document.location = Config.URL.SEARCH_PEOPLE_URL + "#1|" + tosearch;
-        }
-    };
-
-    /*
-     * If this is the first time the field gets focus, we'll make his text color black
-     * and remove the default value
-     */
-    $(dropdownPeopleSearch).bind("focus", function(ev){
-        if (!peopleFocus) {
-            peopleFocus = true;
-            var el = $(dropdownPeopleSearch);
-            el.val("");
-            el.addClass(focussedFieldClass);
-        }
-    });
-
-    /*
-     * Check on every keypress whether the enter key has been pressed or not. If so,
-     * search for people
-     */
-    $(dropdownPeopleSearch).live("keypress", function(ev){
-        if (ev.which === 13) {
-            doPeopleSearch();
-        }
-    });
-
-    $(dropdownPeopleSearchButton).live("click", doPeopleSearch);
-
-
-    ////////////////////////////////////////////
-    // Courses & Sites dropdown : Show & Hide //
-    ////////////////////////////////////////////
-
-    /*
-     * Drop down the people container beneath the top navigation bar
-     */
-    $(".nav_people_link").live("click", function(ev) {
-        $(exploreClass).html(defaultNav);
-        $(navPeopleLink).html(renderSelectedPage("People", true));
-        $("#nav_people_link").removeClass("nav_people_link");
-    });
 
 
     //////////////
@@ -654,6 +479,58 @@ sakai.chat = function(tuid, placement, showSettings){
             }
         });
     };
+
+
+    ////////////
+    // Search //
+    ////////////
+
+    // Search related fields
+    var searchField = "#search_field";
+    var searchButton = "#search_button";
+    var searchForm = "#search_form";
+
+    /*
+     * This variable will tell us whether the search field has had focus. If not, when the
+     * field gets focus for the first time, we'll change it's text color and remove the default
+     * text out of the input field
+     */
+    var searchHadFocus = false;
+
+    var doSearch = function(){
+        var value = $(searchField).val();
+        // Check whether the field is not empty
+        if (value){
+            // Redirecting back to the general search page. This expects the URL to be
+            // in a format like this one: page.html#pageid|searchstring
+            document.location = Config.URL.SEARCH_GENERAL_URL + "#1|" + value;
+        }
+    };
+
+    /*
+     * If this is the first time the field gets focus, we'll make his text color black
+     * and remove the default value
+     */
+    $(searchField).bind("focus", function(ev){
+        if (!searchHadFocus){
+            $(searchField).addClass(focussedFieldClass);
+            $(searchField).val("");
+            searchHadFocus = true;
+        }
+    });
+
+    $(searchField).bind("keypress", function(ev){
+        if (ev.which == 13){
+            doSearch();
+        }
+    });
+
+    $(searchButton).bind("click", doSearch);
+
+    $(searchForm).bind("submit", function(ev){
+        doSearch();
+        return false;
+    });
 
 
     //////////
