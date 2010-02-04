@@ -206,7 +206,7 @@ a {
 .search_container {width:960px;}
 .search_form {padding: 19px 0; text-align: right; float: right; font-size: 12px}
 .search_form .search_input_field {border: 1px solid #ddd; color:#999; display: block; padding:3px; float: left; margin-right: 11px; width: 225px;}
-.search_form .search_button {background: url('../../_images/search_button_trans.png') top left no-repeat;color: #fff;display: block;float: left;height: 23px;padding: 0;width: 88px}
+.search_form .search_button {background: url('../../_images/search_button_trans.png') top left no-repeat;color: #fff;display: block;float: left;height: 23px;margin-right: 8px; padding: 0;width: 88px}
 .search_form .search_button span {position:absolute;top:-9999px;left:-9999px;}
 .focussedInput {color: #000000 !important;}
 
