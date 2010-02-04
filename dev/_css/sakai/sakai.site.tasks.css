@@ -487,9 +487,15 @@
     border: 1px #B0B4B7 solid;
     padding: 0px 6px;
 }
-
+a.site_tasks_comments_remove, a.site_tasks_comments_cancel_button, .site_tasks_topic_reply_info a {
+    color: #058EC4;
+    font-weight: normal;
+}
+.site_tasks_topic_reply_info a {
+    font-weight: bold;
+}
 .site_tasks_comments_cancel_button {
-    margin-left: 27em;
+    margin-left: 25em;
 }
 
 .button-grey .button {
