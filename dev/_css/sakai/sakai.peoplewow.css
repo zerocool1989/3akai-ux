@@ -88,7 +88,7 @@
 
 .peoplewow_content_wrapper {
 	padding: 0;
-	margin: 0 0 20px 0;	
+	margin-bottom: 20px;	
 }
 .peoplewow_tab_content_top {
 	background: url('../../_images/content_tr.gif') top right no-repeat;
@@ -131,21 +131,14 @@
 
 .peoplewow_content_main .peoplewow_items_list {
   float:left;
-  width:16%;
+  width:125px;
 	padding: 20px;
 	/*background-color:#d5dbdf;*/
-  overflow-x:hidden; overflow-y:auto;
-  height: 600px;
+  overflow-x:hidden;
+  overflow-y:auto;
+  height:625px;
 }
 
-.peoplewow_content_main .peoplewow_item_content {
-  float:right;
-  width:76%;
-	padding: 10px;
-	/*background-color:#cccccc;*/
-  overflow-x:hidden; overflow-y:auto;
-  height: 600px;
-}
 
 /*.peoplewow_content_main .search_button {
 	background: #454a4f url('../../_images/search_button.png') top left no-repeat;
@@ -185,6 +178,11 @@
     /*display:list-item; */
   }
 
+.peoplewow_items_list_open ul {
+    /*background-color: #86EF8A;*/
+}
+
+
 .peoplewow_items_list ul ul {
   margin: 0px 15px;
 }
@@ -210,10 +208,9 @@
   }
   
 
-
-.peoplewow_items_list .peoplewow_items_list_active {
+/*.peoplewow_items_list_active li {
     list-style-image: url(../../_images/arrow_down_sm2_blue.png);
-  }
+  }*/
   
   
 .peoplewow_items_list_contacts li {
@@ -227,196 +224,150 @@
     list-style-image: none;
   }
   
+
+.peoplewow_content_main .peoplewow_item_content {
+  float:right;
+  width:705px;
+  margin-top:10px;
+	padding:10px;
+	/*background-color:#cccccc;*/
+  overflow-x:hidden;
+  overflow-y:auto;
+  height:700px;
+  border-left-style:solid;
+  border-width:2px;
+  border-color:#eeeeee;
+}
   
-.peoplewow_recent_contacts {
-  margin:auto;
+  
+  
+  /* MY GROUPS PAGE */
+.peoplewow_item_content .peoplewow_mygroups_header {
+  font-size:14px;
+  display:inline;
+  }
+.peoplewow_item_content .peoplewow_mygroups_list {
+  margin-top:50px;
+  }
+.peoplewow_item_content .peoplewow_mygroups_list_group {
+  margin-top:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  width:715px;
+  height:80px;
+  }
+.peoplewow_item_content .peoplewow_mygroups_list li {
+  list-style-type:none;
+  margin-left:-30px;
+  }
+.peoplewow_item_content .peoplewow_mygroups_list_group:hover {
+  background-color:#eeeeee;
+  }
+.peoplewow_item_content .peoplewow_mygroups_group_img {
+  width:105px;
   float:left;
-  width:31%;
-  margin-left:2%;
-  height:250px;
-  background-image: url(../../_images/prototype_placeholder.png);
+  }
+.peoplewow_item_content .peoplewow_mygroups_group_info {
+  padding-left:5px;
+  width:475px;
+  float:left;
+  display:block;
+  }
+.peoplewow_item_content .peoplewow_mygroups_group_info p {
+  margin-bottom:0px;
+  }
+.peoplewow_item_content .peoplewow_mygroups_group_info a:hover {
+  text-decoration: underline;
+  }
+.peoplewow_item_content .peoplewow_mygroups_group_stats {
+  font-size:10px;color:#999999;
+  }
+.peoplewow_item_content .peoplewow_mygroups_list_group a {
+  font-weight:bold;
+  }
+.peoplewow_item_content .peoplewow_mygroups_list_group .button {
+  margin-top:10px;
+  }
+.peoplewow_item_content .peoplewow_mygroups_group_modify_button {
+  margin-top:34px;
   }
   
-.peoplewow_recent_contacts p {
-  text-align:left;
+  
+  
+  /* MY CONTACTS PAGE */
+  
+.peoplewow_item_content .peoplewow_mycontacts_header {
   font-size:18px;
   padding:10px;
   }
-  
-  
-
-.peoplewow_current_contacts_outer {
+.peoplewow_item_content .peoplewow_mycontacts_recent {
   margin:auto;
   float:left;
-  width:31%;
-  margin-left:2%;
+  width:210px;
+  margin-left:15px;
   height:250px;
-	background-color:#eeeeee;
+  background-image: url(../../_images/prototype_placeholder.png);text-align: left;
+  }
+  
+.peoplewow_item_content .peoplewow_mycontacts_outer {
+  margin-top:25px;
+  margin-left:15px;
+  float:left;
+  padding:15px;
+  padding-bottom:40px;
+  width:610px;
+  height:auto;
+  border-style:solid;
+  border-color:#eeeeee;
+  border-width:20px;
+  }
+
+.peoplewow_item_content .peoplewow_mycontacts_grid {
+  padding-left:20px;
+  float:left;
+  width:400px;
+  }
+  
+/*.peoplewow_contact_name {
+  font-weight:bold;
+  }*/
+.peoplewow_item_content .peoplewow_mycontacts_list {
+  float:left;
+  width:80px;
+  margin-left:12px;
+  margin-bottom:15px;
+  /*
+  display:block;
+  margin:auto;
+  overflow:hidden;
+  background-image: url(../../_images/member_thumb_unselected.png);
+  */
+  }
+  
+.peoplewow_item_content .peoplewow_mycontacts_list img {
+  display:block;
+  margin:4px;
+  }
+.peoplewow_item_content .peoplewow_mycontacts_list a {
+  font-weight:bold;
+  }
+
+  
+.peoplewow_item_content .peoplewow_mycontacts_buttons {
+  margin-left:475px;
+  width:120px;
+  }
+.peoplewow_item_content .peoplewow_mycontacts_buttons a {
+  margin-bottom:10px;
+  }
+.peoplewow_item_content .peoplewow_mycontacts_links {
+  text-decoration:underline;
+  /* background-color: #cccccc; */
+  padding-top:130px; /* needs fixing in IE7 */
+  padding-left:475px;
   }
 
 
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-.search_top_rounded {
-	background: transparent url(../../_images/search_results_tl.png) top left no-repeat;
-}
-.search_top_rounded_inner {
-	background: transparent url(../../_images/search_results_tr.png) top right no-repeat;
-	height: 10px;
-	width: auto;
-}
-.search_bottom_rounded {
-	background: transparent url(../../_images/search_results_bl.png) bottom left no-repeat;
-}
-.search_bottom_rounded_inner {
-	background: transparent url(../../_images/search_results_br.png) bottom right no-repeat;
-	height: 10px;
-	width: auto;
-}
-.search_result_title {
-	text-align: left;
-	margin: 10px;
-	font-weight: normal;
-	font-size: 1.0em;
-	color: #828e9c;
-}
-.search_result_title strong, 
-.search_result_title span {
-	background-color: transparent;
-	color: #828e9c;
-	font-weight: bold;
-}
-
-.search_results_part {
-	padding: 0 10px;
-}
-
-.search_results_part_header {
-	font-weight: normal;
-	font-size: 1.2em;
-	margin-bottom:10px;
-	margin-top:10px;
-}
-
-a.search_results_part_title {
-	color: #5a6a7c;
-}
-
-.display_more_link {
-	font-size: .95em;
-	font-weight: bold;
-}
-
-.search_result_header {
-	margin: 0 0 5px 0;
-}
-
-.search_result_description {
-	margin: 0 0 5px 0;
-}
-
-.search_result_footer {
-	margin: 0 0 5px 0;
-	font-size: .95em;
-}
-
-.search_result_footer a {
-	color: #339900;
-}
-
-/* search results people */
-.search_result_person {
-	margin: 5px 8px 10px 8px;
-	padding: 10px;
-	width: 250px;
-	background-color: #FFF;
-	height: 60px;
-	float: left;
-	border: none;
-}
-
-.search_result_person_picture {
-	float: left;
-	display: block;
-	background-image: url(../../_images/person_icon.jpg);
-	background-repeat: no-repeat;
-	width: 60px;
-	height: 60px;
-	padding: 0;
-	margin: 0;
-}
-
-.search_result_dot {
-	display:block;
-	float:left;
-	position:relative;
-	left:5px;
-}
-
-.search_result_person .search_result_person_name {
-	display: block;
-	color: #000;
-	font-weight: bold;
-	font-size: 1em;
-	margin-left: 70px;
-	margin-top: 4px;
-}
-
-.search_result_person_dept {
-	display: block;
-	color: #999;
-	font-size: .85em;
-	margin: 0 0 6px 70px;
-}
-
-.search_result_person_links {
-	margin-left: 70px;
-	
-}
-.search_result_person_link {
-	color: #000;
-	font-size: .85em;
-}
-
-.search_result_person_divider {
-	color: #ddd;
-	/*padding: 10px;*/
-	margin:0 0 0 10px !important;
-}
-
-.search_result_course_site {
-	padding: 5px 0 10px 0;
-}
-
-.search_result_course_site_title a {
-	color: #3399cc;
-	margin: 0 0 5px 0;
-	font-weight: bold;
-	font-size: 1em;
-}
-
-.search_result_course_site_url a {
-	font-size: .95em;
-	color: #999;
-}
-
-.search_result_course_site_excerpt {
-	font-size: .95em;
-	color: #666;
-}
-.search_result_course_site_excerpt strong {
-	font-size: .95em;
-	color: #333;
-}
 
 /* FOOTER */
 
@@ -448,104 +399,14 @@ a.search_results_part_title {
 }
 .site_heading { border-bottom:none; }
 
-.search_no_results {padding:10px;}
 
 
 
-
-
-
-
-
-
-
-
-
-/* ************************************* */
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-h1 {
-	font-size: 2.1em;
-	font-weight: bold;
-	padding: 10px 10px 0px 15px;
-}
-*/
 
 strong {
 	color: #000;
 }
 
-/* TOP NAV 
-.explore_nav {
-	background-color: #EEEEEE;
-	overflow: auto;
-}
-
-.explore_nav .explore {
-	padding-left: 15px;
-}
-
-.explore_nav .explore li a {
-	color: #475358;
-	font-weight:bold;
-	text-align: center;
-}
-
-.explore_nav_selected {
-	color: #fff;
-	background-color: #666666;
-	padding: 2px 5px 2px 5px;
-	display: inline-block;
-	margin-top:-3px;
-	needed for rounded cornered anchor buttons
-	outline: none;
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    white-space: nowrap;
-    vertical-align: middle;
-    display: -moz-inline-box;
-    display: inline-block;
-    overflow: visible;
-}
-
-.explore_nav_selected span {
-	color: #fff;
-}
-
-.explore_nav_selected_arrow {
-	width: 9px;
-	height: 5px;
-	position: relative;
-	bottom: -11px;
-	
-}
-
-.explore_nav .personal {
-	padding: 0 8px 0 0;
-	font-size: .95em;
-}
-
-.explore_nav .personal li a {
-	color: #058ec4;
-}
-
-.explore_nav .personal li strong {
-	color: #058ec4;
-}
-*/
 
 .site_heading {
 	padding: 20px 0 5px 15px;
@@ -591,198 +452,4 @@ strong {
 	border: none;
 	margin: 0px;
 }
-
-.search_tab_content {
-	background-image: url(../../_images/body_bg2.png);
-	background-repeat: repeat-x;
-}
-
-
-
-.skinned_select {
-	float: left;
-	width: 190px;
-	height: 23px;
-	border: 1px solid #ddd;
-	padding-top: 3px;
-}
-
-
-.search_bar input {
-	border: 1px solid #ddd;
-	float: left;
-	margin: 0 5px 0 5px;
-	height: 19px;
-	width: 350px;
-	font-size: 1em;
-	color: #666;
-	font-size: 1.1em;
-	padding-left: 5px;
-	display: block;
-	padding-top:2px;
-	font-style:italic;
-}
-
-
-.search_button {
-	/*position: relative;*/
-	top: 3px;
-}
-
-
-/* SEARCH RESULTS TITLE */
-.search_result_title {
-	width: 80%;
-	text-align: center;
-	font-size: 1.1em;
-	color: #999;
-	padding: 0;
-}
-
-.keyword {
-	background-color: #ffff00;
-}
-
-
-/* SEARCH RESULTS */
-.search_results_container {
-	margin: 15px;
-}
-
-.search_results_part {
-	padding-bottom: 20px;
-}
-
-.search_results_part_header {
-	border-bottom: 1px solid #ddd;
-	font-size: 1.3em;
-	padding-bottom: 5px;
-	font-weight: bold;
-	color: #333;
-}
-
-.search_results_part_title {
-	font-size: 1.1em;
-	font-weight: bold;
-	color: #333;
-	float: left;
-}
-
-.display_more_link {
-	color: #3399cc;
-	font-size: .85em;
-	font-weight: normal;
-	position: relative;
-	bottom: 0px;
-	margin: 0;
-	padding: 0;
-}
-
-.search_result {
-	color: #333;
-	padding: 5px 0 10px;
-}
-
-.search_result img {
-	float: left;
-	padding: 0 10px 10px 0;
-	width: 50px;
-}
-
-.search_result_right {
-	margin-left: 60px;
-}
-
-.search_result_star {
-	background-image: url(../../_images//star.png);
-	display: block;
-	float: left;
-	position: relative;
-	top: -4px;
-	left: 0;
-}
-
-.search_result_header {
-	color: #3399cc;
-	margin: 0 0 5px 25px;
-	font-weight: bold;
-	font-size: 1.1em;
-}
-
-.search_result_tags, .search_result_description {
-	margin: 0 0 5px;
-	color: #333;
-	font-size: .95em;
-}
-
-.search_result_footer {
-	margin: 0 0 5px 25px;
-	color: #999;
-	font-size: .85em;
-}
-
-.search_result_type a{
-	color: #5fb3d2 !important;
-}
-
-.search_results_part_footer {
-
-}
-
-
-/* search results people */
-.search_result_person {
-	padding: 8px;
-	margin: 15px 10px 0 0;
-	border: 1px solid #ddd;
-	width: 200px;
-	height: 60px;
-	float: left;
-}
-
-.search_result_person_picture {
-	float: left;
-	display: block;
-	background-image: url(../../_images//person_icon.png);
-	background-repeat: no-repeat;
-	width: 60px;
-	height: 60px;
-	padding: 0;
-	margin: 0;
-}
-
-.search_result_dot {
-	display:block;
-	float:left;
-	position:relative;
-	left:5px;
-}
-
-.search_result_person_name {
-	display: block;
-	color: #3399cc;
-	font-weight: bold;
-	margin-left: 80px;
-}
-
-.search_result_person_dept {
-	display: block;
-	color: #999;
-	font-size: .85em;
-	margin-left: 80px;
-}
-
-
-/* search result images */
-.search_result_image_container {
-	float: left;
-	margin: 15px 10px 10px 0;
-}
-
-.search_result_image {
-	
-}
-
-
-
 
