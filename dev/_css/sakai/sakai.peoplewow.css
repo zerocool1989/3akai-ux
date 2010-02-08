@@ -47,7 +47,7 @@
 
 /** PEOPLEWOW TABS **/
 .content_peoplewow .peoplewow_tab_nav {
-	background: url('../../_images/people_tab_bg.png') top right no-repeat;
+	background: url('../../_images/search_tab_bg.png') top right no-repeat;
 	height: 25px;
 	padding: 3px 10px 0 0;
 	margin: 0;
@@ -452,4 +452,3 @@ strong {
 	border: none;
 	margin: 0px;
 }
-
