@@ -26,8 +26,121 @@
 
 /* Hide i18nable elements by default until the messages are replaced by the translated
 strings, and i18n will show the element. Typically this class is applied at body level */
-.i18nable { display:none; }
+.i18nable {
+    display:none;
+}
 
+/* ----------------------------------------------------------------------------
+ * PROGRAMMATICALLY SET STYLES
+ * styles used to programmatically set placement of widgets on the page 
+ * ----------------------------------------------------------------------------
+ */
+
+.inline_class_widget_rightfloat {
+    float:right;
+    padding: 5px;
+}
+.inline_class_widget_leftfloat {
+    float:left;
+    padding: 5px;
+}
+
+/* ----------------------------------------------------------------------------
+ *    BUTTONS 
+ * ----------------------------------------------------------------------------
+ */
+
+.s3d-button {
+    display: inline-block;
+    position: relative;
+    border: none; 
+    margin: 0 5px 5px 0;
+    padding: 0 13px 0 0;
+    cursor: pointer;
+    overflow: visible; /* removes extra side padding in IE */
+    background: url("../../_images/button-sprite-5state.png") no-repeat scroll right -40px transparent;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.s3d-button:hover, .s3d-button-hover  {
+    background-position: right -120px;
+}
+
+.s3d-button::-moz-focus-inner {
+    border: none;  /* overrides extra padding in Firefox */
+}
+
+.s3d-button .s3d-button-inner {
+    position: relative;
+    display: block;
+    background: url("../../_images/button-sprite-5state.png") no-repeat scroll left top transparent;
+    margin: 0;
+    height: 23px;
+    line-height: 23px;
+    white-space: nowrap;
+    padding: 0 0 0 15px;
+    color: #fff;
+}
+
+.s3d-button:hover .s3d-button-inner, .s3d-button-hover .s3d-button-inner {
+    background-position: left -80px;
+    color: #FFF;
+}
+
+
+html>body .s3d-button .s3d-button-inner {
+    white-space: normal; /* only do the white-space fix on IE6 */
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Safari and Google Chrome only - fix margins */
+    .s3d-button .s3d-button-inner {
+        margin-top: -1px;
+    }
+}
+
+.s3d-button-primary {
+    background-position: right -200px;
+}
+
+.s3d-button-primary .s3d-button-inner {
+    background-position: left -160px;
+}
+
+.s3d-button[disabled="disabled"], .s3d-button-disabled {
+    background-position: right -280px;
+    cursor: default;
+}
+
+.s3d-button[disabled="disabled"] .s3d-button-inner, .s3d-button-disabled .s3d-button-inner {
+    background-position: left -240px;    
+}
+
+.s3d-button-icon-right, .s3d-button-icon-left {
+    display: block;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: transparent;
+}
+
+.s3d-button-icon-right {
+    background-position: right center;
+    padding-right: 18px;
+}
+
+.s3d-button-icon-left {
+    background-position: left center;
+    padding-left: 18px;
+}
+
+.s3d-search-button {
+    padding-right: 8px;
+}
+
+.s3d-search-button .s3d-button-icon-right {
+     background-image: url("../../_images/icon-search-white.png");
+}
 
 /* ----------------------------------------------------------------------------
  *    DIALOGS

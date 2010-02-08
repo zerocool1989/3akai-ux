@@ -6,12 +6,12 @@
     <title>Sakai 3 R&amp;D - Site View</title>
 
     <link rel="stylesheet" type="text/css" href="/dev/_css/FSS/fss-base.css" />
+    <link rel="stylesheet" type="text/css" href="/dev/_css/sakai/sakai.base.css"/>
     <link rel="stylesheet" type="text/css" href="/dev/_css/sakai/sakai.core.2.css" />
     <link rel="stylesheet" type="text/css" href="/dev/_css/sakai/sakai.search.css" />
     <link rel="stylesheet" type="text/css" href="/dev/_css/sakai/sakai.search_b.css" />
     <link rel="stylesheet" type="text/css" href="/dev/_css/sakai/sakai.treeview.css" />
     <link rel="stylesheet" type="text/css" href="/devwidgets/chat/css/chat.css"/>
-    <link rel="stylesheet" type="text/css" href="/dev/_css/sakai/sakai.base.css"/>
     <link rel="stylesheet" type="text/css" href="/dev/_css/sakai/sakai.site.css"/>
     <link rel="stylesheet" type="text/css" href="/dev/_css/sakai/sakai.dashboard.css"/>
     <link rel="stylesheet" type="text/css" href="/dev/_css/sakai/sakai.3.css" />
@@ -126,11 +126,10 @@
 
                         <div class="revision_history_viewing">Viewing:</div>
 
-                        <div><select id="revision_history_list"></select></div>
-
-                        <div class="greybutton"><a href="javascript:;" class="button-default" id="revision_history_revert" >Use this Version</a></div>
-
-                        <div class="lightgreybutton"><a href="javascript:;" class="button-default" id="revision_history_cancel" >Cancel</a></div>
+                    <div><select id="revision_history_list"></select></div>
+                    
+                    <button id="revision_history_revert" class="s3d-button s3d-button-primary"><span class="s3d-button-inner">Use this Version</span></button>
+                    <button id="revision_history_cancel" class="s3d-button"><span class="s3d-button-inner">Cancel</span></button>
 
                     </div>
 
@@ -369,6 +368,7 @@
                     <span class="messageInformation" id="messageInformation" style="display:none">Auto saved at <span id="realtime"></span></span>
                 </div>
 
+<<<<<<< HEAD
                 <!-- TAB NAVIGATION -->
                 <div class="primary-tabs">
                     <ul class="fl-tabs fl-tabs-right">
@@ -377,6 +377,14 @@
                         <li id="tab_preview"><a href="javascript:;">Preview</a></li>
                     </ul>
                 </div>
+=======
+            <!--//desNote: row of buttons need to coexist horizontally with tabs,hence the //-->
+            <div class="buttonBar">
+                <button class="s3d-button s3d-button-primary save_button"><span class="s3d-button-inner">Save</span></button>
+                <button class="s3d-button cancel-button"><span class="s3d-button-inner">Cancel</span></button>
+                <span class="messageInformation" id="messageInformation" style="display:none">Auto saved at <span id="realtime"></span></span>
+            </div>
+>>>>>>> master
 
                 <!-- TAB CONTENT -->
                 <div class="fl-centered fl-container fl-tab-content edit_container">
@@ -427,7 +435,14 @@
 
                     </div>
 
+<<<<<<< HEAD
                     <div class="content_bottom"><div class="content_bottom_inner"></div></div>
+=======
+                <div class="buttonBar">
+                    <button class="s3d-button s3d-button-primary save_button"><span class="s3d-button-inner">Save</span></button>
+                    <button class="s3d-button cancel-button"><span class="s3d-button-inner">Cancel</span></button>
+                </div>
+>>>>>>> master
 
                 </div>
             </div>
