@@ -25,7 +25,7 @@
             <li id="nav_content_media_link"><a href="/dev/content_media_wow.html">__MSG__CONTENT_AND_MEDIA__</a></li>
             <li id="nav_people_link"><a href="/dev/peoplewow.html">__MSG__PEOPLE__</a></li>
             <li id="nav_courses_sites_link"><a href="/dev/my_sites.html">__MSG__COURSES_AND_SITES__</a></li>
-            <li id="nav_search_link"><a href="javascript:;">__MSG__SEARCH__</a></li>
+            <li id="nav_search_link"><a href="javascript:;">Calendar</a></li>
         </ul>
         <div class="personal-container fl-force-right">
 
@@ -46,123 +46,11 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
 <div class="fl-centered fixed-container search_container">
     <form class="search_form fl-force-right" id="search_form" action="" method="post">
         <input type="text" id="search_field" class="search_input_field" value="__MSG__SEARCH_FOR__"/>
         <a href="javascript:;" id="search_button" class="search_button"><span>__MSG__SEARCH__</span></a>
     </form>
-=======
-
-<!-- SELECTED PAGE -->
-<div id="nav_selected_page_template"><!--
-    {if dropdown}
-        <div class="explore_nav_selected_dropdown" id="mysites_dropdown_close_link">
-    {else}
-        <div class="explore_nav_selected">
-    {/if}
-        <a href="javascript:;">
-            <span>${value}</span>
-        </a>
-        {if dropdown}
-            <img src="/dev/_images/white_subnav_arrow_up.png" class="explore_nav_selected_arrow" />
-        {/if}
-    </div>
---></div>
-
-<!-- DROPDOWN -->
-<div class="fl-container-flex fl-col-flex2 fl-fix dropdown" id="people_dropdown_main" style="display:none">
-    <div class="fixed-container">
-        <!-- MY CONTACTS -->
-        <div class="fl-col dropdown_contacts">
-            <h2>__MSG__MY_CONTACTS__</h2>
-            <div class="fl-container" id="people_dropdown_my_contacts_list">
-            </div>
-            <div id="people_dropdown_my_contacts_list_template"><!--
-                {for i in items}
-                    <div class="dropdown_person">
-                        {if i.photo}
-                            <a href="/dev/profile.html?user=${i.id}" class="dropdown_person_picture"><img src="${i.photo}" style="width:60px;height:60px"/></a>
-                        {else}
-                            <a href="/dev/profile.html?user=${i.id}" class="dropdown_person_picture"></a>
-                        {/if}
-                        <a href="/dev/profile.html?user=${i.id}" class="dropdown_person_name">${i.name}</a>
-                    </div>
-                {forelse}
-                    <span style="font-size:0.95em">__MSG__YOU_CURRENTLY_HAVE_NO_CONTACTS__</span>
-                {/for}
-            --></div>
-            <div style="clear:both">
-                <a href="/dev/people.html" class="view_all_link">__MSG__VIEW_AND_EDIT_CONTACTS__</a>
-            </div>
-        </div>
-        <!-- SEARCH -->
-        <div class="dropdown_search_people">
-            <h2>__MSG__SEARCH_FOR_PEOPLE__</h2>
-            <div class="fl-fix dropdown_search_container">
-                <div>
-                    <input type="text" class="dropdown_search_input" id="dropdown_people_search" value="__MSG__TYPE_NAME_OR_KEYWORDS__"/>
-                    <button id="dropdown_people_search_button" class="s3d-search-button s3d-button s3d-button-primary"><span class="s3d-button-inner"><span class="s3d-button-icon-right">__MSG__SEARCH__</span></span></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="dropdown_bottom_part_left">
-        <div class="dropdown_bottom_part_right"></div>
-    </div>
-</div>
-
-<!-- DROPDOWN -->
-<div class="fl-container-flex fl-col-flex3 fl-fix dropdown dropdown_mysites" id="mysites_dropdown_main" style="display:none">
-    <div class="fixed-container">
-        <!-- MY SITES -->
-        <div class="fl-col dropdown_sites">
-            <h2>__MSG__MY_SITES__</h2>
-            <div id="top_navigation_my_sites_list"></div>
-            <div id="top_navigation_my_sites_list_template"><!--
-                <ul class="my_site_list">
-                    {for i in entry}
-                        <li><a href="/sites/${i.location}">${i.name}</a></li>
-                    {forelse}
-                        <span>__MSG__YOU_ARENT_A_MEMEBER_OF_ANY_SITES_YET__</span>
-                    {/for}
-                </ul>
-            --></div>
-            <a href="/dev/sites_edit.html" class="view_all_link hidedev">View &amp; Edit All &raquo;</a>
-        </div>
-
-        <!-- RECENTLY VISITED -->
-        <div id="chat_dropdown_recent_sites" class="fl-col dropdown_recent_sites">
-            <h2>__MSG__RECENT_SITES__</h2>
-        </div>
-        <div id='chat_dropdown_recent_sites_template'><!--
-            {if count == 0}
-                <span>__MSG__NO_RECENT_SITES_FOUND__<span>
-            {else}
-                <ul class="my_site_list">
-                    {for i in items}
-                        <li><a href="/sites/${i.location}">${i.name}</a></li>
-                    {/for}
-                </ul>
-            {/if}
-        --></div>
-
-        <!-- SEARCH -->
-        <div class="dropdown_search_course_sites">
-            <h2>__MSG__SEARCH_FOR_COURSES_AND_SITES__</h2>
-            <div class="fl-fix dropdown_search_container">
-                <div>
-                    <input type="text" id="courses_sites_search" class="dropdown_search_input" value="__MSG__TYPE_NAME_OR_KEYWORDS__"/>
-                    <button id="courses_sites_search_button" class="s3d-search-button s3d-button s3d-button-primary"><span class="s3d-button-inner"><span class="s3d-button-icon-right">__MSG__SEARCH__</span></span></button>
-                </div>
-                <button id="top_navigation_create_site" class="s3d-button s3d-create-site-button"><span class="s3d-button-inner"><span class="s3d-button-icon-left">__MSG__CREATE_A_SAKAI_SITES__</span></span></button>
-            </div>
-        </div>
-    </div>
-    <div class="dropdown_bottom_part_left">
-        <div class="dropdown_bottom_part_right"></div>
-    </div>
->>>>>>> master
 </div>
 
 <!-- CREATE A SITE WIDGET -->
