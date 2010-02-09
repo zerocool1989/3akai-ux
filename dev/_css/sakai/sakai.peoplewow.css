@@ -125,7 +125,7 @@
 
 .peoplewow_content_main .peoplewow_items_list {
     float: left;
-    width: 125px;
+    width: 160px;
     padding: 20px;
 }
 
@@ -157,13 +157,22 @@
     list-style-image: none;
 }
 
-.peoplewow_items_list input[type =
-"text"] {
+.peoplewow_items_list input[type = "text"] {
     border: 1px solid #ccc;
     color: #aaa;
     font-size: 12px;
     padding: 3px;
     width: 120px;
+}
+
+.peoplewow_filter_alphabet a {
+    display:block;
+    float:left;
+    width:17px;
+}
+
+.peoplewow_filter_list {
+    font-size: 0.9em;
 }
 
 .peoplewow_content_main .peoplewow_item_content {
