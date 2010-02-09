@@ -123,87 +123,157 @@
     background-color: #eeeeee;
 }
 
+/* My contacts and groups menu bar */
 .peoplewow_content_main .peoplewow_items_list {
+    color: #006e96;
     float: left;
     width: 160px;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 .peoplewow_items_list ul {
     list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    width: 10em;
-    font-weight: bold;
+    list-style-image: url(../../_images/arrow_down_sm2_blue.png);
+    background: none;
 }
 
-.peoplewow_items_list ul ul {
-    margin: 0px 15px;
+.peoplewow_items_list .simpleTree .folder-open {
+    background: url(../../_images/arrow_down_sm2_blue.png) 2px 7px no-repeat #fff;
 }
 
-.peoplewow_items_list li {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    list-style-image: url(../../_images/arrow_right_sm2_blue.png);
+.peoplewow_items_list .simpleTree .folder-open-last {
+    background: url(../../_images/arrow_down_sm2_blue.png) 2px 7px no-repeat #fff;
 }
 
-.peoplewow_items_list_contacts li {
-    list-style-image: url(../../_images/mail_icon.png);
+.peoplewow_items_list .simpleTree .folder-close {
+    background: url(../../_images/arrow_right_sm2_blue.png) 3px 4px no-repeat #fff;
 }
 
-.peoplewow_items_list li.active ul {
-    list-style-type: none;
-    list-style-image: none;
+.peoplewow_items_list .simpleTree .folder-close-last {
+    background: url(../../_images/arrow_right_sm2_blue.png) 3px 4px no-repeat #fff;
 }
 
-.peoplewow_items_list input[type = "text"] {
-    border: 1px solid #ccc;
-    color: #aaa;
-    font-size: 12px;
-    padding: 3px;
-    width: 120px;
+.peoplewow_items_list .simpleTree .doc {
+    background: url(../../_images/arrow_right_sm2_blue.png) 6px center no-repeat #fff;
+    /*background-position:center left;*/
 }
 
-.peoplewow_filter_alphabet a {
-    display:block;
-    float:left;
-    width:17px;
+.peoplewow_items_list .simpleTree .doc-last {
+    background: url(../../_images/arrow_right_sm2_blue.png) 6px center no-repeat #fff;
 }
 
-.peoplewow_filter_list {
-    font-size: 0.9em;
+.peoplewow_items_list .simpleTree #contact_list .line {
+    background: none;
 }
 
+.peoplewow_items_list .simpleTree #contact_list .line-last {
+    background: none;
+}
+
+/* Container */
 .peoplewow_content_main .peoplewow_item_content {
-    float: right;
-    width: 705px;
+    float: left;
+    width: 670px;
     margin-top: 10px;
     padding: 10px;
-    border-left: 2px solid #eee;
+    border: 2px solid #eee;
 }
 
 /* MY GROUPS PAGE */
-.peoplewow_item_content .peoplewow_mygroups_header {
+.peoplewow_mygroups_header {
     font-size: 14px;
     display: inline;
 }
 
+.peoplewow_mygroups_header span {
+    float: left;
+}
+
+#peoplewow_options {
+    float: right;
+}
+
+#peoplewow_options ul {
+    display: inline;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+#peoplewow_options ul li {
+    display: inline;
+    list-style-type: none;
+}
+
+#peoplewow_options_select a:hover {
+    text-decoration: underline;
+}
+
+#peoplewow_options_select li {
+    margin-right: 10px;
+}
+
+#peoplewow_options_select li a {
+    position: relative;
+    top: 3px;
+}
+
+#peoplewow_options_view li a {
+    background-image: url("/dev/_images/prototype_view_icons.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 0;
+    overflow: hidden;
+    padding-top: 21px;
+    width: 22px;
+}
+
+#peoplewow_options_view_thumbnail a:hover {
+    background-position: 0 -21px;
+}
+
+#peoplewow_options_view_thumbnail a:active, #peoplewow_options_view_thumbnail .peoplewow_options_view_selected {
+    background-position: 0 -42px;
+}
+
+#peoplewow_options_view_category a {
+    width: 20px !important;
+    background-position: -22px 0;
+}
+
+#peoplewow_options_view_category a:hover {
+    background-position: -22px -21px;
+}
+
+#peoplewow_options_view_category a:active, #peoplewow_options_view_category .peoplewow_options_view_selected {
+    background-position: -22px -42px;
+}
+
+#peoplewow_options_view_list a {
+    background-position: -44px 0;
+}
+
+#peoplewow_options_view_list a:hover {
+    background-position: -44px -21px;
+}
+
+#peoplewow_options_view_list a:active, #peoplewow_options_view_list .peoplewow_options_view_selected {
+    background-position: -44px -42px;
+}
+
 .peoplewow_item_content .peoplewow_mygroups_list {
-    margin-top: 50px;
+    margin: 50px 0 0 0;
 }
 
 .peoplewow_item_content .peoplewow_mygroups_list_group {
     margin-top: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 715px;
-    height: 80px;
+    overflow:auto;
+    padding: 5px 0;
 }
-
 .peoplewow_item_content .peoplewow_mygroups_list li {
+    clear: both;
     list-style-type: none;
-    margin-left: -30px;
 }
 
 .peoplewow_item_content .peoplewow_mygroups_list_group:hover {
@@ -217,7 +287,7 @@
 
 .peoplewow_item_content .peoplewow_mygroups_group_info {
     padding-left: 5px;
-    width: 475px;
+    width: 450px;
     float: left;
     display: block;
 }
@@ -248,38 +318,26 @@
 }
 
 /* MY CONTACTS PAGE */
-.peoplewow_item_content .peoplewow_mycontacts_header {
-    font-size: 18px;
+.peoplewow_recent_widgets .fl-widget .fl-widget-titlebar .widget_title {
+    padding-left: 15px;
+}
+
+.peoplewow_recent_widgets .fl-widget .fl-widget-content {
+    height: 150px;
     padding: 10px;
 }
 
-.peoplewow_item_content .peoplewow_mycontacts_recent {
-    margin: auto;
-    float: left;
-    width: 210px;
-    margin-left: 15px;
-    height: 250px;
-    background-image: url(../../_images/prototype_placeholder.png);
-    text-align: left;
-}
-
 .peoplewow_item_content .peoplewow_mycontacts_outer {
-    margin-top: 25px;
-    margin-left: 15px;
+    margin: 25px 0 0 0;
     float: left;
-    padding: 15px;
-    padding-bottom: 40px;
-    width: 610px;
-    height: auto;
-    border-style: solid;
-    border-color: #eeeeee;
-    border-width: 20px;
+    padding: 15px 15px 40px 15px;
+    border: 20px solid #eee;
 }
 
 .peoplewow_item_content .peoplewow_mycontacts_grid {
     padding-left: 20px;
     float: left;
-    width: 400px;
+    width: 380px;
 }
 
 .peoplewow_item_content .peoplewow_mycontacts_list {
@@ -299,45 +357,21 @@
 }
 
 .peoplewow_item_content .peoplewow_mycontacts_buttons {
-    margin-left: 475px;
+    margin-left: 420px;
     width: 120px;
 }
 
+/* MY GROUPS GROUP DETAILS PAGE */
 .peoplewow_item_content .peoplewow_mycontacts_buttons a {
     margin-bottom: 10px;
 }
 
 .peoplewow_item_content .peoplewow_mycontacts_links {
-    text-decoration: underline;
     padding-top: 130px;
-    padding-left: 475px;
+    padding-left: 420px;
 }
 
-/* FOOTER */
-.page_footer {
-    padding: 15px 0 15px 15px;
-    border-top: 1px solid #ddd;
-    font-size: .85em;
-    color: #999;
-    margin-top: 35px;
-}
-
-.page_footer a {
-    color: #3399cc;
-}
-
-.sakai_logo {
-    float: left;
-}
-#add _to_contacts_dialog {
-    width: 600px !important;
-    margin-left: -300px !important;
-}
-#add _to_contacts_dialog td {
-    border: none !important;
-    padding: 0em !important;
-}
-
+/* HEADING */
 .site_heading {
     border-bottom: none;
 }
