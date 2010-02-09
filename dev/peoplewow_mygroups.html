@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.base.css" />
     <link type="text/css" rel="stylesheet" href="/devwidgets/chat/css/chat.css"/>
     <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.components.jq_pager.css" />
+    <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.treeview.css" />
 
     <script type="text/javascript" language="JavaScript" src="_configuration/widgets.js"></script>
     <script type="text/javascript" language="JavaScript" src="_configuration/config.js"></script>
@@ -32,10 +33,7 @@
     <script src="_lib/AutoComplete/jquery.autocomplete.min.js" type="text/javascript" language="JavaScript"></script>
     <script type="text/javascript" language="JavaScript" src="_lib/sakai_util/sdata.js"></script>
     <script type="text/javascript" language="JavaScript" src="_lib/sakai_util/i18n.js"></script>
-
-    <!--<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.treeview.css" />
     <script type="text/javascript" language="JavaScript" src="_lib/Jquery/jquery.simple.tree.js"></script>
-    <script type="text/javascript" language="JavaScript" src="_lib/sakai_util/querystring.js"></script>-->
     <script type="text/javascript" language="JavaScript" src="_javascript/peoplewow.js"></script>
     
 
@@ -75,29 +73,64 @@
 
                     <!-- ITEM LIST -->
                     <div class="peoplewow_items_list">
-                        <ul id="peoplewow_items_list_nav">
-                            <li><a href="#">My contacts</a>
-                                <ul class="peoplewow_items_list_contacts">
-                                    <li><a href="">Denzel Williams</a></li>
-                                    <li><a href="">Florencia Coretez</a></li>
-                                    <li><a href="">Victoriyanica Prilutski</a></li>
-                                    <li><a href="">Adrian Jackson</a></li>
+                        <ul class="simpleTree">
+                            <li class="root" id="1">
+                                <span style="display:none">Tree Root 1</span>
+                                <ul>
+                                    <li class='closed' id="contact_list">
+                                        <span id="top_menu">My Contacts</span>
+                                        <ul>
+                                            <li class='open'>
+                                                <a href="javascript:;">Denzel Williams</a>
+                                            </li>
+                                            <li class='open'>
+                                                <a href="javascript:;">Florencia Coretez</a>
+                                            </li>
+                                            <li class='open'>
+                                                <a href="javascript:;">Victoriyanica Prilutski</a>
+                                            </li>
+                                            <li class='open'>
+                                                <a href="javascript:;">Adrian Jackson</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class='open' id="group_list">
+                                        <span>My Groups</span>
+                                        <ul>
+                                            <li class='open'>
+                                                <a href="peoplewow_mygroups_details.html">Biology study group</a>
+                                            </li>
+                                            <li class='open'>
+                                                <a href="peoplewow_mygroups_details.html">DNA research group</a>
+                                            </li>
+                                            <li class='open'>
+                                                <a href="peoplewow_mygroups_details.html">University social group</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
-                            <li class="peoplewow_items_list_active"><a href="peoplewow_mygroups.html">My groups</a>
-                                <ul>
-                                    <li><a href="">Biology study group</a></li>
-                                    <li><a href="">DNA research group</a></li>
-                                    <li><a href="">University social group</a></li>
-                                </ul>
-                            </li> 
                         </ul>
                     </div>
 
                     <!-- CONTENT - LIST OF GROUPS -->
                     <div class="peoplewow_item_content">
-                        <p class="peoplewow_mygroups_header">My groups:</p>
-                        <img class="fl-force-right" src="_images/prototype_view_icons.png" alt="My groups view mode" />
+                        <div class="peoplewow_mygroups_header">
+                            <span>My groups:</span>
+                            <div id="peoplewow_options">
+                                <ul id="peoplewow_options_view">
+							            <li id="peoplewow_options_view_thumbnail">
+								            <a href="javascript:;" title="Change to thumbnail view" class="peoplewow_options_view_selected">Thumbnail view</a>
+							            </li>
+							            <li id="peoplewow_options_view_category">
+								            <a href="javascript:;" title="Change to category view">Category view</a>
+							            </li>
+							            <li id="peoplewow_options_view_list">
+								            <a href="javascript:;" title="Change to list view">List view</a>
+                                    </li>
+						            </ul>
+                            </div>
+                        </div>
                         <ul class="peoplewow_mygroups_list">
                             <li class="peoplewow_mygroups_list_group">
                                 <div class="peoplewow_mygroups_group_img">

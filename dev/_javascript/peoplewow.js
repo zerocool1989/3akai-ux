@@ -54,11 +54,11 @@ sakai.peoplewow = function() {
     // Display contacts and groups menu
 //    initMenu();
 
-    //var simpleTreeCollection = $('.simpleTree').simpleTree({
-    //  autoclose: false,
-    //  drag: false
+    var simpleTreeCollection = $('.simpleTree').simpleTree({
+      autoclose: false,
+      drag: false
 
-    //});
+    });
 
   };
   doInit();
