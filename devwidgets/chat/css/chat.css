@@ -96,6 +96,9 @@
 .show_online_visible a {color: #666;}
 
 /* MAIN */
+.initiate_chat_window,.chat_straight_link {color:#fff;cursor:pointer;font-size:90%;}
+.chat_has_dropdown img {margin-left:-10px; margin-top: 11px; padding-right: 10px;}
+
 /* create site button
  * overrides sd3-button from sakai.base.css
  */
