@@ -114,16 +114,23 @@
     padding: 10px;
 }
 
+/* TOP TOOLBAR */
 .peoplewow_content_main .peoplewow_toolbar {
-    padding: 15px;
     background-color: #eeeeee;
+    margin-bottom:10px;
+    padding: 15px;
+}
+.peoplewow_content_main .peoplewow_toolbar_back {
+    display:block;
+    font-weight:bold;
+    margin-top:6px;
 }
 
 /* LEFT CONTAINER*/
 .peoplewow_items_list {
     float: left;
     width: 160px;
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
     overflow-x: hidden;
 }
 .peoplewow_items_list_nav {
@@ -259,14 +266,55 @@
     text-align: center;
 }
 
-/* Container */
+/* RIGHT TOP CONTAINER */
+.peoplewow_content_main .peoplewow_item_content_top ul {
+    display: inline;
+    float: left;
+    margin: 5px 0 0 0;
+    padding: 0 0 0 20px !important;
+}
+.peoplewow_content_main .peoplewow_item_content_top ul li {
+    float:left;
+    display: inline;
+}
+.peoplewow_content_main .peoplewow_item_content_top ul li a {
+    background: #d5dbdf;
+    -moz-border-radius-topleft: 7px;
+    -moz-border-radius-topright: 7px;
+    -webkit-border-top-left-radius: 7px;
+    -webkit-border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border: 1px solid #d5dbdf;
+    border-bottom: none;
+    color: #454a4f;
+    display: block;
+    margin-right:1px;
+    margin-bottom:1px;
+    padding:5px 10px;
+}
+.peoplewow_content_main .peoplewow_item_content_top ul .peoplewow_item_content_top_selected a{
+    background: #fff;
+    padding-bottom: 6px;
+    margin-bottom: 0;
+}
+.peoplewow_content_main .peoplewow_item_content_top {
+    border-bottom: 1px solid #d5dbdf;
+    border-left: 1px solid #d5dbdf;
+    overflow: auto;
+}
+
+/* RIGHT CONTAINER */
 .peoplewow_content_main .peoplewow_item_content {
     border-left: 1px solid #d5dbdf;
     color: #454a4f;
     float: left;
-    margin-top: 10px;
-    padding:10px 30px;
-    width:630px;
+    padding:10px 20px;
+    width:650px;
+}
+.peoplewow_content_main .peoplewow_item_content .button {
+    color: #006E96;
+    
 }
 
 /* MY GROUPS PAGE */
@@ -416,7 +464,10 @@
     padding: 0;
 }
 #peoplewow_content_groups ul li {
+    clear:both;
     list-style-type: none;
+    margin-bottom:20px;
+    overflow:auto;
 }
 #peoplewow_content_groups .peoplewow_content_groups_image {
     background: url("/dev/_images/prototype_placeholder_people_groups.png") no-repeat 0px 0px;
@@ -441,6 +492,10 @@
 }
 #peoplewow_content_groups .peoplewow_content_groups_title {
     font-weight: bold;
+}
+#peoplewow_content_groups .peoplewow_content_groups_buttons {
+    margin: 20px 0 0 10px;
+    width: 90px;
 }
 
 /* HEADING */
