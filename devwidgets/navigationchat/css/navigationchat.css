@@ -150,13 +150,13 @@
 }
 
 
-#widget_chat {
+#widget_navigationchat {
     position: relative;
     width: 960px;
     margin: 0 auto;
 }
 
-#widget_chat #user_link_menu {
+#widget_navigationchat #user_link_menu {
     position: absolute;
     top: 43px;
     right: 285px;

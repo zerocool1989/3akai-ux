@@ -104,7 +104,7 @@ sakai.site = function(){
     var $initialcontent = $("#initialcontent");
     var $page_nav_content = $("#page_nav_content");
     var $sitetitle = $("#sitetitle");
-    var $widget_chat = $("#widget_chat");
+    var $widget_navigationchat = $("#widget_navigationchat");
     var $loginLink = $("#loginLink");
     var $insert_more_menu = $("#insert_more_menu");
     var $more_menu = $("#more_menu");
@@ -257,7 +257,7 @@ sakai.site = function(){
             $("#loginLink").hide();
         } else {
             $(".explore_nav").hide();
-            $widget_chat.hide();
+            $widget_navigationchat.hide();
             sakai._isAnonymous = true;
             $loginLink.show();
         }
