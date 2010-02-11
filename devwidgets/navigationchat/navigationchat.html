@@ -1,3 +1,63 @@
+
+<!-- EXPLORE NAV CONTAINER -->
+<div id="explore_nav_container" style="display:none">
+    <div class="fl-container explore_nav">
+        <ul class="explore">
+            <li id="nav_my_sakai_link"><a  href="/dev/my_sakai.html">__MSG__MY_SAKAI__</a></li>
+            <li id="nav_content_media_link"><a href="/dev/content_media_wow.html">__MSG__CONTENT_AND_MEDIA__</a></li>
+            <li id="nav_people_link"><a href="/dev/peoplewow.html">__MSG__PEOPLE__</a></li>
+            <li id="nav_courses_sites_link"><a href="/dev/my_sites.html">__MSG__COURSES_AND_SITES__</a></li>
+            <li id="nav_search_link"><a href="javascript:;">__MSG__CALENDAR__</a></li>
+        </ul>
+
+        <!-- PERSONAL CONTAINER -->
+        <div class="personal-container fl-force-right">
+
+            <div class="personal">
+
+                <ul>
+                    <li id="other_logins_button_container" style="display: none;"><a class="other_logins" href="javascript:;">Institutional login</a></li>
+                    <li id="register_button_container" style="display: none;"><a class="register" href="/dev/create_new_account.html">Register</a></li>
+                    <li id="login_button_container" style="display: none;"><a class="log_in" href="javascript:;">Log in</a></li>
+
+                    <!-- CHAT STATUS DROPDOWN -->
+                    <li id="user_link_container">
+                        <a id="user_link" class="user_link" href="javascript:;">
+                            <span id="userid"></span>
+                        </a>
+                    </li>
+
+                    <li><a class="mail" href="/dev/inbox.html"><img src="/dev/_images/mail_icon.png" alt="Mail Icon" /> (<span id="chat_unreadMessages">0</span>)</a></li>
+                    <li><a class="help" href="http://confluence.sakaiproject.org/display/SAKDEV/Sakai+3" target="_blank">__MSG__HELP__</a></li>
+                    <li><a class="sign_out" href="/dev/logout.html">__MSG__SIGN_OUT__</a></li>
+                </ul>
+
+                <div id="login_container" style="display: none;">
+                    <form id="login_form" method="POST">
+                        <label for="login_username">__MSG__USERNAME__</label>
+                        <br/>
+                        <input type="text" alt="__MSG__USERNAME__" id="login_username" name="login_username" />
+                        <br />
+                        <label for="login_password">__MSG__PASSWORD__</label>
+                        <br />
+                        <input type="password" alt="__MSG__PASSWORD__" id="login_password" name="login_password" />
+
+                        <div id="login_error_message" style="display: none;">__MSG__LOGIN_FAILED__!</div>
+                        <div id="login_busy" class="fl-force-right" style="display:none;"></div>
+
+                        <div class="login-container-button fl-force-right">
+                            <button id="login_cancel_button" type="button" class="s3d-button s3d-button-secondary"><span class="s3d-button-inner">Cancel</span></button>
+                            <button id="login_submit_button" type="button" class="s3d-button s3d-button-primary"><span class="s3d-button-inner">Sign In</span></button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- USER LINK MENU -->
 <div id="user_link_menu" style="display:none">
     <div class="user_link_menu_border">
         <ul>
@@ -17,48 +77,19 @@
     </div>
 </div>
 
-<!-- EXPLORE NAV CONTAINER -->
-<div id="explore_nav_container" style="display:none">
-    <div class="fl-container explore_nav">
-        <ul class="explore fl-force-left">
-            <li id="nav_my_sakai_link"><a  href="/dev/my_sakai.html">__MSG__MY_SAKAI__</a></li>
-            <li id="nav_content_media_link"><a href="/dev/content_media_wow.html">__MSG__CONTENT_AND_MEDIA__</a></li>
-            <li id="nav_people_link"><a href="/dev/peoplewow.html">__MSG__PEOPLE__</a></li>
-            <li id="nav_courses_sites_link"><a href="/dev/my_sites.html">__MSG__COURSES_AND_SITES__</a></li>
-            <li id="nav_search_link"><a href="javascript:;">Calendar</a></li>
-        </ul>
-        <div class="personal-container fl-force-right">
-
-            <div class="personal">
-                <ul>
-                    <!-- CHAT STATUS DROPDOWN -->
-                    <li id="user_link_container">
-                        <a id="user_link" class="user_link" href="javascript:;">
-                            <span id="userid"></span>
-
-                        </a>
-                    </li>
-                    <li><a class="mail" href="/dev/inbox.html"><img src="/dev/_images/mail_icon.png" alt="Mail Icon" /> (<span id="chat_unreadMessages">0</span>)</a></li>
-                    <li><a class="help" href="http://confluence.sakaiproject.org/display/SAKDEV/Sakai+3" target="_blank">__MSG__HELP__</a></li>
-                    <li><a class="sign_out" href="/dev/logout.html">__MSG__SIGN_OUT__</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="fl-centered fixed-container search_container">
-    <form class="search_form fl-force-right" id="search_form" action="" method="post">
-        <input type="text" id="search_field" class="search_input_field" value="__MSG__SEARCH_FOR__"/>
-        <a href="javascript:;" id="search_button" class="search_button"><span>__MSG__SEARCH__</span></a>
+<!-- SEARCH -->
+<div id="genaral_search_container">
+    <form class="fl-force-right">
+        <input type="text" id="general_search_input" class="general_search_input" value="Search for media, people and sites"/>
+        <button id="general_search_submit_button" class="s3d-search-button s3d-button s3d-button-primary"><span class="s3d-button-inner"><span class="s3d-button-icon-right">__MSG__SEARCH__</span></span></button>
+        <br class="clear"/>
     </form>
 </div>
 
-<!-- CREATE A SITE WIDGET -->
-<div id="top_navigation_widgets"></div>
 
 <div id="chat_available_template" style="display:none"><!--
     <a href="javascript:;" id="chat_available_minimize">
-        <img class="chat_button_image" src="/devwidgets/chat/images/chat_minimize.png" alt="" />
+        <img class="chat_button_image" src="/devwidgets/navigationchat/images/chat_minimize.png" alt="" />
     </a>
     <table>
         <tbody>
@@ -160,10 +191,10 @@
                         </td>
                         <td>
                             <a href="javascript:;">
-                                <img id="chat_close_${i.userid}" class="chat_user_button_image chat_close" src="/devwidgets/chat/images/chat_close.png" alt="" />
+                                <img id="chat_close_${i.userid}" class="chat_user_button_image chat_close" src="/devwidgets/navigationchat/images/chat_close.png" alt="" />
                             </a>
                             <a href="javascript:;">
-                                <img id="chat_minimize_${i.userid}" class="chat_user_button_image chat_minimize" src="/devwidgets/chat/images/chat_minimize.png" alt="" />
+                                <img id="chat_minimize_${i.userid}" class="chat_user_button_image chat_minimize" src="/devwidgets/navigationchat/images/chat_minimize.png" alt="" />
                             </a>
                             <span id="chat_window_name_${i.userid}" class="chat_window_name">${i.name}</span><br />
                             <span id="chat_window_statusmessage_${i.userid}" class="chat_available_statusmessage">${i.statusmessage}</span>
@@ -194,7 +225,7 @@
                 <td id="chat_windows"></td>
                 <td id="chat_online_connections_link">
                     <span id="online_button">
-                        <img src="/devwidgets/chat/images/people.png" width="16px" class="chat_people_icon" alt="Online"/>
+                        <img src="/devwidgets/navigationchat/images/people.png" width="16px" class="chat_people_icon" alt="Online"/>
                         <a class="chat_straight_link" id="chat_online"></a>
 
                         <!-- SHOW ONLINE FRIENDS -->
@@ -211,4 +242,4 @@
 </div>
 
 <!-- JAVASCRIPT -->
-<script type="text/javascript" language="JavaScript" src="/devwidgets/chat/javascript/chat.js"></script>
+<script type="text/javascript" language="JavaScript" src="/devwidgets/navigationchat/javascript/navigationchat.js"></script>
