@@ -1,8 +1,17 @@
-/* HEADER */
+/* GENERAL */
 .content_peoplewow a {
     color: #006E96;
 }
+.content_peoplewow a:hover{
+    text-decoration: underline;
+}
+.content_peoplewow .button {
+    color: #61646a;
+    font-weight: bold;
+    padding: 4px 25px;
+}
 
+/* CONTAINER */
 .peoplewow-container .content_peoplewow .fixed-container {
     background: #fff url('../../_images/header_l.png') top left no-repeat;
     padding: 0 20px 20px 20px
@@ -14,6 +23,7 @@
     margin-right: -20px;
 }
 
+/* HEADER */
 .content_peoplewow h1.title {
     font-size: 1.4em;
     font-weight: bold;
@@ -21,18 +31,7 @@
     padding: 0;
 }
 
-.content_peoplewow .breadcrumb {
-    font-size: .85em;
-    padding: 15px 0 0 0;
-    color: #444;
-}
-
-.breadcrumb .pipe-divider {
-    padding: 0 6px;
-    color: #AAA;
-}
-
-/** PEOPLEWOW TABS **/
+/* TABS */
 .content_peoplewow .peoplewow_tab_nav {
     background: url('../../_images/search_tab_bg.png') top right no-repeat;
     height: 25px;
@@ -78,17 +77,6 @@
     font-weight: normal;
 }
 
-.peoplewow_content_wrapper {
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.peoplewow_tab_content_top {
-    background: url('../../_images/content_tr.gif') top right no-repeat;
-    padding: 0 5px 0 0;
-    margin: 0;
-}
-
 .peoplewow_tab_content_top_inner {
     background: url('../../_images/content_tl.gif') 0 0 no-repeat;
     margin: 0;
@@ -107,8 +95,16 @@
     height: 6px;
 }
 
-.peoplewow_bar {
-    clear: both;
+.peoplewow_tab_content_top {
+    background: url('../../_images/content_tr.gif') top right no-repeat;
+    padding: 0 5px 0 0;
+    margin: 0;
+}
+
+/* CONTENT */
+.peoplewow_content_wrapper {
+    padding: 0;
+    margin-bottom: 20px;
 }
 
 .peoplewow_content_main {
@@ -123,61 +119,154 @@
     background-color: #eeeeee;
 }
 
-/* My contacts and groups menu bar */
-.peoplewow_content_main .peoplewow_items_list {
-    color: #006e96;
+/* LEFT CONTAINER*/
+.peoplewow_items_list {
     float: left;
     width: 160px;
     padding: 20px;
     overflow-x: hidden;
 }
-
-.peoplewow_items_list ul {
+.peoplewow_items_list_nav {
+    margin: 0;
+    padding: 0;
+}
+.peoplewow_items_list_nav li {
     list-style-type: none;
-    list-style-image: url(../../_images/arrow_down_sm2_blue.png);
-    background: none;
+    margin-left: -10px;
+}
+.peoplewow_items_list_nav li a {
+    display: block;
+    font-weight: bold;
+    padding: 3px 0 3px 10px;
+}
+.peoplewow_items_list_nav .peoplewow_items_list_nav_selected a {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #767b83;
+    color: #fff;
+}
+.peoplewow_items_list .peoplewow_items_list_section {
+    clear: both;
+    margin-top: 10px;
+    overflow:hidden;
+}
+.peoplewow_items_list .peoplewow_filter_examples {
+    color: #aaaaaa;
+    font-size:11px;
+}
+.peoplewow_items_list .peoplewow_filter_clear {
+    float: right;
+    font-size: 10px;
+    opacity: 0.5;
+}
+.peoplewow_items_list .peoplewow_filter_alphabet + .peoplewow_filter_clear {
+    position:relative;
+    top:3px;
+}
+.peoplewow_items_list input[type="text"] {
+    color: #454a4f;
+    border: 1px solid #d9d9d9;
+    font-size:12px;
+    margin-bottom:2px;
+    padding:3px;
+    width:152px;
+}
+.peoplewow_items_list .peoplewow_filter_alphabet {
+    margin-top: 10px;
+}
+.peoplewow_items_list .peoplewow_filter_alphabet a {
+    display:block;
+    float:left;
+    padding:2px;
+    width:18px;
 }
 
-.peoplewow_items_list .simpleTree .folder-open {
-    background: url(../../_images/arrow_down_sm2_blue.png) 2px 7px no-repeat #fff;
+/* LIST CONTAINER */
+.peoplewow_list_container{
+    border-top: 1px solid #d5dbdf;
+    margin-top: 10px;
+    padding-top: 10px;
 }
-
-.peoplewow_items_list .simpleTree .folder-open-last {
-    background: url(../../_images/arrow_down_sm2_blue.png) 2px 7px no-repeat #fff;
+.peoplewow_list_container ul {
+    clear: both;
+    margin:0;
+    margin-left:5px;
+    min-height:20px;
 }
-
-.peoplewow_items_list .simpleTree .folder-close {
-    background: url(../../_images/arrow_right_sm2_blue.png) 3px 4px no-repeat #fff;
+.peoplewow_list_container ul li {
+    clear: both;
+    list-style-type: none;
+    padding-left: 10px;
 }
-
-.peoplewow_items_list .simpleTree .folder-close-last {
-    background: url(../../_images/arrow_right_sm2_blue.png) 3px 4px no-repeat #fff;
+.peoplewow_list_container ul li a {
+    clear: both;
+    color: #006E96;
+    display: block;
+    padding: 2px 5px;
 }
-
-.peoplewow_items_list .simpleTree .doc {
-    background: url(../../_images/arrow_right_sm2_blue.png) 6px center no-repeat #fff;
-    /*background-position:center left;*/
+.peoplewow_list_container ul li a:hover {
+    text-decoration: underline;
 }
-
-.peoplewow_items_list .simpleTree .doc-last {
-    background: url(../../_images/arrow_right_sm2_blue.png) 6px center no-repeat #fff;
+.peoplewow_list_container .peoplewow_list_dropdown{
+    float: left;
+    margin: 5px 0 0 -18px;
 }
-
-.peoplewow_items_list .simpleTree #contact_list .line {
-    background: none;
+.peoplewow_list_container .peoplewow_list_selected {
+    background: #D3DBDE;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    float: left;
+    margin: 1px 0;
 }
-
-.peoplewow_items_list .simpleTree #contact_list .line-last {
-    background: none;
+.peoplewow_list_container .peoplewow_list_selected a, .peoplewow_list_container .peoplewow_list_dropdown_text {
+    float: left;
+    clear: none;
+}
+.peoplewow_list_container .peoplewow_list_remove {
+    margin-top: 1px;
+}
+.peoplewow_list_container .peoplewow_list_container {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+.peoplewow_list_container .peoplewow_list_header {
+    color: #878a8c;
+    display: block;
+    font-size: 1.2em;
+    padding: 2px 5px;
+}
+.peoplewow_list_container .peoplewow_list_count {
+    color: #878a8c;
+}
+.peoplewow_list_container .peoplewow_list_container_form {
+    margin-top: 10px
+}
+.peoplewow_list_container .peoplewow_list input[type="text"]{
+    border: 1px solid #ccc;
+    color: #aaa;
+    font-size: 12px;
+    padding: 3px;
+    width: 79px;
+}
+.peoplewow_list_container .peoplewow_list button {
+    background: url("/dev/_images/button_bg.png") repeat-x scroll left bottom transparent;
+    border: 1px solid #ccc;
+    color: #61646a;
+    margin-left: 3px;
+    padding: 2px 5px;
+    text-align: center;
 }
 
 /* Container */
 .peoplewow_content_main .peoplewow_item_content {
+    border-left: 1px solid #d5dbdf;
+    color: #454a4f;
     float: left;
-    width: 670px;
     margin-top: 10px;
-    padding: 10px;
-    border: 2px solid #eee;
+    padding:10px 30px;
+    width:630px;
 }
 
 /* MY GROUPS PAGE */
@@ -315,6 +404,43 @@
 
 .peoplewow_item_content .peoplewow_mygroups_group_modify_button {
     margin-top: 34px;
+}
+
+/* BROWSE */
+#peoplewow_content_groups p {
+    margin: 0;
+    padding: 0;
+}
+#peoplewow_content_groups ul {
+    margin: 0;
+    padding: 0;
+}
+#peoplewow_content_groups ul li {
+    list-style-type: none;
+}
+#peoplewow_content_groups .peoplewow_content_groups_image {
+    background: url("/dev/_images/prototype_placeholder_people_groups.png") no-repeat 0px 0px;
+    color:#61646A;
+    font-weight:bold;
+    height: 22px;
+    padding-top:38px;
+    text-align:center;
+    width: 62px;
+}
+#peoplewow_content_groups .peoplewow_content_groups_text {
+    margin-left:10px;
+    width:450px;
+}
+#peoplewow_content_groups .peoplewow_content_groups_description {
+    color: #454a4f;
+    font-size: 12px;
+}
+#peoplewow_content_groups .peoplewow_content_groups_info {
+    color: #878a8c;
+    font-size: 11px;
+}
+#peoplewow_content_groups .peoplewow_content_groups_title {
+    font-weight: bold;
 }
 
 /* HEADING */
