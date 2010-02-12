@@ -68,52 +68,9 @@
 #login_busy { background: url("../../../dev/_images/ajax_load.gif") 0 0 no-repeat; width: 80px; height: 10px; }
 
 /* General Search */
-<<<<<<< HEAD
-#genaral_search_container {
-    margin: 12px auto 0px auto;
-    text-align:right;
-    width:960px;
-    clear: both;
-}
-
-#general_search_input {
-    width: 27em;
-    color: #ddd;
-    font-style: italic;
-    padding: 1px 0 0 10px;
-    display: block;
-    float: left;
-    margin: 0 5px 0 0;
-    height: 20px;
-    border: 1px solid #777;
-}
-
-.search_input_focus {
-    font-weight: bold !important;
-    color: #333 !important;
-    font-style: normal !important;
-}
-
-
-#widget_navigationchat {
-    position: relative;
-    width: 960px;
-    margin: 0 auto;
-}
-
-#widget_navigationchat #user_link_menu {
-    position: absolute;
-    top: 43px;
-    right: 285px;
-}
-
-
-
-=======
 #genaral_search_container {margin:15px auto;text-align:right;width:960px}
 #general_search_input { border: none; color: #aaa; float: left; font-size: 0.95em; height: 20px; margin: 0 14px 0 0; padding: 1px 5px; width: 18em; }
 .search_input_focus { color: #333 !important;}
->>>>>>> master
 
 /* CHAT */
 #widget_chat { position: relative; width: 960px; margin: 0 auto; }
@@ -199,39 +156,8 @@
  * overrides sd3-button from sakai.base.css
  */
 
-<<<<<<< HEAD
-.s3d-create-site-button {
-    height: 27px;
-    background-position: right -356px;
-    padding-right: 18px;
-    margin: 20px 0;
-}
-
-.s3d-create-site-button:hover {
-    background-position: right -196px;
-}
-
-.s3d-create-site-button .s3d-button-inner {
-    height: 27px;
-    background-position: left -316px;
-    padding-left: 3px;
-    color: #006E96;
-}
-
-.s3d-create-site-button:hover .s3d-button-inner {
-    background-position: left -156px;
-}
-
-.s3d-create-site-button .s3d-button-icon-left {
-    background-image: url("/dev/_images/icon-create-site.png");
-    background-position:left top;
-    line-height:30px;
-    padding-left:33px;
-}
-=======
 .s3d-create-site-button {height: 27px; background-position: right -356px; padding-right: 18px; margin: 20px 0; }
 .s3d-create-site-button:hover { background-position: right -196px; }
 .s3d-create-site-button .s3d-button-inner { height: 27px; background-position: left -316px; padding-left: 3px; color: #006E96; }
 .s3d-create-site-button:hover .s3d-button-inner { background-position: left -156px; }
 .s3d-create-site-button .s3d-button-icon-left { background-image: url("/dev/_images/icon-create-site.png"); background-position:left top; line-height:30px; padding-left:33px; }
->>>>>>> master
