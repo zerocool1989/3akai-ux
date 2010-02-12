@@ -360,8 +360,6 @@
     margin-left: 420px;
     width: 120px;
 }
-
-/* MY GROUPS GROUP DETAILS PAGE */
 .peoplewow_item_content .peoplewow_mycontacts_buttons a {
     margin-bottom: 10px;
 }
@@ -370,6 +368,144 @@
     padding-top: 130px;
     padding-left: 420px;
 }
+
+
+/* MY GROUPS GROUP DETAILS PAGE */
+.peoplewow_item_content .peoplewow_groups_tab_nav {
+    border-bottom: 1px solid #ddd;
+    background: url('../../_images/search_tab_bg.png') 14px 0px no-repeat;
+    height: 25px;
+    padding: 1px 0 0 15px;
+    margin: 0;
+}
+
+.peoplewow_item_content .peoplewow_groups_tab_nav ul {
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+    float: left;
+}
+
+.peoplewow_item_content .peoplewow_groups_tab_nav ul li {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    display: block;
+    float: left;
+}
+
+.peoplewow_item_content .peoplewow_groups_tab_nav ul li a {
+    padding: 3px 18px 4px 13px;
+    line-height: 20px;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    color: #000;
+    display: block;
+    float: left;
+}
+
+.peoplewow_item_content .peoplewow_groups_tab_nav ul li.fl-activeTab {
+    background: #FFF url('../../_images/tab_corner_tl.png') top left no-repeat;
+    padding-left: 5px;
+    height: 30px;
+}
+
+.peoplewow_item_content .peoplewow_groups_tab_nav .fl-activeTab a {
+    background: url('../../_images/tab_corner_tr.png') top right no-repeat;
+    font-weight: normal;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_info {
+    padding-top: 10px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_info p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_info a {
+    margin-top: 10px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_info .peoplewow_groupdetails_title {
+    font-size: 22px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity {
+    margin-top: 60px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity {
+    background-color: #ddd;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_joined {
+    /*background-color: #eee;*/
+    width: 400px;
+    float: left;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_activity_heading {
+    padding-bottom: 0px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_joined_grid {
+    float: left;
+    width: 450px;
+}
+.peoplewow_item_content .peoplewow_groupdetails_joined_list {
+    float: left;
+    width: 65px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_joined_list img {
+    display: block;
+    margin: 4px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_joined_list a {
+    font-weight: bold;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_sideinfo {
+    margin-bottom: 200px;
+    width: 180px;
+    float: right;
+
+
+    /*background-color: #eee;*/
+
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_recentactivity {
+    float: left;
+    width: 450px;
+    /*background-color: #eee;*/
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_recentactivity_list_item img {
+    float: left;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_recentactivity_list_item p {
+    margin: 0 0 0 60px;
+}
+
+.peoplewow_seperator {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
 
 /* HEADING */
 .site_heading {
