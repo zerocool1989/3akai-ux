@@ -13,11 +13,13 @@ strong {color: #000;}
 .header .greeting .greeting_text {font-size: 2em; color: #454A4F; display: block; padding-top: 10px; padding-bottom: 6px; font-weight: bold;}
 .header .greeting .greeting_links {font-size: .9em; color: #454A4F; font-weight: bold;}
 .header .greeting .pipe_divider {padding: 0 12px;}
+.header .page_options { text-align: right; margin: 51px 0; }
+.focussedInput {color: #000000 !important;}
 
 /* OPTIONS */
-.options {clear: both;margin-top:50px;text-align: right;}
-.options a {font-size: .9em; color: #454A4F; font-weight: bold;}
-
+.options {clear: both;text-align: right; margin-right:10px;}
+.options .fixed-container { background-color: #fff; }
+.options a {font-size: 9pt; color: #454A4F; font-weight: bold;}
 .greeting_picture img {
     width: 60px;
     height: 60px;
