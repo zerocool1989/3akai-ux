@@ -220,7 +220,7 @@
 }
 
 #peoplewow_options_view li a {
-    background-image: url("/dev/_images/prototype_view_icons.png");
+    background-image: url("../../_images/prototype_view_icons.png");
     background-repeat: no-repeat;
     float: left;
     height: 0;
@@ -360,8 +360,6 @@
     margin-left: 420px;
     width: 120px;
 }
-
-/* MY GROUPS GROUP DETAILS PAGE */
 .peoplewow_item_content .peoplewow_mycontacts_buttons a {
     margin-bottom: 10px;
 }
@@ -370,6 +368,235 @@
     padding-top: 130px;
     padding-left: 420px;
 }
+
+
+/* MY GROUPS GROUP DETAILS PAGE */
+.peoplewow_item_content .peoplewow_groups_tab_nav {
+    border-bottom: 1px solid #ddd;
+    background: url('../../_images/search_tab_bg.png') 14px 0px no-repeat;
+    height: 25px;
+    padding: 1px 0 0 15px;
+    margin: 0;
+}
+
+.peoplewow_item_content .peoplewow_groups_tab_nav ul {
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+    float: left;
+}
+
+.peoplewow_item_content .peoplewow_groups_tab_nav ul li {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    display: block;
+    float: left;
+}
+
+.peoplewow_item_content .peoplewow_groups_tab_nav ul li a {
+    padding: 3px 18px 4px 13px;
+    line-height: 20px;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    color: #000;
+    display: block;
+    float: left;
+}
+
+.peoplewow_item_content .peoplewow_groups_tab_nav ul li.fl-activeTab {
+    background: #FFF url('../../_images/tab_corner_tl.png') top left no-repeat;
+    padding-left: 5px;
+    height: 30px;
+}
+
+.peoplewow_item_content .peoplewow_groups_tab_nav .fl-activeTab a {
+    background: url('../../_images/tab_corner_tr.png') top right no-repeat;
+    font-weight: normal;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_info {
+    padding-top: 10px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_info p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_info a {
+    margin-top: 10px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_info .peoplewow_groupdetails_title {
+    font-size: 22px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity {
+    margin-top: 60px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity {
+    /*background-color: #ddd;*/
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_joined {
+    /*background-color: #eee;*/
+    width: 400px;
+    float: left;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_activity_heading {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_joined_grid {
+    float: left;
+    width: 450px;
+}
+.peoplewow_item_content .peoplewow_groupdetails_joined_list {
+    float: left;
+    width: 65px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_joined_list img {
+    display: block;
+    margin: 4px;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_joined_list a {
+    font-weight: bold;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_sideinfo {
+    margin-bottom: 200px;
+    width: 180px;
+    float: right;
+
+
+    /*background-color: #eee;*/
+
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_recentactivity {
+    float: left;
+    width: 450px;
+    /*background-color: #eee;*/
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_recentactivity_list_item img {
+    float: left;
+}
+
+.peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_recentactivity_list_item p {
+    margin: 0 0 0 60px;
+}
+
+.peoplewow_seperator {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.peoplewow_groupdetails_members ul {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.peoplewow_groupdetails_members li {
+    padding: 5px 0;
+    padding-left: 20px;
+    margin-left: -25px;
+    list-style-type: none;
+    /*list-style-image: url(../../_images/webchuck/vcard_icon.png);*/
+    background: url('../../_images/webchuck/vcard_icon.png') center left no-repeat;
+    border-bottom: 1px solid #ddd;
+}
+
+.peoplewow_groupdetails_events {
+    margin-top: 29px;
+}
+
+.peoplewow_groupdetails_events p {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.peoplewow_groupdetails_events_event_date {
+    background: url('../../_images/webchuck/calendar_icon.png') 0px 0px no-repeat;
+}
+
+.peoplewow_groupdetails_events_event_date p {
+    margin-left: 22px;
+}
+
+.peoplewow_groupdetails_events_event span {
+    font-weight: bold;
+}
+
+
+/* MY GROUPS MEMBERS DETAILS PAGE */
+
+.peoplewow_groupmembers_info {
+    margin-top: 10px;
+}
+
+.peoplewow_item_content .peoplewow_groupmembers_info .peoplewow_mygroups_group_stats {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #999999;
+}
+
+.peoplewow_item_content .peoplewow_groupmembers_info .peoplewow_mygroups_group_stats a.peoplewow_a_seperator {
+    border-right: 1px solid #ddd;
+    padding-right: 8px;
+    margin-right: 8px;
+}
+
+.peoplewow_groupmembers_list_top {
+    font-size: 14px;
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+
+.peoplewow_groupmembers_list {
+    font-size: 14px;
+    margin: 40px 0;
+    padding: 40px 0;
+}
+
+.peoplewow_groupmembers_list_top span {
+    color: #999999;
+}
+
+.peoplewow_groupmembers_list span {
+    color: #999999;
+}
+
+.peoplewow_groupmembers_group {
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.peoplewow_groupmembers_group_member {
+    background: url('../../_images/webchuck/vcard_icon.png') 0px 5px no-repeat;
+    width: 215px;
+    float: left;
+    padding: 3px;
+}
+
+.peoplewow_groupmembers_group_member a {
+    margin-left: 25px;
+    font-weight: bold;
+}
+
 
 /* HEADING */
 .site_heading {
