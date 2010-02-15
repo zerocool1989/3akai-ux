@@ -138,11 +138,6 @@ padding: 2px 15px 0 20px; border-right: 1px solid #888888; }
 .sakai_site .revision_history div
 { float: left; }
 
-.sakai_site .revision_history .clear
-{ clear: both; }
-
-
-
 /* SITE MANAGEMENT NAV */
 .site_management
 { margin:0; padding: 0; border: none; }

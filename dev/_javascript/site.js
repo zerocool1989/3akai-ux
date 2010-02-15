@@ -104,7 +104,7 @@ sakai.site = function(){
     var $initialcontent = $("#initialcontent");
     var $page_nav_content = $("#page_nav_content");
     var $sitetitle = $("#sitetitle");
-    var $widget_chat = $("#widget_chat");
+    var $widget_navigationchat = $("#widget_navigationchat");
     var $loginLink = $("#loginLink");
     var $insert_more_menu = $("#insert_more_menu");
     var $more_menu = $("#more_menu");
@@ -257,7 +257,7 @@ sakai.site = function(){
             $("#loginLink").hide();
         } else {
             $(".explore_nav").hide();
-            $widget_chat.hide();
+            $widget_navigationchat.hide();
             sakai._isAnonymous = true;
             $loginLink.show();
         }
@@ -311,7 +311,6 @@ sakai.site = function(){
                     // Move all the widgets.
                     var url = sakai.site.urls.CURRENT_SITE_ROOT() + "_widgets/" + moveWidgets[i].from;
                     var dest = sakai.site.urls.CURRENT_SITE_ROOT() + "_widgets/" + moveWidgets[i].to;
-                    console.log("From: " + url + " - TO: " + dest);
                     $.ajax({
                         url: url,
                         data: {
@@ -322,7 +321,6 @@ sakai.site = function(){
                         cache: false,
                         type: "POST",
                         success: function(response) {
-                            console.log(response);
                         },
                         error: function(xhr, textStatus, thrownError) {
                             alert("Failed to move a widget: " + xhr.status);

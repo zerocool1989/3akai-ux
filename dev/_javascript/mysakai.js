@@ -933,6 +933,7 @@ sakai.dashboard = function(){
         onShow: renderGoodies
     });
 
+
     /////////////////////////////
     // Initialisation function //
     /////////////////////////////
