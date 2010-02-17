@@ -132,12 +132,6 @@
     overflow-x: hidden;
 }
 
-.peoplewow_items_list ul {
-    list-style-type: none;
-    list-style-image: url(../../_images/arrow_down_sm2_blue.png);
-    background: none;
-}
-
 .peoplewow_items_list .simpleTree .folder-open {
     background: url(../../_images/arrow_down_sm2_blue.png) 2px 7px no-repeat #fff;
 }
@@ -438,11 +432,8 @@
     margin-top: 60px;
 }
 
-.peoplewow_item_content .peoplewow_groupdetails_activity {
-    /*background-color: #ddd;*/
-}
-
 .peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_joined {
+    /*background-color: #ddd;*/
     /*background-color: #eee;*/
     width: 400px;
     float: left;
@@ -477,15 +468,12 @@
     margin-bottom: 200px;
     width: 180px;
     float: right;
-
-
-    /*background-color: #eee;*/
-
 }
 
 .peoplewow_item_content .peoplewow_groupdetails_activity .peoplewow_groupdetails_recentactivity {
     float: left;
     width: 450px;
+    /*background-color: #ddd;*/
     /*background-color: #eee;*/
 }
 
@@ -548,7 +536,6 @@
 .peoplewow_item_content .peoplewow_groupmembers_info .peoplewow_mygroups_group_stats {
     margin-top: 10px;
     font-size: 11px;
-    color: #999999;
 }
 
 .peoplewow_item_content .peoplewow_groupmembers_info .peoplewow_mygroups_group_stats a.peoplewow_a_seperator {
@@ -561,14 +548,10 @@
     font-size: 14px;
     margin-top: 10px;
     padding-top: 10px;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
 }
 
 .peoplewow_groupmembers_list {
     font-size: 14px;
-    margin: 40px 0;
-    padding: 40px 0;
 }
 
 .peoplewow_groupmembers_list_top span {
@@ -580,9 +563,15 @@
 }
 
 .peoplewow_groupmembers_group {
+    /*border-top: 1px solid #ddd;*/
+    margin-bottom: 20px;
+    /*padding: 10px 0;*/
+    /*background-color: #CCCCFF;*/
+}
+
+.peoplewow_groupmembers_group_border {
+    margin: 5px 0;
     border-top: 1px solid #ddd;
-    margin: 10px 0;
-    padding: 10px 0;
 }
 
 .peoplewow_groupmembers_group_member {
