@@ -1,0 +1,133 @@
+/** CONTAINER **/
+.fixed-container {
+    background: #fff;
+}
+
+/** HEADING **/
+.inbox_main .site_heading {
+    color: #454a4f;
+    padding: 10px 0 50px 0;
+    border: none;
+}
+
+/** LAYOUT **/
+.inbox_main .main_container {
+    border: none;
+    margin: 0 0 20px;
+    padding: 0;
+}
+.inbox_main .main_container select {
+    color: #454a4f;
+    margin-bottom: 10px;
+}
+
+.inbox_main .col-main {
+    margin-left: 240px;
+    padding: 0;
+    overflow: hidden;
+    width: 676px;
+}
+
+/** EVENTS CONTAINER **/
+.main_events_container {
+    border-top: 1px solid #d3d7d9;
+    padding: 0 15px;
+}
+.main_events_container .vevent {
+    border-bottom: 1px solid #d3d7d9;
+    clear: both;
+    color: #333;
+    font-style: normal;
+    overflow: auto;
+}
+
+.main_events_container .index a {color: #003399; text-decoration:none}
+.main_events_container .index a:hover {text-decoration: underline}
+.main_events_container .index .listdetail, .main_events_container .index .actions, .main_events_container .index .count , .main_events_container .index .urgent {display: none}
+.main_events_container .index .simpletalk {padding: 20px 0}
+.main_events_container .index .simpletalk h2 {color: #006e96; font-size: 13px; margin: 0 0 25px 0}
+.main_events_container .index .simpletalk h2 a {color: #006e96}
+.main_events_container .index .simpletalk p {font-size: 11px; margin: 0}
+.main_events_container .index .simpletalk p a {color: #333; font-weight: normal}
+.main_events_container .index .urgent {font-weight: bold}
+.main_events_container .index img {float:left; margin-right: 7px; padding-bottom:22px;}
+.main_events_container .index .details {float:left; margin-right: 10px !important; width: 190px}
+.main_events_container .index .location {float:left; margin-right: 10px !important; width: 190px}
+
+
+/** RIGHT COLUMN **/
+.inbox_main .main_content_container {
+    width: 630px;
+    border-left: 3px solid #d5dbdf;
+    border-right: 3px solid #d5dbdf;
+    min-height: 400px;
+    padding: 8px 20px 20px 20px;
+}
+.inbox_main .main_content_container h2 {
+    color: #5a6a7c;
+    font-size: 15px;
+}
+inbox_main .main_content_container option {
+    color: #454a4f;
+}
+.inbox_main .top_decor {
+    background: transparent url(/dev/_images/inbox_table_top.png) no-repeat top left;
+    height: 0px;
+    width: 673px;
+    border: none;
+    padding: 9px 0 0 7px;
+}
+
+.inbox_main .bottom_decor {
+    background: transparent url(/dev/_images/inbox_table_bottom.png) no-repeat top left;
+    height: 41px;
+    width: 676px;
+    border: none;
+}
+
+/** SIDE NAV **/
+.inbox_main .side_panel {
+    width: 230px
+}
+
+/** Folders **/
+.inbox_main .inbox-folders {
+    width: 230px
+}
+
+.inbox_main .inbox-folders .if_titlebar {
+    background: transparent url(/dev/_images/block_tr.png) no-repeat scroll right top;
+    padding: 0 10px 0 0;
+    height: 50px;
+}
+
+.inbox_main .inbox-folders .if_titlebar_inner {
+    background: transparent url(/dev/_images/block_tl.png) no-repeat scroll left top;
+    padding: 18px 0 0 17px;
+    height: 50px;
+}
+
+.inbox_main .inbox-folders .if_title {
+    background: transparent url(/dev/_images/recent_activity_icon.png) no-repeat scroll left top;
+    color: #878A8C;
+    font-size: 1em;
+    padding-left: 25px;
+}
+
+.inbox_main .inbox-folders .if_content {
+    border-left: 3px solid #D4DADE;
+    border-right: 3px solid #D4DADE;
+    padding: 1px 5px 1px 12px;
+    margin: 0;
+}
+
+.inbox_main .inbox-folders .if_bottom {
+    background: transparent url(/dev/_images/content_bl.png) no-repeat scroll left bottom;
+    height: 5px;
+    padding: 0 0 0 10px;
+}
+
+.inbox_main .inbox-folders .if_bottom_inner {
+    background: transparent url(/dev/_images/content_br.png) no-repeat scroll right bottom;
+    height: 5px;
+}

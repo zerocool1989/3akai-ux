@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sakai 3 R&amp;D - My Messages</title>
+
+    <link rel="stylesheet" type="text/css" href="_css/FSS/fss-base.css" />
+    <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.base.css" />
+    <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.core.2.css" />
+    <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.3.css" />
+    <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.events.css" />
+    <link rel="stylesheet" type="text/css" href="/devwidgets/navigationchat/css/navigationchat.css"/>
+
+    <script type="text/javascript" language="JavaScript" src="_configuration/widgets.js"></script>
+    <script type="text/javascript" language="JavaScript" src="_configuration/config.js"></script>
+    <script type="text/javascript" language="JavaScript" src="_lib/Fluid/InfusionAll.js"></script>
+    <script type="text/javascript" language="JavaScript" src="_lib/sakai_util/trimpath.js"></script>
+    <script type="text/javascript" language="JavaScript" src="_lib/Jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" language="JavaScript" src="_lib/Jquery/jquery.corners.js"></script>
+    <script type="text/javascript" language="JavaScript" src="_lib/Jquery/jqModal.js"></script>
+    <script type="text/javascript" language="JavaScript" src="_lib/sakai_util/sdata.js"></script>
+    <script type="text/javascript" language="JavaScript" src="_lib/sakai_util/i18n.js"></script>
+
+</head>
+
+<body class="fl-centered inbox_main inbox_detail i18nable">
+
+    <!-- EXPLORE BAR -->
+    <div id="widget_navigationchat" class="widget_inline"></div>
+
+    <!-- HEADER -->
+    <div class="fl-container-flex header">
+        <div class="fl-fix fl-centered fixed-container">
+            <div class="decor"><!-- --></div>
+
+            <!-- TITLE BAR  -->
+            <div class="site_heading">
+                <h1 id="sitetitle">Events</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="fl-fix fl-centered fixed-container">
+
+        <!-- MAIN PAGE -->
+        <div class="fl-fix fl-col-mixed main_container">
+
+            <!-- SETTINGS -->
+            <div class="fl-col side_panel">
+
+                <!-- FOLDERS -->
+                <div class="inbox-folders" id="inbox_folders">
+
+                    <div class="if_titlebar">
+                        <div class="if_titlebar_inner"><h2 class="if_title">Show me talks</h2></div>
+                    </div>
+                    <div class="if_content">
+                        <p>Show talks between:</p>
+                        <p>Previous range:</p>
+                        <p>Talks coming up:</p>
+                        <p>Show only this term's talks</p>
+                    </div>
+                    <div class="if_bottom">
+                        <div class="if_bottom_inner"><!-- --></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Main -->
+            <div class="col-main">
+
+                <!-- MAIN INBOX -->
+                <div id="inbox_pane_inbox" class="inbox_pane">
+
+                    <div class="top_decor"><!-- --></div>
+
+                    <!-- Inbox -->
+                    <div class="main_content_container">
+                        <h2 class="fl-force-left">Recently added featured talks</h2>
+                        <div class="fl-force-right">
+                            <select>
+                                <option>Display 10 per page</option>
+                                <option selected="selected">Display 20 per page</option>
+                                <option>Display 50 per page</option>
+                            </select>
+                        </div>
+                        <div class="main_events_container fl-push">
+                            <script type="text/javascript" src="http://talks.cam.ac.uk/show/index/5606?layout=embed"></script>
+                        </div>
+                    </div>
+
+                    <div class="bottom_decor"><!-- --></div>
+
+                </div>
+
+            </div>
+        </div>
+       
+    </div>
+
+    <!-- FOOTER WIDGET -->
+    <div id="widget_footer" class="widget_inline footercontainer"></div>
+
+    <!-- JAVASCRIPT -->
+
+</body>
+</html>
