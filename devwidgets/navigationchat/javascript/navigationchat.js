@@ -190,7 +190,7 @@ sakai.navigationchat = function(tuid, placement, showSettings){
     var navPeopleLinkClass = "nav_people_link";
     var navMySakaiLink = "#nav_my_sakai_link";
     var navSearchLink = "#nav_search_link";
-    var navCalendarLink = "#nav_calendar_link";
+    var navEventsLink = "#nav_events_link";
     var navProfileLink = "#nav_profile_link";
     var navSelectedNavItemClass = "explore_nav_selected";
 
@@ -437,9 +437,9 @@ sakai.navigationchat = function(tuid, placement, showSettings){
             return;
         }
 
-        // Calendar
-        if ((windowLocationPath.indexOf(Config.URL.SEARCH_GENERAL_URL) !== -1) || (windowLocationPath.indexOf(Config.URL.SEARCH_PEOPLE_URL) !== -1) || (windowLocationPath.indexOf(Config.URL.SEARCH_SITES_URL) !== -1) || (windowLocationPath.indexOf(Config.URL.SEARCH_CONTENT_URL) !== -1) || (windowLocationPath.indexOf(Config.URL.PUBLIC_SEARCH) !== -1)){
-            $(navCalendarLink).addClass(navSelectedNavItemClass);
+        // Events
+        if ((windowLocationPath.indexOf("/dev/events.html") !== -1)){
+            $(navEventsLink).addClass(navSelectedNavItemClass);
             return;
         }
 
@@ -1667,6 +1667,7 @@ sakai.navigationchat = function(tuid, placement, showSettings){
             }
         });
 
+        determineCurrentNav();
 
     };
 
