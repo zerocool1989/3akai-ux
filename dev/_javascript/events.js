@@ -21,6 +21,10 @@
 var sakai = sakai || {};
 sakai.events = function(){
 
+    /////////////////////////////
+    // Configuration variables //
+    /////////////////////////////
+
     var limit = 10;
 
     /**
@@ -93,14 +97,25 @@ sakai.events = function(){
         });
     };
 
-    $(".main_events_container a").attr("target", "_blank");
-
+    /**
+     * Bind the change event to the dropdown box where you can
+     * select how many items you want
+     */
     $(".main_content_container select").live("change", function(){
         limit = $(".main_content_container select").val();
         getTalks();
     });
-    
+
+    ////////////////////
+    // Initialisation //
+    ////////////////////
+
+    /**
+     * Initialisation function
+     */
     var init = function(){
+        
+        // Get the featured talks
         getTalks();
     };
     
