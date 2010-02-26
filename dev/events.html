@@ -3,7 +3,7 @@
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Sakai 3 R&amp;D - My Messages</title>
+    <title>Sakai 3 R&amp;D - Events</title>
 
     <link rel="stylesheet" type="text/css" href="_css/FSS/fss-base.css" />
     <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.base.css" />
@@ -21,7 +21,7 @@
     <script type="text/javascript" language="JavaScript" src="_lib/Jquery/jqModal.js"></script>
     <script type="text/javascript" language="JavaScript" src="_lib/sakai_util/sdata.js"></script>
     <script type="text/javascript" language="JavaScript" src="_lib/sakai_util/i18n.js"></script>
-    <script type="text/javascript" language="JavaScript" src="_lib/sakai_util/querystring.js"></script>
+    <script type="text/javascript" language="JavaScript" src="_lib/sakai_util/date.format.js"></script>
 </head>
 
 <body class="fl-centered inbox_main inbox_detail i18nable">
@@ -85,41 +85,34 @@
                             <select>
                                 <option value="1">Display 1 per page</option>
                                 <option value="5">Display 5 per page</option>
-                                <option value="10">Display 10 per page</option>
+                                <option value="10" selected="selected">Display 10 per page</option>
                                 <option value="20">Display 20 per page</option>
                                 <option value="50" >Display 50 per page</option>
                             </select>
                         </div>
-                        <div class="main_events_container fl-push">
+                        <div id="main_events_container" class="fl-push">
                             
-                            <script type="text/javascript">
-
-                                var qs = new Querystring(), test;
-                                var qs_limit = qs.get("limit");
-
-                                if (qs_limit) {
-                                    $('.main_content_container select').val(qs_limit);
-                                    test = '<script src="http://talks.cam.ac.uk/show/index/5606?layout=embed&limit=' + qs_limit + '" type="text/javascript"><\/script>';
-                                }
-                                else {
-                                    test = '<script src="http://talks.cam.ac.uk/show/index/5606?layout=embed&limit=1" type="text/javascript"><\/script>';
-                                }
-                                document.write(test);
-
-                                $(".main_events_container a").attr("target", "_blank");
-
-                                $(".main_content_container select").live("change", function(){
-                                    window.location = "/dev/events.html?limit=" + $(".main_content_container select option:selected").val();
-                                });
-                                
-                                $('document').ready(function() {
-                                    var doNext = function(){
-                                        $('.main_content_container select').val(qs_limit);
-                                    };
-                                    setTimeout(doNext,1000);
-                                });
-                            </script>
                         </div>
+                        <div id="main_events_container_template"><!--
+                            {for listitem in list}
+                                {var talk = listitem.talk || listitem}
+                                <div class="event_talks">
+                                    <p class="event_talks_series">${talk.series}</p>
+                                    <h2 class="event_talks_summary">
+                                        <a href="${talk.url}">${talk.title}</a>
+                                    </h2>
+                                    <p class="event_talks_details">
+                                        ${talk.speaker}
+                                    </p>
+                                    <p class="event_talks_location">
+                                        ${talk.venue}
+                                    </p>
+                                    <p class="event_talks_date">
+                                        <span>${talk.parse_date}</span>
+                                    </p>
+                                </div>
+                            {/for}
+                        --></div>
                     </div>
 
                     <div class="bottom_decor"><!-- --></div>
@@ -135,5 +128,6 @@
     <div id="widget_footer" class="widget_inline footercontainer"></div>
 
     <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="_javascript/events.js"></script>
 </body>
 </html>

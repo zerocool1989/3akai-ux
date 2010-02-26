@@ -29,31 +29,60 @@
 }
 
 /** EVENTS CONTAINER **/
-.main_events_container {
+#main_events_container {
     border-top: 1px solid #d3d7d9;
     padding: 0 15px;
 }
-.main_events_container .vevent {
+#main_events_container .event_talks {
     border-bottom: 1px solid #d3d7d9;
     clear: both;
     color: #333;
     font-style: normal;
     overflow: auto;
+    padding: 20px 0 10px 0
 }
 
-.main_events_container .index a {color: #003399; text-decoration:none}
-.main_events_container .index a:hover {text-decoration: underline}
-.main_events_container .index .listdetail, .main_events_container .index .actions, .main_events_container .index .count , .main_events_container .index .urgent, .main_events_container .talks, .main_events_container .index > p:last-child {display: none}
-.main_events_container .index .simpletalk {padding: 20px 0}
-.main_events_container .index .simpletalk h2 {color: #006e96; font-size: 13px; margin: 0 0 25px 0}
-.main_events_container .index .simpletalk h2 a {color: #006e96}
-.main_events_container .index .simpletalk p {font-size: 11px; margin: 0}
-.main_events_container .index .simpletalk p a {color: #333; font-weight: normal}
-.main_events_container .index .urgent {font-weight: bold}
-.main_events_container .index img {float:left; margin-right: 7px; padding-bottom:22px;}
-.main_events_container .index .details {float:left; margin-right: 10px !important; width: 190px}
-.main_events_container .index .location {float:left; margin-right: 10px !important; width: 190px}
-
+#main_events_container .event_talks a {
+    color: #003399;
+    text-decoration: none
+}
+#main_events_container .event_talks a:hover {
+    text-decoration: underline
+}
+#main_events_container .event_talks h2 {
+    color: #006e96;
+    font-size: 13px;
+    margin: 0 0 25px 0
+}
+#main_events_container .event_talks h2 a {
+    color: #006e96
+}
+#main_events_container .event_talks p {
+    font-size: 11px;
+    margin: 0
+}
+#main_events_container .event_talks p a {
+    color: #333;
+    font-weight: normal
+}
+#main_events_container .event_talks .event_talks_details, #main_events_container .event_talks .event_talks_location, #main_events_container .event_talks .event_talks_date {
+    background: no-repeat 0 0;
+    float:left;
+    margin-right: 10px !important;
+    min-height:20px;
+    padding-left: 25px;
+    width: 165px
+}
+#main_events_container .event_talks .event_talks_details {
+    background-image: url(/dev/_images/user-silhouette.png);
+}
+#main_events_container .event_talks .event_talks_location {
+    background-image: url(/dev/_images/home.png);
+}
+#main_events_container .event_talks .event_talks_date {
+    background-image: url(/dev/_images/clock-frame.png);
+    margin-right: 0 !important
+}
 
 /** RIGHT COLUMN **/
 .inbox_main .main_content_container {
