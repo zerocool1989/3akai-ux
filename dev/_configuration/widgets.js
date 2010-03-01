@@ -58,7 +58,6 @@ var Widgets = {
             description:"Assignments",
             hasSettings: false,
             id:"assignments",
-            img:"/devwidgets/assignments/images/assignments.png",
             name:"Assignments",
             siteportal:true,
             url:"/devwidgets/assignments/assignments.html"
@@ -179,7 +178,7 @@ var Widgets = {
         myfiles: {
             description:"A list of my files",
             id:"myfiles",
-            img:"/dev/img/prototype_placeholder_small.png",
+            img:"/dev/_images/prototype_placeholder_small.png",
             name:"My Files",
             personalportal:true,
             url:"/devwidgets/myfiles/myfiles.html"
@@ -345,13 +344,6 @@ var Widgets = {
             name:"Tangler Forum",
             showinsakaigoodies:true,
             url:"/devwidgets/tangler/tangler.html"
-        },
-        tagpicker: {
-            description:"Pick a tag.",
-            id:"tagpicker",
-            img:"/devwidgets/discussion/images/discussion.png",
-            name:"Tag",
-            url:"/devwidgets/pickers/tagpicker.html"
         },
         tasks: {
             description:"Tasks Widget",
