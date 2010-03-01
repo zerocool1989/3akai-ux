@@ -47,397 +47,400 @@
     <!-- EXPLORE BAR -->
     <div id="widget_navigationchat" class="widget_inline"></div>
 
-        <!-- HEADER -->
-        <div class="fl-container-flex header" >
+    <!-- HEADER -->
+    <div class="fl-container-flex header" >
 
-            <div class="fl-fix fl-centered fixed-container">
-
-                <div class="decor"><!-- --></div>
-
-                <!-- SEARCH -->
-                <div class="search_container">
-                    <form class="search_form buttonBar fl-force-right" id="search_form" action="" method="post" onsubmit="return false;">
-                        <input type="text" name="search" value="Search this site" id="search_filed" class="search_field" />
-                        <button id="search_filed_button" class="s3d-button s3d-search-button s3d-button-primary"><span class="s3d-button-inner"><span class="s3d-button-icon-right">Search</span></span></button>
-                        <br class="fl-push" />
-                    </form>
-                </div>
-    
-            </div>
-        
-        </div>
-
-        <!-- CONTENT -->
         <div class="fl-fix fl-centered fixed-container">
 
-            <!-- MAIN PAGE -->
-            <div class="fl-fix fl-col-fixed main_container column_splitter_sites" id="show_view_container">
+            <div class="decor"><!-- --></div>
 
-                <!-- Page Nav -->
-                <div class="fl-col page_nav">
+            <!-- SEARCH -->
+            <div class="search_container">
+                <form class="search_form buttonBar fl-force-right" id="search_form" action="" method="post" onsubmit="return false;">
+                    <input type="text" name="search" value="Search this site" id="search_filed" class="search_field" />
+                    <button id="search_filed_button" class="s3d-button s3d-search-button s3d-button-primary"><span class="s3d-button-inner"><span class="s3d-button-icon-right">Search</span></span></button>
+                    <br class="fl-push" />
+                </form>
+            </div>
 
-                    <div class="add_a_new_container">
-                    <a class="add_a_new" id="add_a_new" style="display:none" href="javascript:;">Add a New ...</a>
-                    </div>
+            <!-- TITLE BAR  -->
+            <div class="site_heading fl-force-left">
+                <h1 id="sitetitle"></h1>
+            </div>
+        </div>
 
-                    <!-- Page navigation -->
-                    <div id="page_nav_content" class="pages page_nav_content">
+    </div>
 
-                    </div>
+    <!-- CONTENT -->
+    <div class="fl-fix fl-centered fixed-container">
 
-                    <!-- Site Management -->
-                    <div class="site_management" id="site_management" style="display:none">
+        <!-- MAIN PAGE -->
+        <div class="fl-fix fl-col-fixed main_container column_splitter_sites" id="show_view_container">
 
-                        <div class="sm_titlebar">
-                        <div class="sm_titlebar_inner"><h2 class="sm_title">Site Management</h2></div>
-                        </div>
+            <!-- Page Nav -->
+            <div class="fl-col page_nav">
 
-                        <div class="sm_content">
-                            <ul>
-                                <li><a id="site_management_basic_link" href="/dev/site_management_basic_settings.html?siteid=">Site Settings</a></li>
-                                <!-- <li><a id="site_management_files_link" href="/dev/content_media.html?siteid=">Site Files</a></li> -->
-                                <li><a id="site_management_members_link" href="/dev/site_management_members_manage.html?siteid=">Members</a></li>
-                                <li><a id="site_management_appearance_link" href="/dev/site_management_appearance.html?siteid=">Appearance</a></li>
-                                <li><a href="javascript:;" id="edit_sidebar">Edit Sidebar</a></li>
-                            </ul>
-                        </div>
+                <div class="add_a_new_container">
+                <a class="add_a_new" id="add_a_new" style="display:none" href="javascript:;">Add a New ...</a>
+                </div>
 
-                        <div class="sm_bottom">
-                            <div class="sm_bottom_inner"></div>
-                        </div>
-
-                    </div>
+                <!-- Page navigation -->
+                <div id="page_nav_content" class="pages page_nav_content">
 
                 </div>
 
-                <!-- TOP RIGHT MENU -->
-                <div class="content_page_options" id="content_page_options">
-                    <ul class="fl-force-right">
-                        <li id="li_edit_page" style="display:none"><a href="javascript:;" id="edit_page">__MSG__EDIT_PAGE__</a></li>
-                        <li><a href="javascript:;" id="print_page">Print page</a></li>
-                        <li><a href="javascript:;" id="more_link">More</a></li>
-                    </ul>
+                <!-- Site Management -->
+                <div class="site_management" id="site_management" style="display:none">
+
+                    <div class="sm_titlebar">
+                    <div class="sm_titlebar_inner"><h2 class="sm_title">Site Management</h2></div>
+                    </div>
+
+                    <div class="sm_content">
+                        <ul>
+                            <li><a id="site_management_basic_link" href="/dev/site_management_basic_settings.html?siteid=">Site Settings</a></li>
+                            <!-- <li><a id="site_management_files_link" href="/dev/content_media.html?siteid=">Site Files</a></li> -->
+                            <li><a id="site_management_members_link" href="/dev/site_management_members_manage.html?siteid=">Members</a></li>
+                            <li><a id="site_management_appearance_link" href="/dev/site_management_appearance.html?siteid=">Appearance</a></li>
+                            <li><a href="javascript:;" id="edit_sidebar">Edit Sidebar</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sm_bottom">
+                        <div class="sm_bottom_inner"></div>
+                    </div>
                 </div>
 
-                <!-- MAIN CONTENT -->
-                <div class="fl-col-fixed content_container">
+            </div>
 
-                    <!-- TOP BORDER -->
-                    <div class="content_top"><div class="content_top_inner"></div></div>
+            <!-- TOP RIGHT MENU -->
+            <div class="content_page_options" id="content_page_options">
+                <ul class="fl-force-right">
+                    <li id="li_edit_page" style="display:none"><a href="javascript:;" id="edit_page">__MSG__EDIT_PAGE__</a></li>
+                    <li><a href="javascript:;" id="print_page">Print page</a></li>
+                    <li><a href="javascript:;" id="more_link">More</a></li>
+                </ul>
+            </div>
 
-                    <div class="sakai_site_contents_main fl-fix">
+            <!-- MAIN CONTENT -->
+            <div class="fl-col-fixed content_container">
 
-                    <!-- REVISION HISTORY -->
-                    <div class="fl-container revision_history fl-fix" id="revision_history_container"  style="display:none">
+                <!-- TOP BORDER -->
+                <div class="content_top"><div class="content_top_inner"></div></div>
 
-                        <div class="revision_history_viewing">Viewing:</div>
+                <div class="sakai_site_contents_main fl-fix">
+
+                <!-- REVISION HISTORY -->
+                <div class="fl-container revision_history fl-fix" id="revision_history_container"  style="display:none">
+
+                    <div class="revision_history_viewing">Viewing:</div>
 
                     <div><select id="revision_history_list"></select></div>
 
                     <button id="revision_history_revert" class="s3d-button s3d-button-primary"><span class="s3d-button-inner">Use this Version</span></button>
                     <button id="revision_history_cancel" class="s3d-button"><span class="s3d-button-inner">Cancel</span></button>
 
-                    </div>
+                </div>
 
-                    <!-- PAGE TITLE -->
-                    <h1 id="pagetitle"></h1>
+                <!-- PAGE TITLE -->
+                <h1 id="pagetitle"></h1>
 
-                    <!-- OPTIONS FOR THE DASHBOARD -->
-                    <div class="fl-container-flex dashboard_options" style="display:none;">
-                        <a href="javascript:;" id="add-goodies">__MSG__ADD_SAKAI_GOODIES__</a>
-                        <span class="pipe_divider">|</span>
-                        <a href="javascript:;" id="edit-layout">Change layout</a>
-                    </div>
+                <!-- OPTIONS FOR THE DASHBOARD -->
+                <div class="fl-container-flex dashboard_options" style="display:none;">
+                    <a href="javascript:;" id="add-goodies">__MSG__ADD_SAKAI_GOODIES__</a>
+                    <span class="pipe_divider">|</span>
+                    <a href="javascript:;" id="edit-layout">Change layout</a>
+                </div>
 
-                    <div class="content_page_header" style="display:none">
-                        <img src="/dev/_images/profile_icon.png" href="#" class="fl-icon fl-force-left profile" alt="Author"/>
-                        <p><a href="#">John Doe</a></p>
-                        <p>Changed this page on 20 December, 2009 <a href="#">(View Changes)</a></p>
-                    </div>
+                <div class="content_page_header" style="display:none">
+                    <img src="/dev/_images/profile_icon.png" href="#" class="fl-icon fl-force-left profile" alt="Author"/>
+                    <p><a href="#">John Doe</a></p>
+                    <p>Changed this page on 20 December, 2009 <a href="#">(View Changes)</a></p>
+                </div>
 
-                    <!-- MAIN CONTENT -->
-                    <div id="main-content-div">
+                <!-- MAIN CONTENT -->
+                <div id="main-content-div">
 
-                    </div>
+                </div>
 
-                    <!-- DASHBOARD PAGES  -->
+                <!-- DASHBOARD PAGES  -->
 
-                    <!-- CONTENT -->
-                    <div id="dashboard_container_template"><!--
-                        <div class="fl-col-flex${size} sakai_dashboard_page">
-                            {var index = 0}
-                            <div class="content">
-                                {for c in columns}
-                                ${index++|eat}
-                                <div class="fl-col groupWrapper" id="column_uid_${index}">
-                                    <div class="widget_spacer">
+                <!-- CONTENT -->
+                <div id="dashboard_container_template"><!--
+                    <div class="fl-col-flex${size} sakai_dashboard_page">
+                        {var index = 0}
+                        <div class="content">
+                            {for c in columns}
+                            ${index++|eat}
+                            <div class="fl-col groupWrapper" id="column_uid_${index}">
+                                <div class="widget_spacer">
+                                </div>
+                                {for p in c.portlets}
+                                <div class="fl-widget widget1 ${p.id}" id="${p.id}_${p.uid}">
+                                    <div class="fl-widget-titlebar widget1-head" id="draghandle_${p.id}_${p.uid}">
+                                        <div class="widget-titlebar-inner">
+                                            <h2 class="widget_title">${p.title}</h2>
+                                            <a href="javascript:;" id="${p.id}_${p.uid}_settings" class="fl-force-right fl-icon settings" style="display:none">Settings</a>
+                                        </div>
                                     </div>
-                                    {for p in c.portlets}
-                                    <div class="fl-widget widget1 ${p.id}" id="${p.id}_${p.uid}">
-                                        <div class="fl-widget-titlebar widget1-head" id="draghandle_${p.id}_${p.uid}">
-                                            <div class="widget-titlebar-inner">
-                                                <h2 class="widget_title">${p.title}</h2>
-                                                <a href="javascript:;" id="${p.id}_${p.uid}_settings" class="fl-force-right fl-icon settings" style="display:none">Settings</a>
+                                    {if p.display == "none"}
+                                    <div id="${p.uid}_container" style="display:none">
+                                        {else}
+                                        <div id="${p.uid}_container">
+                                            {/if}
+                                            <div id="widget_${p.id}_${p.uid}_${p.placement}" class="widget_inline">
                                             </div>
                                         </div>
-                                        {if p.display == "none"}
-                                        <div id="${p.uid}_container" style="display:none">
-                                            {else}
-                                            <div id="${p.uid}_container">
-                                                {/if}
-                                                <div id="widget_${p.id}_${p.uid}_${p.placement}" class="widget_inline">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/for}
                                     </div>
                                     {/for}
                                 </div>
-                            </div>
-                    --></div>
-
-                    <!-- Dropdown menu shown when clicking on a widget's pencil -->
-                    <div class="add_new_menu" id="widget_settings_menu" style="display:none">
-                        <ul>
-                            <li id="settings_remove" class="more_option"><a href="javascript:;">Remove</a></li>
-                            <li id="settings_hide" class="more_option"><a id="settings_hide_link" href="javascript:;">Hide</a></li>
-                            <li id="settings_settings" class="more_option"><a id="settings_settings_link" href="javascript:;">Settings</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Change the layout for a dashboard page. -->
-                    <div id="change_layout_dialog" class="dialog">
-                        <div class="dialog_header">
-                            <div class="dialog_header_inner">
-                            <h1>Change layout</h1>
-                            <a href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog">Close Dialog</a>
+                                {/for}
                             </div>
                         </div>
-                        <div class="dialog_content">
-                            <div class="add-tools-right">
-                                <h4>Select a layout for your dashboard page:</h4>
-                                <div class="elf-right-up">
-                                    <div id="layouts_list"></div>
-                                </div>
-                            </div>
-                            <!-- DIALOG BUTTONS -->
-                            <div class="dialog_buttons">
-                                <a href="javascript:;" id="select-layout-finished" class="button-default">Save</a>
-                                <a href="javascript:;" id="select-layout-cancel" class="button jqmClose">Cancel</a>
-                            </div>
-                        </div>
-                        <!-- DIALOG FOOTER -->
-                        <div class="dialog_footer">
-                            <div class="dialog_footer_inner"><!-- --></div>
+                --></div>
+
+                <!-- Dropdown menu shown when clicking on a widget's pencil -->
+                <div class="add_new_menu" id="widget_settings_menu" style="display:none">
+                    <ul>
+                        <li id="settings_remove" class="more_option"><a href="javascript:;">Remove</a></li>
+                        <li id="settings_hide" class="more_option"><a id="settings_hide_link" href="javascript:;">Hide</a></li>
+                        <li id="settings_settings" class="more_option"><a id="settings_settings_link" href="javascript:;">Settings</a></li>
+                    </ul>
+                </div>
+
+                <!-- Change the layout for a dashboard page. -->
+                <div id="change_layout_dialog" class="dialog">
+                    <div class="dialog_header">
+                        <div class="dialog_header_inner">
+                        <h1>Change layout</h1>
+                        <a href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog">Close Dialog</a>
                         </div>
                     </div>
+                    <div class="dialog_content">
+                        <div class="add-tools-right">
+                            <h4>Select a layout for your dashboard page:</h4>
+                            <div class="elf-right-up">
+                                <div id="layouts_list"></div>
+                            </div>
+                        </div>
+                        <!-- DIALOG BUTTONS -->
+                        <div class="dialog_buttons">
+                            <a href="javascript:;" id="select-layout-finished" class="button-default">Save</a>
+                            <a href="javascript:;" id="select-layout-cancel" class="button jqmClose">Cancel</a>
+                        </div>
+                    </div>
+                    <!-- DIALOG FOOTER -->
+                    <div class="dialog_footer">
+                        <div class="dialog_footer_inner"><!-- --></div>
+                    </div>
+                </div>
 
-                    <!-- Change layout template -->
-                    <div id="layouts_template" style="display:none;"><!--
-                        {for i in layouts}
-                            {if i.siteportal}
-                                {if i_index == selected}
-                                    <div class="layout_container">
-                                            <table cellpadding="0" cellspacing="0" class="layout_picker_item">
-                                                <tr>
-                                                    {for w in i.widths}
-                                                    <td style="width:${w}%;" class="layout_picker_item_column layout-picker" id="layout-picker-${w}-${i_index}">
-                                                        &nbsp;
-                                                    </td>
-                                                    {/for}
-                                                </tr>
-                                            </table>
-                                        <input type="radio" name="layoutselect" id="layout-picker-${i_index}" class="layout-picker layout_picker_item_radio" checked="true"/>
-                                    </div>
-                                {else}
-                                    <div class="layout_container_unselected">
-                                        <table cellpadding="0" cellspacing="0" class="layout_picker_item_unselected">
+                <!-- Change layout template -->
+                <div id="layouts_template" style="display:none;"><!--
+                    {for i in layouts}
+                        {if i.siteportal}
+                            {if i_index == selected}
+                                <div class="layout_container">
+                                        <table cellpadding="0" cellspacing="0" class="layout_picker_item">
                                             <tr>
                                                 {for w in i.widths}
-                                                <td style="width:${w}%;" class="layout_picker_item_column_unselected layout-picker" id="layout-picker-${w}-${i_index}">
+                                                <td style="width:${w}%;" class="layout_picker_item_column layout-picker" id="layout-picker-${w}-${i_index}">
                                                     &nbsp;
                                                 </td>
                                                 {/for}
                                             </tr>
                                         </table>
-                                        <input type="radio" name="layoutselect" id="layout-picker-${i_index}" class="layout-picker layout_picker_item_radio_unselected"/>
-                                    </div>
-                                {/if}
+                                    <input type="radio" name="layoutselect" id="layout-picker-${i_index}" class="layout-picker layout_picker_item_radio" checked="true"/>
+                                </div>
+                            {else}
+                                <div class="layout_container_unselected">
+                                    <table cellpadding="0" cellspacing="0" class="layout_picker_item_unselected">
+                                        <tr>
+                                            {for w in i.widths}
+                                            <td style="width:${w}%;" class="layout_picker_item_column_unselected layout-picker" id="layout-picker-${w}-${i_index}">
+                                                &nbsp;
+                                            </td>
+                                            {/for}
+                                        </tr>
+                                    </table>
+                                    <input type="radio" name="layoutselect" id="layout-picker-${i_index}" class="layout-picker layout_picker_item_radio_unselected"/>
+                                </div>
                             {/if}
+                        {/if}
+                    {/for}
+                --></div>
+
+                <!-- ADD GOODIES DIALOG -->
+                <div id="add_goodies_dialog" class="dialog add_goodies">
+
+                    <!-- DIALOG HEADER -->
+                    <div class="dialog_header">
+                        <div class="dialog_header_inner">
+                            <h1>Add Goodies</h1>
+                            <a href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog">Close Dialog</a>
+                        </div>
+                    </div>
+                    <!-- DIALOG CONTENT -->
+                    <div class="dialog_content">
+                        <div id="add_goodies_body" class="dialog_body">
+                        </div>
+                    </div>
+
+                    <!-- DIALOG FOOTER -->
+                    <div class="dialog_footer">
+                        <div class="dialog_footer_inner"><!-- --></div>
+                    </div>
+                    <div id="add_goodies_body_template"><!--
+                        <table>
+                        {for i in items}
+                        {if i.alreadyIn}
+                        <tr class="add" id="row_add_${i.id}" style="display:none">
+                        {else}
+                        <tr id="row_add_${i.id}" class="add">
+                        {/if}
+                        <td class="remove_add_column"><a href="javascript:;" id="btn_add_${i.id}" class="add-button add active-primary goodies_add_button">Add</a></td>
+                        <td>
+                        <div class="dialogue_add_goodies_title">${i.title}</div>
+                        <div class="dialogue_add_goodies_description">
+                        ${i.description}
+                        </div>
+                        </td>
+                        </tr>
+                        {if i.alreadyIn}
+                        <tr id="row_remove_${i.id}" class="remove">
+                        {else}
+                        <tr id="row_remove_${i.id}" class="remove" style="display:none">
+                        {/if}
+                        <td width="80px"><a href="javascript:;" id="btn_remove_${i.id}" class="add-button remove goodies_remove_button">Remove</a></td>
+                        <td>
+                        <div class="dialogue_remove_goodies_title">${i.title}</div>
+                        <div class="dialogue_remove_goodies_description">
+                        ${i.description}
+                        </div>
+                        </td>
+                        </tr>
                         {/for}
+                        </table>
                     --></div>
 
-                    <!-- ADD GOODIES DIALOG -->
-                    <div id="add_goodies_dialog" class="dialog add_goodies">
-
-                        <!-- DIALOG HEADER -->
-                        <div class="dialog_header">
-                            <div class="dialog_header_inner">
-                                <h1>Add Goodies</h1>
-                                <a href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog">Close Dialog</a>
-                            </div>
-                        </div>
-                        <!-- DIALOG CONTENT -->
-                        <div class="dialog_content">
-                            <div id="add_goodies_body" class="dialog_body">
-                            </div>
-                        </div>
-
-                        <!-- DIALOG FOOTER -->
-                        <div class="dialog_footer">
-                            <div class="dialog_footer_inner"><!-- --></div>
-                        </div>
-                        <div id="add_goodies_body_template"><!--
-                            <table>
-                            {for i in items}
-                            {if i.alreadyIn}
-                            <tr class="add" id="row_add_${i.id}" style="display:none">
-                            {else}
-                            <tr id="row_add_${i.id}" class="add">
-                            {/if}
-                            <td class="remove_add_column"><a href="javascript:;" id="btn_add_${i.id}" class="add-button add active-primary goodies_add_button">Add</a></td>
-                            <td>
-                            <div class="dialogue_add_goodies_title">${i.title}</div>
-                            <div class="dialogue_add_goodies_description">
-                            ${i.description}
-                            </div>
-                            </td>
-                            </tr>
-                            {if i.alreadyIn}
-                            <tr id="row_remove_${i.id}" class="remove">
-                            {else}
-                            <tr id="row_remove_${i.id}" class="remove" style="display:none">
-                            {/if}
-                            <td width="80px"><a href="javascript:;" id="btn_remove_${i.id}" class="add-button remove goodies_remove_button">Remove</a></td>
-                            <td>
-                            <div class="dialogue_remove_goodies_title">${i.title}</div>
-                            <div class="dialogue_remove_goodies_description">
-                            ${i.description}
-                            </div>
-                            </td>
-                            </tr>
-                            {/for}
-                            </table>
-                        --></div>
-
-                        <div id="dashboard-container-template"><!--
-                                <div class="fl-col-flex${size}">
-                                    {var index = 0}
-                                    <div class="content">
-                                        {for c in columns}
-                                        ${index++|eat}
-                                        <div class="fl-col groupWrapper" id="column_uid_${index}">
-                                            <div class="widget_spacer">
+                    <div id="dashboard-container-template"><!--
+                            <div class="fl-col-flex${size}">
+                                {var index = 0}
+                                <div class="content">
+                                    {for c in columns}
+                                    ${index++|eat}
+                                    <div class="fl-col groupWrapper" id="column_uid_${index}">
+                                        <div class="widget_spacer">
+                                        </div>
+                                        {for p in c.portlets}
+                                        <div class="fl-widget widget1 ${p.id}" id="${p.id}_${p.uid}">
+                                            <div class="fl-widget-titlebar widget1-head" id="draghandle_${p.id}_${p.uid}">
+                                                <div class="widget-titlebar-inner">
+                                                    <h2 class="widget_title">${p.title}</h2>
+                                                    <a href="javascript:;" id="${p.id}_${p.uid}_settings" class="settings fl-force-right fl-icon" style="display:none">Settings</a>
+                                                </div>
                                             </div>
-                                            {for p in c.portlets}
-                                            <div class="fl-widget widget1 ${p.id}" id="${p.id}_${p.uid}">
-                                                <div class="fl-widget-titlebar widget1-head" id="draghandle_${p.id}_${p.uid}">
-                                                    <div class="widget-titlebar-inner">
-                                                        <h2 class="widget_title">${p.title}</h2>
-                                                        <a href="javascript:;" id="${p.id}_${p.uid}_settings" class="settings fl-force-right fl-icon" style="display:none">Settings</a>
+                                            {if p.display == "none"}
+                                            <div id="${p.uid}_container" style="display:none">
+                                                {else}
+                                                <div id="${p.uid}_container">
+                                                    {/if}
+                                                    <div id="widget_${p.id}_${p.uid}_${p.placement}" class="widget_inline">
                                                     </div>
                                                 </div>
-                                                {if p.display == "none"}
-                                                <div id="${p.uid}_container" style="display:none">
-                                                    {else}
-                                                    <div id="${p.uid}_container">
-                                                        {/if}
-                                                        <div id="widget_${p.id}_${p.uid}_${p.placement}" class="widget_inline">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                {/for}
                                             </div>
                                             {/for}
                                         </div>
+                                        {/for}
                                     </div>
-                            </div>
-                        --></div>
-
-                    </div>
-                    </div>
-                    <!-- BOTTOM BORDER -->
-                    <div class="content_bottom"><div class="content_bottom_inner"></div></div>
+                                </div>
+                        </div>
+                    --></div>
 
                 </div>
+                </div>
+                <!-- BOTTOM BORDER -->
+                <div class="content_bottom"><div class="content_bottom_inner"></div></div>
 
             </div>
 
-            <!-- WORK AREA -->
-            <div class="fl-fix edit_view" id="edit_view_container" style="display:none">
-            <div class="main_container content_container">
+        </div>
 
-                <!--//desNote: row of buttons need to coexist horizontally with tabs,hence the //-->
+        <!-- WORK AREA -->
+        <div class="fl-fix edit_view" id="edit_view_container" style="display:none">
+        <div class="main_container content_container">
+
+            <!--//desNote: row of buttons need to coexist horizontally with tabs,hence the //-->
+            <div class="buttonBar">
+                <button class="s3d-button s3d-button-primary save_button"><span class="s3d-button-inner">Save</span></button>
+                <button class="s3d-button cancel-button"><span class="s3d-button-inner">Cancel</span></button>
+                <span class="messageInformation" id="messageInformation" style="display:none">Auto saved at <span id="realtime"></span></span>
+            </div>
+
+            <!-- TAB NAVIGATION -->
+            <div class="primary-tabs">
+                <ul class="fl-tabs fl-tabs-right">
+                    <li class="fl-tabs-active" id="tab_text_editor"><a>Text Editor</a></li>
+                    <li id="tab_html"><a href="javascript:;">HTML</a></li>
+                    <li id="tab_preview"><a href="javascript:;">Preview</a></li>
+                </ul>
+            </div>
+
+            <!-- TAB CONTENT -->
+            <div class="fl-centered fl-container fl-tab-content edit_container">
+
+                <!-- TOP BORDER -->
+                <div class="content_top"><div class="content_top_inner"></div></div>
+
+                <!-- TOOLBAR -->
+                <div class="toolbar toolbar-placeholder" id="toolbarplaceholder"></div>
+
+                    <div class="toolbar" id="toolbarcontainer">
+                    <div class="mceToolbarExternal mceEditor defaultSkin"></div>
+                </div>
+
+                <!-- EDIT CONTENTS -->
+                <div class="edit_contents_main">
+
+                    <div class="title_input_container" id="title-input-container">
+                    <input type="text" value="Untitled" class="title-input" id="title-input"/>
+                    </div>
+
+                    <div class="fl-tab-content-border fl-tab-content-editor" id="fl-tab-content-editor">
+                    <div id="placeholderforeditor" class="textarea">
+
+                        <!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
+                        <textarea id="elm1" name="elm1" rows="15" cols="80" style="width: 100%">
+                            &nbsp;
+                        </textarea>
+                    </div>
+                    </div>
+
+                    <div id="html-editor" style="display:none;">
+                        <textarea id="html-editor-content" rows="20" wrap="hard"></textarea>
+                    </div>
+
+                <div class="new_page_path" id="new_page_path">
+
+                </div>
+
+                <div class="content_container fl-fix" id="page_preview_content" style="display:none;">
+
+                </div>
+
                 <div class="buttonBar">
-                    <div class="greybutton"><a href="javascript:;" class="button-default save_button">Save</a></div>
-                    <div class="lightgreybutton"><a href="javascript:;" class="button cancel-button">Cancel</a></div>
-                    <span class="messageInformation" id="messageInformation" style="display:none">Auto saved at <span id="realtime"></span></span>
+                    <button class="s3d-button s3d-button-primary save_button"><span class="s3d-button-inner">Save</span></button>
+                    <button class="s3d-button cancel-button"><span class="s3d-button-inner">Cancel</span></button>
                 </div>
 
-                <!-- TAB NAVIGATION -->
-                <div class="primary-tabs">
-                    <ul class="fl-tabs fl-tabs-right">
-                        <li class="fl-tabs-active" id="tab_text_editor"><a href="javascript:;">Text Editor</a></li>
-                        <li id="tab_html"><a href="javascript:;">HTML</a></li>
-                        <li id="tab_preview"><a href="javascript:;">Preview</a></li>
-                    </ul>
                 </div>
 
-                <!-- TAB CONTENT -->
-                <div class="fl-centered fl-container fl-tab-content edit_container">
+                <div class="content_bottom"><div class="content_bottom_inner"></div></div>
 
-                    <!-- TOP BORDER -->
-                    <div class="content_top"><div class="content_top_inner"></div></div>
-
-                    <!-- TOOLBAR -->
-                    <div class="toolbar toolbar-placeholder" id="toolbarplaceholder"></div>
-
-                        <div class="toolbar" id="toolbarcontainer">
-                        <div class="mceToolbarExternal mceEditor defaultSkin"></div>
-                    </div>
-
-                    <!-- EDIT CONTENTS -->
-                    <div class="edit_contents_main">
-
-                        <div class="title_input_container" id="title-input-container">
-                        <input type="text" value="Untitled" class="title-input" id="title-input"/>
-                        </div>
-
-                        <div class="fl-tab-content-border fl-tab-content-editor" id="fl-tab-content-editor">
-                        <div id="placeholderforeditor" class="textarea">
-
-                            <!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
-                            <textarea id="elm1" name="elm1" rows="15" cols="80" style="width: 100%">
-                                &nbsp;
-                            </textarea>
-                        </div>
-                        </div>
-
-                        <div id="html-editor" style="display:none;">
-                            <textarea id="html-editor-content" rows="20" wrap="hard"></textarea>
-                        </div>
-
-                    <div class="new_page_path" id="new_page_path">
-
-                    </div>
-
-                    <div class="content_container fl-fix" id="page_preview_content" style="display:none;">
-
-                    </div>
-
-                    <div class="buttonBar">
-                        <div class="greybutton"><a href="javascript:;" class="button-default save_button">Save</a></div>
-                        <div class="lightgreybutton"><a href="javascript:;" class="button cancel-button">Cancel</a></div>
-                    </div>
-
-                    </div>
-
-                    <div class="content_bottom"><div class="content_bottom_inner"></div></div>
-
-                </div>
-            </div>
             </div>
         </div>
+        </div>
+    </div>
 
 <!-- FOOTER WIDGET -->
 <div id="widget_footer" class="widget_inline footercontainer"></div>
