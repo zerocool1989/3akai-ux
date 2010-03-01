@@ -106,6 +106,10 @@ sakai.events = function(){
         getTalks();
     });
 
+    var initDatepicker = function(){
+        //$("#events_start_date").datepicker();
+    };
+
     ////////////////////
     // Initialisation //
     ////////////////////
@@ -117,6 +121,9 @@ sakai.events = function(){
         
         // Get the featured talks
         getTalks();
+        
+        // Initialise the datepickers
+        initDatepicker();
     };
     
     init();
