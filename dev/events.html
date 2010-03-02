@@ -10,7 +10,8 @@
     <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.core.2.css" />
     <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.3.css" />
     <link rel="stylesheet" type="text/css" href="_css/sakai/sakai.events.css" />
-    <link rel="stylesheet" type="text/css" href="/devwidgets/navigationchat/css/navigationchat.css"/>
+    <link rel="stylesheet" type="text/css" href="/devwidgets/navigationchat/css/navigationchat.css" />
+    <link rel="stylesheet" type="text/css" href="_lib/Jquery/css/jquery.ui.datepicker.css" />
 
     <script type="text/javascript" language="JavaScript" src="_configuration/widgets.js"></script>
     <script type="text/javascript" language="JavaScript" src="_configuration/config.js"></script>
@@ -26,7 +27,7 @@
 
 </head>
 
-<body class="fl-centered inbox_main inbox_detail i18nable">
+<body class="fl-centered events i18nable">
 
     <!-- EXPLORE BAR -->
     <div id="widget_navigationchat" class="widget_inline"></div>
@@ -47,41 +48,72 @@
     <div class="fl-fix fl-centered fixed-container">
 
         <!-- MAIN PAGE -->
-        <div class="fl-fix fl-col-mixed main_container">
+        <div class="fl-col-mixed main_container">
 
             <!-- SETTINGS -->
-            <div class="fl-col side_panel">
+            <div class="fl-col events_side_panel">
 
-                <!-- FOLDERS -->
-                <div class="inbox-folders" id="inbox_folders">
-
-                    <div class="if_titlebar">
-                        <div class="if_titlebar_inner"><h2 class="if_title">Show me talks</h2></div>
-                    </div>
-                    <div class="if_content">
-                        <p>Show talks between:</p>
-                        <input id="events_start_date" type="text" />
-                        <p>Previous range:</p>
-                        <p>Talks coming up:</p>
-                        <p>Show only this term's talks</p>
-                    </div>
-                    <div class="if_bottom">
-                        <div class="if_bottom_inner"><!-- --></div>
-                    </div>
-
+                <div class="events_side_titlebar">
+                    <div class="events_side_titlebar_inner"><h2 class="events_side_title">Show me talks</h2></div>
                 </div>
+                <div class="events_side_content">
+                    <form id="events_form_filter" method="post" action="javascript:;">
+                        <p>
+                            <label class="events_label_block" for="events_start_date">Show talks between:</label>
+                            <input class="events_datepicker" id="events_start_date" type="text" /> <span class="events_datepicker_split"> and </span>
+                            <input class="events_datepicker" id="events_end_date" type="text" />
+                        </p>
+                        <p>
+                            <span id="events_start_date_formatted" class="events_datepicker_formatted">&nbsp;</span>
+                            <span id="events_end_date_formatted" class="events_datepicker_formatted">&nbsp;</span>
+                        </p>
+                        <p class="events_form_divider fl-push">
+                            <label id="events_limit_before" for="events_limit_seconds_before_today">Previous range:</label>
+                            <label id="events_limit_after" for="events_limit_seconds_after_today">Talks coming up:</label>
 
+                            <select id="events_limit_seconds_before_today">
+                                <option selected="selected" value="" class="events_option_deselect">No past limit</option>
+                                <option value="86400">Day</option>
+                                <option value="604800">Week</option>
+                                <option value="604800">Two weeks</option>
+                                <option value="2592000">Month</option>
+                                <option value="5184000">Two months</option>
+                                <option value="7776000">Three months</option>
+                                <option value="31557600">Year</option>
+                            </select>
+                            <select id="events_limit_seconds_after_today">
+                                <option selected="selected" value="" class="events_option_deselect">No future limit</option>
+                                <option value="86400">Day</option>
+                                <option value="604800">Week</option>
+                                <option value="604800">Two weeks</option>
+                                <option value="2592000">Month</option>
+                                <option value="5184000">Two months</option>
+                                <option value="7776000">Three months</option>
+                                <option value="31557600">Year</option>
+                            </select>
+                        </p>
+                        <p class="events_form_divider fl-push">
+                            <input type="checkbox" id="events_only_this_term" /> <label for="events_only_this_term">Show only this term's talks</label>
+                        </p>
+                        <p class="events_form_divider fl-push" id="events_show_talks_container">
+                            <button class="s3d-button s3d-button-primary" type="submit" id="events_show_talks"><span class="s3d-button-inner">Show talks</span></button>
+                        </p>
+                    </form>
+                </div>
+                <div class="events_side_bottom">
+                    <div class="events_side_bottom_inner"><!-- --></div>
+                </div>
             </div>
 
             <!-- Main -->
             <div class="col-main">
 
-                <!-- MAIN INBOX -->
-                <div id="inbox_pane_inbox" class="inbox_pane">
+                <!-- MAIN events -->
+                <div id="events_pane_events" class="events_pane">
 
                     <div class="top_decor"><!-- --></div>
 
-                    <!-- Inbox -->
+                    <!-- events -->
                     <div class="main_content_container">
                         <h2 class="fl-force-left">Featured talks</h2>
                         <div class="fl-force-right">
@@ -93,10 +125,10 @@
                                 <option value="50" >Display 50 per page</option>
                             </select>
                         </div>
-                        <div id="main_events_container" class="fl-push">
+                        <div id="events_container_right" class="fl-push">
                             
                         </div>
-                        <div id="main_events_container_template"><!--
+                        <div id="events_container_right_template"><!--
                             {for listitem in list}
                                 {var talk = listitem.talk || listitem}
                                 <div class="event_talks">

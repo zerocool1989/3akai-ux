@@ -27,13 +27,28 @@ sakai.events = function(){
 
     var limit = 10;
 
+    var $eventContainerMain = $("#events_container_list");
+    
+    // Templates
+    var eventsContainerMainTemplate = "events_container_list_template";
+
+
+    //////////////////////////
+    // Render functionality //
+    //////////////////////////
+
     /**
      * Render the talks and show it to the user
      * @param {Object} results The JSON results object
      */
     var renderTalks = function(results){
-        $("#main_events_container").html($.Template.render("main_events_container_template", results));
+        $eventContainerMain.html($.Template.render(eventsContainerMainTemplate, results));
     };
+
+
+    ////////////////////////
+    // Date functionality //
+    ////////////////////////
 
     /**
      * Parse the start and end date in an approriate format
@@ -43,6 +58,15 @@ sakai.events = function(){
      */
     var parseDate = function(startDate, endDate){
         return dateFormat(startDate, "dddd dS mmmm yyyy, HH:MM") + "-" + dateFormat(endDate, "HH:MM");
+    };
+
+    /**
+     * Parse a date to a shorter format
+     * e.g. Sun 28 Feb 2010
+     * @param {Date} date The date you want to shorten
+     */
+    var parseShortDate = function(date){
+        return dateFormat(date, "ddd dd mmm yyyy");
     };
 
     /**
@@ -106,8 +130,37 @@ sakai.events = function(){
         getTalks();
     });
 
+    /**
+     * Show shorter date beneath the input field
+     */
+    var showShortDate = function(){
+        var $el = $(this);
+        var date = $el.datepicker("getDate");
+        
+        if(date){
+            $("#" + $el.attr("id") + "_formatted").text(parseShortDate(date));
+        }
+    };
+
+    /**
+     * Initialise the datepickers
+     */
     var initDatepicker = function(){
-        //$("#events_start_date").datepicker();
+        var d = new Date();
+        $("#events_start_date").datepicker({
+            buttonText: "Please select a start date",
+            dateFormat: 'dd/mm/y',
+            defaultDate: d,
+            onClose: showShortDate
+        });
+
+        $("#events_end_date").datepicker({
+            buttonText: "Please select an end date",
+            dateFormat: 'dd/mm/y',
+            // We set the default date for the stop date to a week later
+            defaultDate: +7,
+            onClose: showShortDate
+        });
     };
 
     ////////////////////

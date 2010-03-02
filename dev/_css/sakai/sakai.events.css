@@ -1,27 +1,50 @@
-/** CONTAINER **/
-.fixed-container {
+/* CONTAINER */
+.events .fixed-container {
     background: #fff;
 }
 
-/** HEADING **/
-.inbox_main .site_heading {
+/* HEADING */
+.events .site_heading {
     color: #454a4f;
     padding: 10px 0 50px 0;
     border: none;
 }
 
 /** LAYOUT **/
-.inbox_main .main_container {
+.main_container {
     border: none;
     margin: 0 0 20px;
     padding: 0;
 }
-.inbox_main .main_container select {
+.main_container select {
     color: #454a4f;
     margin-bottom: 10px;
 }
-
-.inbox_main .col-main {
+.events_side_panel select {
+    float:left;
+    width:95px;
+}
+.events_option_deselect{
+    color: #a8adb2
+}
+#events_limit_before, #events_limit_after {
+    float: left;
+    margin-bottom: 4px;
+}
+#events_limit_before {
+    width: 93px;
+}
+#events_limit_after {
+    margin-left: 10px;
+}
+#events_limit_seconds_after_today {
+    margin-left: 5px;
+}
+#events_show_talks_container {
+    margin: 0;
+    text-align: right;
+}
+.col-main {
     margin-left: 240px;
     padding: 0;
     overflow: hidden;
@@ -29,11 +52,11 @@
 }
 
 /** EVENTS CONTAINER **/
-#main_events_container {
+#events_container_right {
     border-top: 1px solid #d3d7d9;
     padding: 0 15px;
 }
-#main_events_container .event_talks {
+#events_container_right .event_talks {
     border-bottom: 1px solid #d3d7d9;
     clear: both;
     color: #333;
@@ -42,30 +65,30 @@
     padding: 20px 0 10px 0
 }
 
-#main_events_container .event_talks a {
+#events_container_right .event_talks a {
     color: #003399;
     text-decoration: none
 }
-#main_events_container .event_talks a:hover {
+#events_container_right .event_talks a:hover {
     text-decoration: underline
 }
-#main_events_container .event_talks h2 {
+#events_container_right .event_talks h2 {
     color: #006e96;
     font-size: 13px;
     margin: 0 0 25px 0
 }
-#main_events_container .event_talks h2 a {
+#events_container_right .event_talks h2 a {
     color: #006e96
 }
-#main_events_container .event_talks p {
+#events_container_right .event_talks p {
     font-size: 11px;
     margin: 0
 }
-#main_events_container .event_talks p a {
+#events_container_right .event_talks p a {
     color: #333;
     font-weight: normal
 }
-#main_events_container .event_talks .event_talks_details, #main_events_container .event_talks .event_talks_location, #main_events_container .event_talks .event_talks_date {
+#events_container_right .event_talks .event_talks_details, #events_container_right .event_talks .event_talks_location, #events_container_right .event_talks .event_talks_date {
     background: no-repeat 0 0;
     float:left;
     margin-right: 10px !important;
@@ -73,33 +96,33 @@
     padding-left: 25px;
     width: 165px
 }
-#main_events_container .event_talks .event_talks_details {
+#events_container_right .event_talks .event_talks_details {
     background-image: url(/dev/_images/user-silhouette.png);
 }
-#main_events_container .event_talks .event_talks_location {
+#events_container_right .event_talks .event_talks_location {
     background-image: url(/dev/_images/home.png);
 }
-#main_events_container .event_talks .event_talks_date {
+#events_container_right .event_talks .event_talks_date {
     background-image: url(/dev/_images/clock-frame.png);
     margin-right: 0 !important
 }
 
 /** RIGHT COLUMN **/
-.inbox_main .main_content_container {
+.main_content_container {
     width: 630px;
     border-left: 3px solid #d5dbdf;
     border-right: 3px solid #d5dbdf;
     min-height: 400px;
     padding: 8px 20px 20px 20px;
 }
-.inbox_main .main_content_container h2 {
+.main_content_container h2 {
     color: #5a6a7c;
     font-size: 15px;
 }
-inbox_main .main_content_container option {
+.main_content_container option {
     color: #454a4f;
 }
-.inbox_main .top_decor {
+.top_decor {
     background: transparent url(/dev/_images/inbox_table_top.png) no-repeat top left;
     height: 0px;
     width: 673px;
@@ -107,56 +130,90 @@ inbox_main .main_content_container option {
     padding: 9px 0 0 7px;
 }
 
-.inbox_main .bottom_decor {
+.bottom_decor {
     background: transparent url(/dev/_images/inbox_table_bottom.png) no-repeat top left;
     height: 41px;
     width: 676px;
     border: none;
 }
 
-/** SIDE NAV **/
-.inbox_main .side_panel {
+/* LEFT COLUMN */
+.events_side_panel {
     width: 230px
 }
-
-/** Folders **/
-.inbox_main .inbox-folders {
-    width: 230px
+.events_side_panel .events_form_divider {
+    border-top: 1px solid #e5e7e9;
+    padding-top: 8px;
 }
-
-.inbox_main .inbox-folders .if_titlebar {
+.events_side_panel #events_form_filter p {
+    margin-bottom: 9px;
+    padding-left: 9px;
+}
+.events_side_panel .events_label_block {
+    display: block;
+}
+.events_side_panel .events_side_titlebar {
     background: transparent url(/dev/_images/block_tr.png) no-repeat scroll right top;
     padding: 0 10px 0 0;
     height: 50px;
 }
 
-.inbox_main .inbox-folders .if_titlebar_inner {
+.events_side_panel .events_side_titlebar_inner {
     background: transparent url(/dev/_images/block_tl.png) no-repeat scroll left top;
     padding: 18px 0 0 17px;
     height: 50px;
 }
 
-.inbox_main .inbox-folders .if_title {
+.events_side_panel .events_side_title {
     background: transparent url(/dev/_images/recent_activity_icon.png) no-repeat scroll left top;
     color: #878A8C;
     font-size: 1em;
     padding-left: 25px;
 }
 
-.inbox_main .inbox-folders .if_content {
+.events_side_panel .events_side_content {
     border-left: 3px solid #D4DADE;
     border-right: 3px solid #D4DADE;
-    padding: 1px 5px 1px 12px;
+    color: #454a4f;
+    padding: 15px 5px 1px 5px;
     margin: 0;
 }
 
-.inbox_main .inbox-folders .if_bottom {
+.events_side_panel .events_side_bottom {
     background: transparent url(/dev/_images/content_bl.png) no-repeat scroll left bottom;
     height: 5px;
     padding: 0 0 0 10px;
 }
 
-.inbox_main .inbox-folders .if_bottom_inner {
+.events_side_panel .events_side_bottom_inner {
     background: transparent url(/dev/_images/content_br.png) no-repeat scroll right bottom;
     height: 5px;
+}
+
+/* DATEPICKER */
+.events_datepicker {
+    background: url(/dev/_images/datepicker_icon.png) no-repeat right center;
+    border: 1px solid #878a8c;
+    float: left;
+    font-size:12px;
+    margin-top:5px;
+    padding:4px 18px 3px 3px;
+    width:63px !important;
+}
+.events_datepicker_split {
+    float: left;
+    margin:8px 4px 0;
+}
+.events_datepicker_formatted {
+    color:#aaa;
+    display:block;
+    font-size:11.5px;
+    margin:2px 0 10px;
+    float:left;
+}
+#events_start_date_formatted {
+    width:100px;
+}
+#events_end_date_formatted {
+    margin-left: 10px;
 }
