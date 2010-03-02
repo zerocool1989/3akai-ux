@@ -114,7 +114,7 @@
                     <div class="top_decor"><!-- --></div>
 
                     <!-- events -->
-                    <div class="main_content_container">
+                    <div id="events_container_content">
                         <h2 class="fl-force-left">Featured talks</h2>
                         <div class="fl-force-right">
                             <select>
@@ -125,25 +125,24 @@
                                 <option value="50" >Display 50 per page</option>
                             </select>
                         </div>
-                        <div id="events_container_right" class="fl-push">
+                        <div id="events_container_list" class="fl-push">
                             
                         </div>
-                        <div id="events_container_right_template"><!--
-                            {for listitem in list}
-                                {var talk = listitem.talk || listitem}
+                        <div id="events_container_list_template"><!--
+                            {for talk in vevents}
                                 <div class="event_talks">
-                                    <p class="event_talks_series">${talk.series}</p>
+                                    <p class="event_talks_series">${talk.CATEGORIES}</p>
                                     <h2 class="event_talks_summary">
-                                        <a href="${talk.url}" target="_blank">${talk.title}</a>
+                                        <a href="${talk.URL}" target="_blank">${talk.TITLE}</a>
                                     </h2>
                                     <p class="event_talks_details">
-                                        ${talk.speaker}
+                                        ${talk.SPEAKER}
                                     </p>
                                     <p class="event_talks_location">
-                                        ${talk.venue}
+                                        ${talk.LOCATION}
                                     </p>
                                     <p class="event_talks_date">
-                                        <span>${talk.parse_date}</span>
+                                        <span>${talk.DTPARSE}</span>
                                     </p>
                                 </div>
                             {/for}

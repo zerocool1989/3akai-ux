@@ -52,11 +52,11 @@
 }
 
 /** EVENTS CONTAINER **/
-#events_container_right {
+#events_container_list {
     border-top: 1px solid #d3d7d9;
     padding: 0 15px;
 }
-#events_container_right .event_talks {
+#events_container_list .event_talks {
     border-bottom: 1px solid #d3d7d9;
     clear: both;
     color: #333;
@@ -65,30 +65,30 @@
     padding: 20px 0 10px 0
 }
 
-#events_container_right .event_talks a {
+#events_container_list .event_talks a {
     color: #003399;
     text-decoration: none
 }
-#events_container_right .event_talks a:hover {
+#events_container_list .event_talks a:hover {
     text-decoration: underline
 }
-#events_container_right .event_talks h2 {
+#events_container_list .event_talks h2 {
     color: #006e96;
     font-size: 13px;
     margin: 0 0 25px 0
 }
-#events_container_right .event_talks h2 a {
+#events_container_list .event_talks h2 a {
     color: #006e96
 }
-#events_container_right .event_talks p {
+#events_container_list .event_talks p {
     font-size: 11px;
     margin: 0
 }
-#events_container_right .event_talks p a {
+#events_container_list .event_talks p a {
     color: #333;
     font-weight: normal
 }
-#events_container_right .event_talks .event_talks_details, #events_container_right .event_talks .event_talks_location, #events_container_right .event_talks .event_talks_date {
+#events_container_list .event_talks .event_talks_details, #events_container_list .event_talks .event_talks_location, #events_container_list .event_talks .event_talks_date {
     background: no-repeat 0 0;
     float:left;
     margin-right: 10px !important;
@@ -96,30 +96,30 @@
     padding-left: 25px;
     width: 165px
 }
-#events_container_right .event_talks .event_talks_details {
+#events_container_list .event_talks .event_talks_details {
     background-image: url(/dev/_images/user-silhouette.png);
 }
-#events_container_right .event_talks .event_talks_location {
+#events_container_list .event_talks .event_talks_location {
     background-image: url(/dev/_images/home.png);
 }
-#events_container_right .event_talks .event_talks_date {
+#events_container_list .event_talks .event_talks_date {
     background-image: url(/dev/_images/clock-frame.png);
     margin-right: 0 !important
 }
 
 /** RIGHT COLUMN **/
-.main_content_container {
+#events_container_content {
     width: 630px;
     border-left: 3px solid #d5dbdf;
     border-right: 3px solid #d5dbdf;
     min-height: 400px;
     padding: 8px 20px 20px 20px;
 }
-.main_content_container h2 {
+#events_container_content h2 {
     color: #5a6a7c;
     font-size: 15px;
 }
-.main_content_container option {
+#events_container_content option {
     color: #454a4f;
 }
 .top_decor {
