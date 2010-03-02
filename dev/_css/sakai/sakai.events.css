@@ -10,7 +10,13 @@
     border: none;
 }
 
-/** LAYOUT **/
+/* ERRORS */
+.events_error {
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+/* LAYOUT */
 .main_container {
     border: none;
     margin: 0 0 20px;
