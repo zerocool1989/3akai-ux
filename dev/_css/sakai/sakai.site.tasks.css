@@ -530,3 +530,8 @@ a.site_tasks_comments_remove, a.site_tasks_comments_cancel_button, .site_tasks_t
     margin: 0 -3px 0 0;
     padding: 0px 9px;
 }
+.sakai_site .content_page_options #course_dashboard {
+    background: transparent url(../../_images/gauge.png) top left no-repeat;
+    padding: 2px 15px 0 20px;
+    border-right: 1px solid #888888;
+}
