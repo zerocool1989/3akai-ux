@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations under the License.
  */
 
-/*global $, Config, jQuery, sakai, sdata, Querystring, window, removeAreaSelect */
+/*global $, Config, jQuery, sdata, Querystring, window, removeAreaSelect */
 
 var sakai = sakai || {};
 
@@ -510,8 +510,7 @@ sakai.site_appearance = function() {
             disable: false,
             keys: true,
             hide: false,
-            onSelectEnd: preview,
-            selectionColor: 'white'
+            onSelectEnd: preview
         });
     };
 
