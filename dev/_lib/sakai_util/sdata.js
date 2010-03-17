@@ -839,24 +839,42 @@ sdata.widgets.WidgetPreference =  {
     /**
      * Renders the template with the given JSON object, inserts it into a certain HTML
      * element if required, and returns the rendered HTML string
-     * @param {string} templateName
-     *  the name of the template HTML ID.
+     * @param {string|object} templateInstance
+     *  the name of the template HTML ID or a jQuery selection object.
      * @param {object} contextObject
      *  The JSON object containing the data to be rendered
      * @param {object} [optional] output
      *  The jQuery element in which the template needs to be rendered
      * @return The rendered HTML string
      */
-    $.Template.render = function(templateName, contextObject, output)  {
+    $.Template.render = function(templateInstance, contextObject, output) {
+
+        var templateName;
+
+        // The template name and the context object should be defined
+        if(!templateInstance || !contextObject){
+            throw "$.Template.render: the template name or the contextObject is not defined";
+        }
+
+        if(templateInstance instanceof jQuery && templateInstance[0]){
+            templateName = templateInstance[0].id;
+        }
+        else if (typeof templateInstance === "string"){
+            templateName = templateInstance.replace("#", "");
+            templateInstance = $("#" + templateName);
+        }
+        else {
+            throw "$.Template.render: The templateInstance is not in a valid format or the template couldn't be found.";
+        }
+
         if (!templateCache[templateName]) {
-            var el = $("#" + templateName);
-            if (el.get(0)) {
-                var templateNode = el.get(0);
+            if (templateInstance.get(0)) {
+                var templateNode = templateInstance.get(0);
                 var firstNode = templateNode.firstChild;
                 var template = null;
                 // Check whether the template is wrapped in <!-- -->
                 if (firstNode && (firstNode.nodeType === 8 || firstNode.nodeType === 4)) {
-                    template = templateNode.firstChild.data.toString();
+                    template = firstNode.data.toString();
                 }
                 else {
                     template = templateNode.innerHTML.toString();
@@ -866,13 +884,15 @@ sdata.widgets.WidgetPreference =  {
 
             }
             else {
-                throw "Template could not be found";
+                throw "$.Template.render: The template '" + templateName + "' could not be found";
             }
         }
 
         // Run the template and feed it the given JSON object
         var render = templateCache[templateName].process(contextObject);
 
+        // Check it there was an output element defined
+        // If so, put the rendered template in there
         if (output) {
             output.html(render);
         }
@@ -1358,8 +1378,8 @@ sakai.sorting.human = function(a, b){
  * line. After this has been done, all calls to
  *    fluid.log(message);
  * will be logged in the most appropriate console
- *  NOTE: always disable debugging for production systems, as logging calls are quite
- *  expensive.
+ * NOTE: always disable debugging for production systems, as logging calls are quite
+ * expensive.
  */
 //fluid.setLogging(false);
 fluid.setLogging(true);
@@ -1373,8 +1393,8 @@ fluid.setLogging(true);
 
 /*
  * In order to decode or encode a URL use the following functions:
- *  $.URLDecode(string) : URL Decodes the given string
- *  $.URLEncode(string) : URL Encodes the given string
+ * $.URLDecode(string) : URL Decodes the given string
+ * $.URLEncode(string) : URL Encodes the given string
  */
 $.extend({URLEncode:function(c){var o='';var x=0;c=c.toString();var r=/(^[a-zA-Z0-9_.]*)/;
   while(x<c.length){var m=r.exec(c.substr(x));
