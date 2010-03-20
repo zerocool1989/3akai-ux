@@ -20,6 +20,9 @@ var Config = {
     URL: {
         API_GOOGLE_CHARTS: "http://chart.apis.google.com/chart",
         BATCH_GET: "/system/batch/get",
+        BUNDLE_ROOT : "/dev/_bundle/",
+        CONTENT_MEDIA_URL : "/dev/content_media_wow.html",
+        BATCH_GET: "/system/batch/get",
         BUNDLE_ROOT: "/dev/_bundle/",
         CONTENT_MEDIA_URL: "/dev/content_media.html",
         COURSES_SITES_PAGE: "/dev/courses_sites.html",
@@ -28,7 +31,7 @@ var Config = {
         LOGOUT_URL: "/dev/logout.html",
         MY_DASHBOARD: "/dev/my_sakai.html",
         PATCH_PROFILE_URL: "/_user/public/__USERID__/authprofile",
-        PEOPLE_URL: "/dev/people.html",
+        PEOPLE_URL: "/dev/peoplewow.html",
         PROFILE_URL: "/dev/profile.html",
         PUBLIC_INSTITUTIONAL_LOGIN_PAGE: "/dev/i_index.html",
         PUBLIC_MY_SAKAI_PAGE: "/dev/public_my_sakai.html",
